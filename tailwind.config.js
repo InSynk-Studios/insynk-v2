@@ -169,6 +169,16 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+       /**
+       * **************************
+       * ***** Custom Designs *****
+       * **************************
+       */
+      brand: {
+        primary: {
+          100: "#FDA567",
+        },
+      },
     }),
     columns: {
       auto: "auto",
