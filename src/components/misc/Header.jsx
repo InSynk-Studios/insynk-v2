@@ -40,27 +40,25 @@ export const Header = () => {
         animateHeader && "bg-black/20"
       }`}
     >
-      <div className="">
-        <div
-          className={`flex ${
-            animateHeader ? "py-3" : "py-6"
-          } mx-auto items-center justify-between px-6 trasition ease-in-out duration-500`}
-        >
-          <div>
-            <Image priority src={Logo} height={100} width={100} alt="logo" />
-          </div>
-          <div className="flex justify-center items-center gap-2">
-            {navigation.map((item, index) => (
-              <Link
-                key={item.name}
-                href={item.to}
-                className="px-4 py-2 text-lg font-semibold hover:text-black"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Button>Contact Us</Button>
-          </div>
+      <div
+        className={`flex ${
+          animateHeader ? "py-3" : "py-6"
+        } mx-auto items-center justify-between px-14 trasition ease-in-out duration-500`}
+      >
+        <div>
+          <Image priority src={Logo} height={100} width={100} alt="logo" />
+        </div>
+        <div className="flex justify-center items-center gap-2">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.to}
+              className="px-4 py-2 text-lg font-semibold hover:text-black"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Button>Contact Us</Button>
         </div>
       </div>
     </header>

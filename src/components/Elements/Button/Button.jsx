@@ -59,13 +59,14 @@ export const Button = React.forwardRef(
       >
         {isLoading && <Spinner size="sm" className="text-current" />}
         {!isLoading && startIcon}
+
         {isSketch ? (
           <span className="absolute inset-0 h-full w-full skew-y-3 translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
         ) : null}
-
         {isSketch ? (
           <span className="absolute inset-0 h-full w-full border-2 skew-y-3 border-black bg-[#FDA567] group-hover:bg-black"></span>
         ) : null}
+        
         <span className="relative group-hover:text-white">
           {props.children}
         </span>
