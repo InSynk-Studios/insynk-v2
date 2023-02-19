@@ -322,7 +322,15 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: [
+        "tanker": ["Tanker-400", "sans-serif"],
+        "dmsans-400": ["DMSans-400", "sans-serif"],
+        "dmsans-500": ["DMSans-500", "sans-serif"],
+        "dmsans-700": ["DMSans-700", "sans-serif"],
+        "caveat-400": ["Caveat-400", "sans-serif"],
+        "caveat-500": ["Caveat-500", "sans-serif"],
+        "caveat-600": ["Caveat-600", "sans-serif"],
+        "caveat-700": ["Caveat-700", "sans-serif"],
+        sans: [
         "ui-sans-serif",
         "system-ui",
         "-apple-system",
