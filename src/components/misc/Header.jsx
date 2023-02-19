@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/stories/assets/logo.svg";
+import Logo from "@/assets/logo.svg";
 import Link from "next/link";
-import { Button } from "@/components/Elements/Button/Button";
+import { Button } from "@/components/Elements";
 
 export const Header = () => {
   const [animateHeader, setAnimateHeader] = useState(false);

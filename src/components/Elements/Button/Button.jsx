@@ -7,7 +7,7 @@ const variants = {
   primary: "bg-brand-primary-100 text-white text-lg rounded-3xl",
   inverse: "bg-white text-blue-400 border-blue-400 rounded-lg",
   danger: "bg-red-400 text-white rounded-lg",
-  sketch: "group relative h-12 inline-block px-4 py-2 font-medium border-none",
+  sketch: "group relative h-12 inline-block px-4 py-3 font-medium border-none",
 };
 
 const sizes = {
@@ -43,11 +43,7 @@ export const Button = React.forwardRef(
         onClick={onClick}
         disabled={disabled}
         className={twMerge(
-          isSketch
-            ? `group relative h-12 inline-block px-4 py-2 font-medium`
-            : null,
           `flex justify-center items-center border border-gray-300`,
-          `shadow-sm font-medium focus:outline-none hover:opacity-80`,
           variants[variant],
           disabled
             ? "bg-state-disabled-dark cursor-not-allowed text-t-disabled"
@@ -61,17 +57,22 @@ export const Button = React.forwardRef(
         {!isLoading && startIcon}
 
         {isSketch ? (
-          <span className="absolute inset-0 h-full w-full skew-y-3 translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 h-full w-full skew-y-3 translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0 group-hover:-translate-y-0" />
         ) : null}
         {isSketch ? (
-          <span className="absolute inset-0 h-full w-full border-2 skew-y-3 border-black bg-[#FDA567] group-hover:bg-black"></span>
+          <span
+            className={`absolute inset-0 h-full w-full border-2 skew-y-3 border-black bg-brand-primary-100 group-hover:bg-white`}
+          />
         ) : null}
-        
-        <span className="relative group-hover:text-white">
+
+        <span
+          className={twMerge(
+            "mx-2 relative group-hover:text-black",
+            childrenWrapperClassName
+          )}
+        >
           {props.children}
         </span>
-
-        {/* <span className={twMerge("mx-2", childrenWrapperClassName)}></span> */}
         {!isLoading && endIcon}
       </button>
     );

@@ -1,4 +1,4 @@
-import { Card } from "@/components/Elements/Card/Card";
+import { Card } from "@/components/Elements";
 
 const meta = {
   title: "Components/Elements/Card",
