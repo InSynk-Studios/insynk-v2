@@ -37,7 +37,7 @@ export const Header = () => {
   return (
     <header
       className={`w-full top-0 backdrop-filter backdrop-blur-lg fixed z-10 trasition ease-in-out duration-500 ${
-        animateHeader && "bg-black/20"
+        animateHeader && "bg-brand-primary-400"
       }`}
     >
       <div

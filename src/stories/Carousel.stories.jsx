@@ -1,8 +1,8 @@
 import * as React from "react";
-import { CarouselRow } from "@/components/Carousel";
+import { Carousel } from "@/components/Carousel";
 
 const MyCarousel = () => {
-  return <CarouselRow />;
+  return <Carousel />;
 };
 
 const meta = {

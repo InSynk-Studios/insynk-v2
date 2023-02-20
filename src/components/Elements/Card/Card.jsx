@@ -13,10 +13,12 @@ const SHADOWS = {
 export const Card = React.forwardRef(
   (
     {
-      className = "w-80 h-80",
+      className,
       cardBgColor = "bg-brand-primary-100",
-      shadow = "md",
-      title = "title",
+      cardRearClass,
+      cardFrontClass,
+      shadow,
+      title,
       cardTitleClass,
       ...props
     },
@@ -32,16 +34,29 @@ export const Card = React.forwardRef(
         )}
         {...props}
       >
-        <span className="absolute inset-0 h-full w-full rounded-2xl translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0" />
         <span
-          className={`absolute inset-0 h-full w-full border-2 rounded-2xl border-black ${cardBgColor}`}
+          className={twMerge(
+            "absolute inset-0 h-full w-full rounded-2xl translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0",
+            cardRearClass
+          )}
         />
-
-        <h1 className={`${cardTitleClass} relative text-black font-tanker font-normal`}>
-          {title}
-        </h1>
-        <span className="relative m-2 flex justify-start items-start h-full">
-          {props.children}
+        <span
+          className={twMerge(
+            `absolute inset-0 h-full w-full border-2 rounded-2xl border-black ${cardBgColor}`,
+            cardFrontClass
+          )}
+        >
+          <h1
+            className={twMerge(
+              "relative text-black font-tanker font-normal",
+              cardTitleClass
+            )}
+          >
+            {title}
+          </h1>
+          <span className="relative p-4 flex justify-start items-start">
+            {props.children}
+          </span>
         </span>
       </div>
     );

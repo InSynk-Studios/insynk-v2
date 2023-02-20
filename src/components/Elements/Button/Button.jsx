@@ -25,7 +25,7 @@ export const Button = React.forwardRef(
       className = "",
       variant = "primary",
       size = "md",
-      sketchFrontColor,
+      sketchFrontColor = "bg-brand-primary-100",
       isLoading = false,
       disabled = false,
       isSketch = false,
