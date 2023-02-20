@@ -16,6 +16,8 @@ export const Card = React.forwardRef(
       className = "w-80 h-80",
       cardBgColor = "bg-brand-primary-100",
       shadow = "md",
+      title = "title",
+      cardTitleClass,
       ...props
     },
     ref
@@ -35,7 +37,12 @@ export const Card = React.forwardRef(
           className={`absolute inset-0 h-full w-full border-2 rounded-2xl border-black ${cardBgColor}`}
         />
 
-        <span className="relative mx-2">{props.children}</span>
+        <h1 className={`${cardTitleClass} relative text-black font-tanker font-normal`}>
+          {title}
+        </h1>
+        <span className="relative m-2 flex justify-start items-start h-full">
+          {props.children}
+        </span>
       </div>
     );
   }

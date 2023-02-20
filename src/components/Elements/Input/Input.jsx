@@ -62,7 +62,7 @@ export const Input = React.forwardRef(
             name={name}
             type={type}
             className={twMerge(
-              "relative appearance-none w-full block px-3 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-brand-primary-500 focus:shadow-primary-focus sm:text-sm",
+              "relative break-all appearance-none w-full block px-3 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-brand-primary-500 focus:shadow-primary-focus",
               className,
               borders[border]
             )}

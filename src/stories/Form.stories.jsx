@@ -18,19 +18,27 @@ const MyForm = ({ hideSubmit = false }) => {
         <>
           <Input
             border="dashed"
+            className=" font-caveat-700 text-xl"
             error={formState.errors["title"]}
             registration={register("title")}
           />
           <Textarea
             border="dashed"
-            rows={2}
+            rows={1}
+            className=" font-caveat-700 text-xl w-1/2"
             error={formState.errors["description"]}
             registration={register("description")}
           />
 
           {!hideSubmit && (
             <div>
-              <Button type="submit" variant="sketch" isSketch={true} size="sm">
+              <Button
+                type="submit"
+                variant="sketch"
+                isSketch={true}
+                size="sm"
+                sketchFrontColor="bg-brand-primary-200"
+              >
                 Submit
               </Button>
             </div>

@@ -18,7 +18,7 @@ export const Textarea = React.forwardRef(
       registration,
       error,
       placeholder = "Write something..",
-      rows = 5,
+      rows,
       defaultValue = "",
       border = "default",
       disabled = false,
@@ -41,7 +41,7 @@ export const Textarea = React.forwardRef(
           name={name}
           ref={ref}
           className={twMerge(
-            "appearance-none block w-full px-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-brand-primary-500 focus:shadow-primary-focus sm:text-sm",
+            "appearance-none block w-full px-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-brand-primary-500 focus:shadow-primary-focus",
             className,
             borders[border]
           )}

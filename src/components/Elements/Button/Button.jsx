@@ -25,6 +25,7 @@ export const Button = React.forwardRef(
       className = "",
       variant = "primary",
       size = "md",
+      sketchFrontColor,
       isLoading = false,
       disabled = false,
       isSketch = false,
@@ -61,7 +62,7 @@ export const Button = React.forwardRef(
         ) : null}
         {isSketch ? (
           <span
-            className={`absolute inset-0 h-full w-full border-2 skew-y-3 border-black bg-brand-primary-100 group-hover:bg-white`}
+            className={`${sketchFrontColor} absolute inset-0 h-full w-full border-2 skew-y-3 border-black group-hover:bg-white`}
           />
         ) : null}
 
