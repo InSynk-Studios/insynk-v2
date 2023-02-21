@@ -70,6 +70,21 @@
       format("svg"); /* Legacy iOS */
 }
 
+/* Clash Grotesk-500 */
+@font-face {
+  font-family: "ClashGrotesk-500";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/ClashGrotesk-Medium.ttf"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
+    /* IE6-IE8 */ url("../fonts/ClashGrotesk-Medium.ttf") format("ttf"),
+    /* Super Modern Browsers */ url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
+    /* Modern Browsers */ url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/ClashGrotesk-Medium.ttf")
+      format("svg"); /* Legacy iOS */
+}
+
 /* DMSans-400 */
 @font-face {
   font-family: "DMSans-400";

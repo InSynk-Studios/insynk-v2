@@ -324,7 +324,8 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      tanker: ["Tanker-400", "sans-serif"],
+      "tanker-400": ["Tanker-400", "sans-serif"],
+      "clashgrotesk-500": ["ClashGrotesk-400", "sans-serif"],
       "dmsans-400": ["DMSans-400", "sans-serif"],
       "dmsans-500": ["DMSans-500", "sans-serif"],
       "dmsans-700": ["DMSans-700", "sans-serif"],
