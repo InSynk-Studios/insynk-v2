@@ -7,7 +7,8 @@ const variants = {
   primary: "bg-brand-primary-100 text-white text-lg rounded-3xl",
   inverse: "bg-white text-blue-400 border-blue-400 rounded-lg",
   danger: "bg-red-400 text-white rounded-lg",
-  sketch: "group relative h-12 inline-block px-4 py-3 font-medium border-none",
+  sketch:
+    "group relative h-12 inline-block px-2 py-3 font-caveat-700 font-bold border-none",
 };
 
 const sizes = {
@@ -22,7 +23,7 @@ export const Button = React.forwardRef(
   (
     {
       type = "button",
-      className = "",
+      className,
       variant = "primary",
       size = "md",
       sketchFrontColor = "bg-brand-primary-100",
@@ -58,23 +59,23 @@ export const Button = React.forwardRef(
         {!isLoading && startIcon}
 
         {isSketch ? (
-          <span className="absolute inset-0 h-full w-full skew-y-3 translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0 group-hover:-translate-y-0" />
+          <span className="absolute inset-0 h-full w-full skew-y-2 translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0 group-hover:-translate-y-0" />
         ) : null}
         {isSketch ? (
           <span
-            className={`${sketchFrontColor} absolute inset-0 h-full w-full border-2 skew-y-3 border-black group-hover:bg-white`}
+            className={`${sketchFrontColor} absolute inset-0 h-full w-full border-2 skew-y-2 border-black group-hover:bg-white`}
           />
         ) : null}
 
         <span
           className={twMerge(
-            "mx-2 relative group-hover:text-black",
+            "mx-1 relative flex gap-2 group-hover:text-black",
             childrenWrapperClassName
           )}
         >
           {props.children}
+          {!isLoading && endIcon}
         </span>
-        {!isLoading && endIcon}
       </button>
     );
   }

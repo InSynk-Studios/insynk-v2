@@ -16,11 +16,11 @@ export const Form = ({
   });
   return (
     <form
-      className={twMerge("space-y-6", className)}
+      className={twMerge("space-y-6 paper", className)}
       onSubmit={methods.handleSubmit(onSubmit)}
       id={id}
     >
-      {children(methods)}
+      <div className="lines">{children(methods)}</div>
     </form>
   );
 };

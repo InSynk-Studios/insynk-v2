@@ -3,3 +3,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/************************
+***Contact form styles***
+*************************/
+.paper {
+  position: absolute;
+  height: 500px;
+  width: 1050px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: -275px -225px;
+  left: 30%;
+  top: 50%;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  left: 85px;
+  height: 100%;
+  width: 2px;
+  background: #877464;
+}
+.lines {
+  margin-top: 70px;
+  height: calc(100% - 45px);
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    white 0px,
+    white 25px,
+    #8db4e1b2 26px
+  );
+}
+.text {
+  position: absolute;
+  top: 175px;
+  left: 95px;
+  bottom: 10px;
+  right: 10px;
+  line-height: 25px;
+  overflow: hidden;
+  outline: none;
+}
