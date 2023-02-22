@@ -6,14 +6,16 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <section className="flex flex-col gap-20 justify-center items-center h-screen mt-8 w-2/3">
+    <section className="flex flex-col gap-36 justify-center items-center h-screen mt-20 w-2/3">
       <div className="flex flex-row justify-between items-center">
         <div>
           <h1 className="text-brand-primary-600 font-tanker-400 leading-10 font-normal text-2xl sm:text-5xl">
             we are a product studio who love to build{" "}
-            <span className="text-brand-primary-700 flex flex-col w-fit">
-              <p>disuptive products</p>
-              <Image priority src={CurvedLine} alt="" />
+            <span className="text-brand-primary-700">
+              disuptive products
+              <span className="flex justify-center">
+                <Image priority src={CurvedLine} alt="" />
+              </span>
             </span>
           </h1>
           <p className="font-dmsans-400 font-normal leading-7 tracking-tight text-xl">

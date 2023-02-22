@@ -26,11 +26,10 @@ export const Header = () => {
   }, []);
 
   const navigation = [
-    { name: "Home", to: `/`, icon: "" },
+    { name: "Home", to: `/` },
     {
       name: "Blog",
       to: `Blog`,
-      icon: "",
     },
   ].filter(Boolean);
 
@@ -42,7 +41,7 @@ export const Header = () => {
   return (
     <header
       className={`w-full top-0 fixed z-10 trasition ease-in-out duration-500 ${
-        animateHeader && "bg-brand-primary-400"
+        animateHeader && "bg-brand-primary-400 border-b-2"
       }`}
     >
       <div

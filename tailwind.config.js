@@ -184,6 +184,10 @@ module.exports = {
           200: "#FEBC8D",
           100: "#FDA567",
         },
+        background: {
+          200: "#FFF8F2",
+          100: "#FFFDF3",
+        },
       },
     }),
     columns: {

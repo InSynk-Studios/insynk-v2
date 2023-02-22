@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "../components/misc/Header";
+import { Header } from "../features/Header";
 
 const meta = {
   title: "Components/Elements/Header",

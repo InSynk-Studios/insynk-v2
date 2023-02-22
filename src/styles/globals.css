@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-brand-primary-400;
+    @apply bg-brand-background-100;
   }
 }
 /************************
