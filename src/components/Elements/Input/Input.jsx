@@ -31,6 +31,7 @@ export const Input = React.forwardRef(
       placeholder = "Placeholder",
       defaultValue,
       name,
+      maxLength,
       border = "default",
       size = "md",
       onChange = () => {},
@@ -61,6 +62,7 @@ export const Input = React.forwardRef(
             disabled={disabled}
             name={name}
             type={type}
+            maxLength={maxLength}
             className={twMerge(
               "relative break-all appearance-none w-full block px-3 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-brand-primary-500 focus:shadow-primary-focus",
               className,

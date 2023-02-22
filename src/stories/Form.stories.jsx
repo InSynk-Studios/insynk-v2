@@ -1,11 +1,10 @@
 import * as React from "react";
+import Image from "next/image";
 
 import { Button } from "@/components/Elements";
-
 import { Form } from "@/components/Form/Form";
 import { Input } from "@/components/Elements";
-import { Textarea } from "@/components/Elements";
-import Image from "next/image";
+
 import FormBulb from "@/assets/illustration/form_bulb.svg";
 import PaperPlane from "@/assets/icons/paper_plane.svg";
 
@@ -13,6 +12,31 @@ const formStyles =
   "absolute flex justify-start items-start font-caveat-700 text-xl left-24";
 
 const MyForm = ({ hideSubmit = false }) => {
+  const handleEnter = (event) => {
+    if (event.keyCode === 13) {
+      const form = event.target.form;
+      const index = Array.prototype.indexOf.call(form, event.target);
+      form.elements[index + 1].focus();
+      event.preventDefault();
+    }
+  };
+
+  const MyInput = (props) => {
+    return (
+      <Input
+        onKeyDown={handleEnter}
+        border="dashed"
+        maxLength={120}
+        size="full"
+        wrapperClassName="w-full"
+        type="text"
+        className="bg-transparent h-5 p-0"
+        placeholder={props.placeholder}
+        error={props.formState.errors[props.description]}
+        registration={props.register(props.description)}
+      />
+    );
+  };
   return (
     <Form
       onSubmit={async (values) => {
@@ -56,14 +80,17 @@ const MyForm = ({ hideSubmit = false }) => {
               and I have this insane idea that I want to work upon. Here’s the
               gist of the idea
             </p>
-            <Input
-              border="dashed"
-              size="xl"
-              type="text"
-              className="bg-transparent h-5 p-0"
+            <MyInput
               placeholder="About what you’re building in brief"
-              error={formState.errors["description"]}
-              registration={register("description")}
+              formState={formState}
+              register={register}
+              description={"description1"}
+            />
+            <MyInput
+              placeholder=""
+              formState={formState}
+              register={register}
+              description={"description2"}
             />
           </span>
           <span className={`${formStyles} gap-2 mt-3 top-80 w-4/5`}>
