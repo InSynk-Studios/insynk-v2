@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Carousel } from "@/components/Carousel";
+import { Carousel } from "@/components/Elements/Carousel";
 
 const MyCarousel = () => {
   return <Carousel />;

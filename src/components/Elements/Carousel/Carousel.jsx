@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { twMerge } from "tailwind-merge";
-import { Card } from "../Elements";
+import { Card } from "..";
 import Image from "next/image";
 
 export const Carousel = React.forwardRef(

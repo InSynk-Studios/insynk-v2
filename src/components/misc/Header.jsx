@@ -34,9 +34,14 @@ export const Header = () => {
     },
   ].filter(Boolean);
 
+  function scrollToForm() {
+    const access = document.getElementById("ContactForm");
+    access.scrollIntoView({ behavior: "smooth" }, true);
+  }
+
   return (
     <header
-      className={`w-full top-0 backdrop-filter backdrop-blur-lg fixed z-10 trasition ease-in-out duration-500 ${
+      className={`w-full top-0 fixed z-10 trasition ease-in-out duration-500 ${
         animateHeader && "bg-brand-primary-400"
       }`}
     >
@@ -45,20 +50,20 @@ export const Header = () => {
           animateHeader ? "py-3" : "py-6"
         } mx-auto items-center justify-between px-14 trasition ease-in-out duration-500`}
       >
-        <div>
-          <Image priority src={Logo} height={100} width={100} alt="logo" />
-        </div>
-        <div className="flex justify-center items-center gap-2">
+        <Image priority src={Logo} height={100} width={100} alt="logo" />
+        <div className="flex justify-center items-center gap-2 text-sm sm:text-lg font-clashgrotesk-500 font-semibold">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.to}
-              className="px-4 py-2 text-lg font-semibold hover:text-black"
+              className="px-4 py-2 hover:text-black"
             >
               {item.name}
             </Link>
           ))}
-          <Button>Contact Us</Button>
+          <Button onClick={scrollToForm} className="">
+            Contact Us
+          </Button>
         </div>
       </div>
     </header>
