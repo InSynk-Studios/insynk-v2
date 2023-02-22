@@ -1,4 +1,6 @@
-import { Button } from "../components/Elements/Button/Button";
+import { Button } from "@/components/Elements";
+import Image from "next/image";
+import PaperPlane from "@/assets/icons/paper_plane.svg";
 
 const meta = {
   title: "Components/Elements/Button",
@@ -48,20 +50,27 @@ export const StartIcon = Template.bind({});
 StartIcon.args = {
   children: "Start Icon Button",
   variant: "primary",
-  // startIcon: <Plus />,
+  startIcon: (
+    <Image priority src={PaperPlane} height={25} width={25} alt="plane" />
+  ),
 };
 
 export const EndIcon = Template.bind({});
 EndIcon.args = {
-  children: "End Icon Button",
-  variant: "danger",
-  // endIcon: <Plus />,
+  children: "Send message",
+  variant: "sketch",
+  isSketch: true,
+  endIcon: (
+    <Image priority src={PaperPlane} height={25} width={25} alt="plane" />
+  ),
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   children: "Disabled Button",
   variant: "primary",
-  // endIcon: <Plus />,
+  endIcon: (
+    <Image priority src={PaperPlane} height={25} width={25} alt="plane" />
+  ),
   disabled: true,
 };

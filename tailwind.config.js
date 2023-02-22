@@ -169,13 +169,16 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-       /**
+      /**
        * **************************
        * ***** Custom Designs *****
        * **************************
        */
       brand: {
         primary: {
+          400: "#FFF8F2",
+          300: "#F9F3E5",
+          200: "#FEBC8D",
           100: "#FDA567",
         },
       },
@@ -321,6 +324,15 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      "tanker-400": ["Tanker-400", "sans-serif"],
+      "clashgrotesk-500": ["ClashGrotesk-400", "sans-serif"],
+      "dmsans-400": ["DMSans-400", "sans-serif"],
+      "dmsans-500": ["DMSans-500", "sans-serif"],
+      "dmsans-700": ["DMSans-700", "sans-serif"],
+      "caveat-400": ["Caveat-400", "sans-serif"],
+      "caveat-500": ["Caveat-500", "sans-serif"],
+      "caveat-600": ["Caveat-600", "sans-serif"],
+      "caveat-700": ["Caveat-700", "sans-serif"],
       sans: [
         "ui-sans-serif",
         "system-ui",
@@ -980,5 +992,5 @@ module.exports = {
       50: "50",
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

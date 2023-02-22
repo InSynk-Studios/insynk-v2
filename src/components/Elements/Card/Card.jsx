@@ -1,0 +1,73 @@
+import * as React from "react";
+import PropTypes from "prop-types";
+import { twMerge } from "tailwind-merge";
+
+const SHADOWS = {
+  xs: "shadow-xs",
+  sm: "shadow-sm",
+  md: "shadow-md",
+  lg: "shadow-lg",
+  xl: "shadow-xl",
+};
+
+export const Card = React.forwardRef(
+  (
+    {
+      className,
+      cardBgColor = "bg-brand-primary-100",
+      cardRearClass,
+      cardFrontClass,
+      shadow,
+      title,
+      cardTitleClass,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <div
+        ref={ref}
+        className={twMerge(
+          "group relative inline-block",
+          SHADOWS[shadow],
+          className
+        )}
+        {...props}
+      >
+        <span
+          className={twMerge(
+            "absolute inset-0 h-full w-full rounded-2xl translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0",
+            cardRearClass
+          )}
+        />
+        <span
+          className={twMerge(
+            `absolute inset-0 h-full w-full border-2 rounded-2xl border-black ${cardBgColor}`,
+            cardFrontClass
+          )}
+        >
+          <h1
+            className={twMerge(
+              "relative text-black font-tanker font-normal",
+              cardTitleClass
+            )}
+          >
+            {title}
+          </h1>
+          <span className="relative p-4 flex justify-start items-start">
+            {props.children}
+          </span>
+        </span>
+      </div>
+    );
+  }
+);
+
+Card.displayName = "Card";
+
+Card.propTypes = {
+  className: PropTypes.string,
+  cardBgColor: PropTypes.string,
+  children: PropTypes.node,
+  shadow: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
+};
