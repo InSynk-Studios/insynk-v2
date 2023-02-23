@@ -48,15 +48,13 @@ export const Card = React.forwardRef(
         >
           <h1
             className={twMerge(
-              "relative text-black font-tanker font-normal",
+              "relative text-black font-tanker-400 font-normal",
               cardTitleClass
             )}
           >
             {title}
           </h1>
-          <span className="relative">
-            {props.children}
-          </span>
+          <span className="relative">{props.children}</span>
         </span>
       </div>
     );

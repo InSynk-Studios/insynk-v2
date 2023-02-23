@@ -1,4 +1,4 @@
-import { Hero, About, Services } from "@/features";
+import { Hero, About, Services, Principles } from "@/features";
 
 export default function Home() {
   return (
@@ -7,13 +7,11 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <Principles />
         <h1
           id="ContactForm"
           className="flex justify-center items-center h-screen text-5xl font-bold underline"
         >
-          Hello world!
-        </h1>
-        <h1 className="flex justify-center items-center h-screen text-5xl font-bold underline">
           Hello world!
         </h1>
       </div>
