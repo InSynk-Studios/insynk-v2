@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { Fragment } from "react";
 import Head from "next/head";
-import { Header } from "@/features/Header";
+import { Header } from "@/sections";
 
 export default function App({ Component, pageProps }) {
   return (

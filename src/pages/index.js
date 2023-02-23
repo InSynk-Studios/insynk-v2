@@ -1,4 +1,4 @@
-import { Hero, About, Services, Principles, Teams } from "@/features";
+import { Hero, About, Services, Principles, Teams } from "@/sections";
 
 export default function Home() {
   return (
