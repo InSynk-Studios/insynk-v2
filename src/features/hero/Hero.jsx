@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section className="flex flex-col justify-center items-center text-center h-screen mt-8 w-2/3">
       <div className="font-tanker-400 font-normal text-2xl sm:text-6xl">
-        <h1 className="text-brand-primary-600">
+        <h1 className="text-brand-primary-400">
           We believe in creating products which are{" "}
           <span className="text-brand-primary-100">InSynk</span> with the future
         </h1>

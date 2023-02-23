@@ -1,4 +1,4 @@
-import { Hero, About, Services, Principles } from "@/features";
+import { Hero, About, Services, Principles, Teams } from "@/features";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <About />
         <Services />
         <Principles />
+        <Teams />
         <h1
           id="ContactForm"
           className="flex justify-center items-center h-screen text-5xl font-bold underline"

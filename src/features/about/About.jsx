@@ -9,9 +9,9 @@ export const About = () => {
     <section className="flex flex-col gap-36 justify-center items-center h-screen mt-20 w-2/3">
       <div className="flex flex-row justify-between items-center">
         <div>
-          <h1 className="text-brand-primary-600 font-tanker-400 leading-10 font-normal text-2xl sm:text-5xl">
+          <h1 className="text-brand-primary-400 font-tanker-400 leading-10 font-normal text-2xl sm:text-5xl">
             we are a product studio who love to build{" "}
-            <span className="text-brand-primary-700">
+            <span className="text-brand-primary-500">
               disuptive products
               <span className="flex justify-center">
                 <Image priority src={CurvedLine} alt="" />
@@ -29,7 +29,7 @@ export const About = () => {
 
       <div className="flex flex-row justify-between items-center">
         <div className="w-2/4">
-          <h1 className="text-brand-primary-600 font-tanker-400 font-normal leading-10 text-2xl sm:text-4xl">
+          <h1 className="text-brand-primary-400 font-tanker-400 font-normal leading-10 text-2xl sm:text-4xl">
             process driven artists with a knack to solve problems
           </h1>
           <p className="font-dmsans-400 font-normal leading-7 tracking-tight text-xl">

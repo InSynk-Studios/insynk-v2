@@ -42,10 +42,10 @@ export const Services = () => {
   return (
     <section className="flex flex-col justify-start items-center gap-12 text-center mt-32 w-full bg-brand-background-200">
       <div className="mt-10">
-        <h1 className="font-tanker-400 font-normal text-4xl text-brand-primary-600">
+        <h1 className="font-tanker-400 font-normal text-4xl text-brand-primary-400">
           How we help
         </h1>
-        <p className="font-dmsans-400 font-normal text-xl leading-7 tracking-tight text-brand-primary-600">
+        <p className="font-dmsans-400 font-normal text-xl leading-7 tracking-tight text-brand-primary-400">
           Our list of services
         </p>
       </div>
