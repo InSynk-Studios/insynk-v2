@@ -185,6 +185,8 @@ module.exports = {
           100: "#FDA567",
         },
         background: {
+          400: "#D0DFDF",
+          300: "#FFE1CC",
           200: "#FFF8F2",
           100: "#FFFDF3",
         },

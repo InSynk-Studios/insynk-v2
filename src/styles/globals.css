@@ -9,6 +9,15 @@
     @apply bg-brand-background-100;
   }
 }
+
+@layer utilities {
+  .service-card-background:nth-child(even) {
+    @apply ml-32;
+  }
+  .service-card-background:nth-child(odd) {
+    @apply -ml-32;
+  }
+}
 /************************
 ***Contact form styles***
 *************************/

@@ -28,7 +28,7 @@ export const Card = React.forwardRef(
       <div
         ref={ref}
         className={twMerge(
-          "group relative inline-block",
+          " relative inline-block",
           SHADOWS[shadow],
           className
         )}
@@ -54,7 +54,7 @@ export const Card = React.forwardRef(
           >
             {title}
           </h1>
-          <span className="relative p-4 flex justify-start items-start">
+          <span className="relative">
             {props.children}
           </span>
         </span>
