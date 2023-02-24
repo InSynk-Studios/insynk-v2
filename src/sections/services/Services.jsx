@@ -1,42 +1,7 @@
 import React from "react";
 import { Button, Card } from "@/components/Elements";
 import Image from "next/image";
-import ProductScoping from "@/assets/illustration/product_scoping.svg";
-
-const service = [
-  {
-    id: 1,
-    title: "product scoping",
-    color: "bg-brand-background-300",
-    image: ProductScoping,
-    description:
-      "While building a great product, its crucial to understand the root cause of a problem. We help teams understand these user stories at a fundamental level and discover opportunities to solve problems and scope out features which achieve the goal. ",
-  },
-  {
-    id: 2,
-    title: "hello",
-    color: "bg-brand-background-400",
-    // image: "bg-brand-background-400",
-    description:
-      "While building a great product, its crucial to understand the root cause of a problem. We help teams understand these user stories at a fundamental level and discover opportunities to solve problems and scope out features which achieve the goal. ",
-  },
-  {
-    id: 3,
-    title: "hello",
-    color: "bg-brand-background-300",
-    // image: "bg-brand-background-300",
-    description:
-      "While building a great product, its crucial to understand the root cause of a problem. We help teams understand these user stories at a fundamental level and discover opportunities to solve problems and scope out features which achieve the goal. ",
-  },
-  {
-    id: 4,
-    title: "hello",
-    color: "bg-brand-background-400",
-    // image: "bg-brand-background-400",
-    description:
-      "While building a great product, its crucial to understand the root cause of a problem. We help teams understand these user stories at a fundamental level and discover opportunities to solve problems and scope out features which achieve the goal. ",
-  },
-];
+import { serviceData } from "./servicesData";
 
 export const Services = () => {
   return (
@@ -50,9 +15,9 @@ export const Services = () => {
         </p>
       </div>
       <div className="w-2/3">
-        {service.map((item, index) => (
+        {serviceData.map((item) => (
           <Card
-            key={index}
+            key={item.id}
             cardBgColor={item.color}
             className="w-full h-96 mb-12 service-card-background"
           >
@@ -70,7 +35,7 @@ export const Services = () => {
                   isSketch={true}
                   className="font-clashgrotesk-500"
                 >
-                  View more
+                  Read More
                 </Button>
               </div>
             </div>

@@ -6,22 +6,22 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <section className="flex flex-col gap-36 justify-center items-center h-screen mt-20 w-2/3">
+    <section className="flex flex-col gap-36 justify-center items-center h-screen mt-20 w-4/5">
       <div className="flex flex-row justify-between items-center">
-        <div>
+        <div className="w-1/2">
           <h1 className="text-brand-primary-400 font-tanker-400 leading-10 font-normal text-2xl sm:text-5xl">
-            we are a product studio who love to build{" "}
+            Our love for building the unexpected{" "}
             <span className="text-brand-primary-500">
-              disuptive products
-              <span className="flex justify-center">
+              is contagious!
+              <span className="flex justify-end w-4/5">
                 <Image priority src={CurvedLine} alt="" />
               </span>
             </span>
           </h1>
           <p className="font-dmsans-400 font-normal leading-7 tracking-tight text-xl">
-            We help founders and teams with the craziest world-changing vision
-            to build out their ideas to disruptive products with our technical
-            expertise.
+            Our mission is to help founders and teams with the boldest, most
+            visionary ideas bring them to life. With our technical expertise, we
+            help turn those ideas into disruptive products that change the game.
           </p>
         </div>
         <Image priority src={AboutSectionFirstSvg} alt="" />
@@ -29,13 +29,13 @@ export const About = () => {
 
       <div className="flex flex-row justify-between items-center">
         <div className="w-2/4">
-          <h1 className="text-brand-primary-400 font-tanker-400 font-normal leading-10 text-2xl sm:text-4xl">
-            process driven artists with a knack to solve problems
+          <h1 className="text-brand-primary-400 font-tanker-400 font-normal leading-10 text-2xl sm:text-5xl">
+            The art of problem-solving is our forte
           </h1>
           <p className="font-dmsans-400 font-normal leading-7 tracking-tight text-xl">
-            We are a team of extensive thinkers and curious and artists who are
-            detail-oriented in everything we do. There is a process to our art
-            which converts ideas into reality.
+            At our studio, we believe that great art requires both a
+            process-driven approach and a curious mind, and our team of talented
+            artists embodies this philosophy to deliver exceptional results.
           </p>
         </div>
         <Image priority src={AboutSectionSecondSvg} alt="" />
