@@ -25,7 +25,7 @@ export const Contact = ({ hideSubmit = false }) => {
       <Input
         onKeyDown={handleEnter}
         border="dashed"
-        maxLength={120}
+        maxLength={170}
         size="full"
         wrapperClassName="w-full"
         type="text"

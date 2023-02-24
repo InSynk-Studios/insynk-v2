@@ -12,10 +12,6 @@ module.exports = {
         resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
         use: ["@svgr/webpack"],
       },
-      {
-        test: /\.yaml$/,
-        use: "js-yaml-loader",
-      },
     ],
   },
 };

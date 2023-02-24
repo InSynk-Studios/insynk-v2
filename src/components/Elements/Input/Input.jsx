@@ -92,7 +92,7 @@ Input.propTypes = {
   type: PropTypes.string,
   label: PropTypes.string,
   size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl", "full"]),
-  border: PropTypes.oneOf(["default", "dotted", "solid", "solid"]),
+  border: PropTypes.oneOf(["default", "dotted", "dashed", "solid"]),
   name: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
