@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import * as z from "zod";
 
 import { Button } from "@/components/Elements";
 import { Form } from "@/components/Form/Form";
@@ -7,6 +8,13 @@ import { Input } from "@/components/Elements";
 
 import FormBulb from "@/assets/illustration/form_bulb.svg";
 import PaperPlane from "@/assets/icons/paper_plane.svg";
+
+const schema = z.object({
+  name: z.string().min(1, "Required"),
+  email: z.string().min(1, "Required"),
+  // description1: z.string().min(1, "Required"),
+  description2: z.string().min(1, "Required"),
+});
 
 const formStyles =
   "absolute flex justify-start items-start font-caveat-700 text-xl left-24";
@@ -45,6 +53,7 @@ export const Contact = ({ hideSubmit = false }) => {
         onSubmit={async (values) => {
           alert(JSON.stringify(values, null, 2));
         }}
+        schema={schema}
       >
         {({ register, formState }) => (
           <>
