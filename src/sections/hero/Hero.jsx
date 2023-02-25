@@ -16,8 +16,8 @@ export const Hero = () => {
   const [displayText, setDisplayText] = useState(false);
 
   return (
-    <section className="flex flex-col justify-center items-center text-center h-screen mt-8 w-2/3">
-      <div className="font-tanker-400 text-brand-primary-400 font-normal text-2xl sm:text-6xl">
+    <section className="flex flex-col justify-center items-center text-center h-screen mt-8 w-11/12 md:w-2/3">
+      <div className="font-tanker-400 text-brand-primary-400 font-normal h-32 text-5xl sm:text-6xl">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -49,7 +49,7 @@ export const Hero = () => {
               .deleteAll();
             typewriter
               .typeString(
-                `Let’s build <span style="color: #FDA567;">together</span> :)`
+                `Let’s build <span style="color: #FDA567;">together</span> !`
               )
               .callFunction(() => {
                 setDisplayBestInIndustry(true);

@@ -46,7 +46,7 @@ export const Header = () => {
         animateHeader && "bg-brand-background-100 border-b-2"
       }`}
     >
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex md:px-14                        ">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link href="/">

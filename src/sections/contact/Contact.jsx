@@ -17,7 +17,7 @@ const schema = z.object({
 });
 
 const formStyles =
-  "absolute flex justify-start items-start font-caveat-700 text-xl left-24";
+  "absolute flex justify-start items-start text-left font-caveat-700 text-xl left-11 md:left-24";
 
 export const Contact = ({ hideSubmit = false }) => {
   const handleEnter = (event) => {
@@ -47,7 +47,7 @@ export const Contact = ({ hideSubmit = false }) => {
   return (
     <section
       id="ContactForm"
-      className="flex relative justify-start items-center gap-12 text-center mt-32 w-11/12 h-screen"
+      className="flex relative justify-start items-center gap-12 text-center mt-32 w-11/12 xl:w-4/5 h-screen"
     >
       <Form
         onSubmit={async (values) => {
@@ -57,23 +57,23 @@ export const Contact = ({ hideSubmit = false }) => {
       >
         {({ register, formState }) => (
           <>
-            <div className="flex justify-between items-start text-left left-24 top-0 absolute w-5/6">
-              <h1 className="text-xl font-caveat-700 mt-4">
+            <div className="flex justify-between items-start text-left left-11 md:left-24 top-0 absolute w-5/6">
+              <h1 className="text-base md:text-xl font-caveat-700 mt-4">
                 Looking for a passionate team to work with?
                 <br />
-                <span className="text-5xl">
+                <span className="text-3xl md:text-5xl">
                   Write to us your craziest ideas!
                 </span>
               </h1>
-              <span className="flex flex-col justify-center items-center mt-8">
+              <span className="flex flex-col justify-center items-center mt-14">
                 <Image src={FormBulb} width={55} height={55} alt="" />
-                <p className="font-caveat-400 text-center text-xl w-3/4">
+                <p className="font-caveat-400 text-center leading-7 tracking-tight text-base md:text-xl w-3/4">
                   This is where great ideas are executed
                 </p>
               </span>
             </div>
             <br />
-            <h2 className="text font-caveat-700 text-left text-xl">
+            <h2 className="text font-caveat-700 text-left text-base md:text-xl">
               Hi Team InSynk,
             </h2>
             <br />
@@ -112,9 +112,9 @@ export const Contact = ({ hideSubmit = false }) => {
               <p>Contact me at</p>
               <Input
                 border="dashed"
-                size="xl"
+                // size="xl"
                 type="email"
-                className="bg-transparent h-5 p-0"
+                className="bg-transparent w-full h-5 p-0"
                 placeholder="Email"
                 error={formState.errors["email"]}
                 registration={register("email")}
@@ -133,7 +133,7 @@ export const Contact = ({ hideSubmit = false }) => {
                   isSketch={true}
                   size="sm"
                   sketchFrontColor="bg-brand-primary-200"
-                  className="uppercase"
+                  className="uppercase w-44 h-10 text-xs"
                   endIcon={
                     <Image
                       priority

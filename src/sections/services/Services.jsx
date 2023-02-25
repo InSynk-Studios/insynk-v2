@@ -23,11 +23,11 @@ export const Services = () => {
           >
             <div className="flex items-center justify-between p-12">
               <Image priority src={item.image} alt="" />
-              <div className="text-left w-2/3">
-                <h1 className="font-tanker-400 font-normal text-5xl">
+              <div className="text-left w-11/12 md:w-2/3">
+                <h1 className="font-tanker-400 font-normal text-3xl md:text-5xl">
                   {item.title}
                 </h1>
-                <p className="h-fit my-5 font-dmsans-500 font-medium">
+                <p className="h-fit my-5 font-dmsans-500 font-medium text-sm md:text-base">
                   {item.description}
                 </p>
                 <Button
