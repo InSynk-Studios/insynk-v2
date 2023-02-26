@@ -5,7 +5,7 @@ import ManWithCape from "@/assets/illustration/man_with_cape.svg";
 
 export const Footer = () => {
   return (
-    <section className="grid grid-cols-1 place-content-between sm:grid-cols-2 items-center px-12 lg:px-40 2xl:px-46">
+    <section className="grid grid-cols-1 place-content-between mt-16 sm:grid-cols-2 items-center px-12 lg:px-40 2xl:px-46">
       <div className="flex flex-col gap-6">
         <Image src={Logo} alt="" />
         <h1 className="font-tanker-400 text-5xl md:text-6xl w-5/6 2xl:w-2/4">

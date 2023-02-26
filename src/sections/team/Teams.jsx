@@ -1,62 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { TeamList } from "./TeamList";
 import CurlyLine from "@/assets/illustration/curly_line.svg";
 import TeamTopLines from "@/assets/illustration/team_top_lines.svg";
 import CurvedLine from "@/assets/illustration/curved_line_team.svg";
-import Aman from "@/assets/illustration/team/aman_picture.svg";
-
-export const team = [
-  {
-    id: 1,
-    image: Aman,
-    name: "Sneham pal, product designer",
-    quote:
-      "“I believe in building non-stop. Helping solve problems which have an impact ”",
-    about:
-      "User behaviors can change rapidly while building a new product. New insights are found out everyday. It is crucial that we adapt to these changes quickly.",
-    signature: "",
-  },
-  {
-    id: 2,
-    image: Aman,
-    name: "Manish jangir, front-end dev",
-    quote:
-      "“I believe in building non-stop. Helping solve problems which have an impact ”",
-    about:
-      "We are fast executioners who believe that having an bias for action goes a long way when building out new products which have to be changed quickly in each iteration.",
-    signature: "",
-  },
-  {
-    id: 3,
-    image: Aman,
-    name: "Sirjit modal, full-stack dev",
-    quote:
-      "“I believe in building non-stop. Helping solve problems which have an impact ”",
-    about:
-      "We tend to go the extra mile and build relationships which we believe in. Much more than just a transaction.",
-    signature: "",
-  },
-  {
-    id: 4,
-    image: Aman,
-    name: "Aman sharma, co-founder",
-    quote:
-      "“I believe in building non-stop. Helping solve problems which have an impact ”",
-    about:
-      "Last but not the least, we are the most fun folks to work with. We simply enjoy building something cool with cool people!  ",
-    signature: "",
-  },
-  {
-    id: 5,
-    image: Aman,
-    name: "Vishnu malviya, co-founder",
-    quote:
-      "“I believe in building non-stop. Helping solve problems which have an impact ”",
-    about:
-      "We like to be extremely detail-oriented with whatever we build. Chasing perfection is something we always do at InSynk. ",
-    signature: "",
-  },
-];
 
 export const Teams = () => {
   return (
@@ -72,20 +19,23 @@ export const Teams = () => {
           Working tirelessly to bring visions into reality
         </p>
       </div>
-      <div className="grid grid-rows-1 sm:grid-cols-3 gap-5 w-5/6">
-        {team.map((member) => (
-          <div key={member.name} className="space-y-2">
+      <div className="grid grid-rows-1 sm:grid-cols-3 gap-5 w-3/4">
+        {TeamList.map((member) => (
+          <div
+            key={member.name}
+            className="space-y-5 flex flex-col items-center"
+          >
             <Image priority src={member.image} alt="" />
             <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-widest">
               {member.name}
             </h2>
-            <h2 className="font-caveat-400 text-xl leading-5 mx-5">
+            <h2 className="font-caveat-400 text-xl leading-5 mx-5 w-4/6">
               {member.quote}
             </h2>
-            <p className="font-dmsans-400 text-xs leading-4 mx-5 tracking-widest">
+            <p className="font-dmsans-400 text-left text-base leading-4 mx-5 w-4/6 tracking-tight">
               {member.about}
             </p>
-            <Image priority src={member.signature} alt="" />
+            <Image priority src={member.signature} className="place-self-start mx-12" alt="" />
           </div>
         ))}
       </div>
