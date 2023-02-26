@@ -176,6 +176,7 @@ module.exports = {
        */
       brand: {
         primary: {
+          600: "#654E3B",
           500: "#F38704",
           400: "#251302",
           300: "#FFFEF5",

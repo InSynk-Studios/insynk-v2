@@ -17,7 +17,7 @@ const schema = z.object({
 });
 
 const formStyles =
-  "absolute flex justify-start items-start text-left font-caveat-700 text-xl left-11 md:left-24";
+  "absolute flex justify-start items-start text-left font-caveat-700 text-2xl left-11 md:left-32";
 
 export const Contact = ({ hideSubmit = false }) => {
   const handleEnter = (event) => {
@@ -37,7 +37,7 @@ export const Contact = ({ hideSubmit = false }) => {
         size="full"
         wrapperClassName="w-full"
         type="text"
-        className="bg-transparent h-5 p-0"
+        className="bg-transparent h-7 p-0"
         placeholder={props.placeholder}
         error={props.formState.errors[props.description]}
         registration={props.register(props.description)}
@@ -57,15 +57,15 @@ export const Contact = ({ hideSubmit = false }) => {
       >
         {({ register, formState }) => (
           <>
-            <div className="flex justify-between items-start text-left left-11 md:left-24 top-0 absolute w-5/6">
-              <h1 className="text-base md:text-xl font-caveat-700 mt-4">
+            <div className="flex justify-between items-start text-left left-11 md:left-32 top-0 absolute w-5/6">
+              <h1 className="text-base md:text-xl font-caveat-700 text-brand-primary-600 mt-12">
                 Looking for a passionate team to work with?
                 <br />
                 <span className="text-3xl md:text-5xl">
                   Write to us your craziest ideas!
                 </span>
               </h1>
-              <span className="flex flex-col justify-center items-center mt-14">
+              <span className="flex flex-col justify-center items-center mt-20">
                 <Image src={FormBulb} width={55} height={55} alt="" />
                 <p className="font-caveat-400 text-center leading-7 tracking-tight text-base md:text-xl w-3/4">
                   This is where great ideas are executed
@@ -83,14 +83,14 @@ export const Contact = ({ hideSubmit = false }) => {
                 border="dashed"
                 size="full"
                 type="text"
-                className="bg-transparent h-5 w-52 p-0"
+                className="bg-transparent h-7 w-52 p-0"
                 placeholder="Name"
                 error={formState.errors["name"]}
                 registration={register("name")}
               />
               {","}
             </span>
-            <span className={`${formStyles} flex-col top-64 w-4/5`}>
+            <span className={`${formStyles} flex-col gap-1 mb-1 bottom-72 w-4/5`}>
               <p>
                 and I have this insane idea that I want to work upon. Here’s the
                 gist of the idea
@@ -108,32 +108,33 @@ export const Contact = ({ hideSubmit = false }) => {
                 description={"description2"}
               />
             </span>
-            <span className={`${formStyles} gap-2 mt-3 top-80 w-4/5`}>
-              <p>Contact me at</p>
+            <span className={`${formStyles} gap-2 bottom-52 mb-2 w-2/4`}>
+              <p className="w-40">Contact me at</p>
               <Input
                 border="dashed"
-                // size="xl"
+                size="full"
+                wrapperClassName="w-full"
                 type="email"
-                className="bg-transparent w-full h-5 p-0"
+                className="bg-transparent h-7 p-0"
                 placeholder="Email"
                 error={formState.errors["email"]}
                 registration={register("email")}
               />
               {"."}
             </span>
-            <span className={`${formStyles} gap-2 mt-16 top-80 w-4/5`}>
+            <span className={`${formStyles} top-96 mt-14`}>
               <p>Let’s build it out to perfection!</p>
             </span>
 
             {!hideSubmit && (
-              <div className={`${formStyles} top-96 mt-12`}>
+              <div className={`${formStyles} bottom-16 mt-12`}>
                 <Button
                   type="submit"
                   variant="sketch"
                   isSketch={true}
-                  size="sm"
+                  size="lg"
                   sketchFrontColor="bg-brand-primary-200"
-                  className="uppercase w-44 h-10 text-xs"
+                  className="uppercase"
                   endIcon={
                     <Image
                       priority
