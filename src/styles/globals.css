@@ -17,70 +17,81 @@
   .service-card-background:nth-child(odd) {
     @apply -ml-32;
   }
-}
-/************************
+
+  .service-card-background:nth-child(even) .card-overlay:nth-child(odd) {
+    @apply absolute flex flex-row-reverse -left-full -ml-60 -bottom-5;
+  }
+  .service-card-background:nth-child(even) .arrow-flip:nth-child(odd) {
+    @apply transform -scale-x-100;
+  }
+  .service-card-background:nth-child(odd) .card-overlay:nth-child(odd) {
+    @apply absolute flex flex-row -right-60 -bottom-10;
+  }
+
+  /************************
 ***Contact form styles***
 *************************/
-.paper {
-  position: absolute;
-  height: 650px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 0px 5px 0px #888;
-}
-.paper::before {
-  content: "";
-  position: absolute;
-  left: 115px;
-  height: 100%;
-  width: 2px;
-  background: #877464;
-}
-.lines {
-  margin-top: 120px;
-  height: calc(70% - 45px);
-  width: 100%;
-  background-image: repeating-linear-gradient(
-    white -10px,
-    white 24px,
-    #8db4e1b2 26px
-  );
-}
-.text {
-  position: absolute;
-  top: 190px;
-  left: 130px;
-  bottom: 10px;
-  right: 10px;
-  line-height: 25px;
-  overflow: hidden;
-  outline: none;
-}
-
-@media only screen and (max-width: 426px) {
-  /* For mobile phones: */
+  .paper {
+    position: absolute;
+    height: 650px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 5px 0px #888;
+  }
   .paper::before {
     content: "";
     position: absolute;
-    left: 35px;
+    left: 115px;
     height: 100%;
     width: 2px;
     background: #877464;
   }
+  .lines {
+    margin-top: 120px;
+    height: calc(70% - 45px);
+    width: 100%;
+    background-image: repeating-linear-gradient(
+      white -10px,
+      white 24px,
+      #8db4e1b2 26px
+    );
+  }
   .text {
     position: absolute;
-    top: 175px;
-    left: 45px;
+    top: 190px;
+    left: 130px;
     bottom: 10px;
     right: 10px;
     line-height: 25px;
     overflow: hidden;
     outline: none;
   }
-  .service-card-background:nth-child(even) {
-    @apply ml-0;
-  }
-  .service-card-background:nth-child(odd) {
-    @apply -ml-0;
+
+  @media only screen and (max-width: 426px) {
+    /* For mobile phones: */
+    .paper::before {
+      content: "";
+      position: absolute;
+      left: 35px;
+      height: 100%;
+      width: 2px;
+      background: #877464;
+    }
+    .text {
+      position: absolute;
+      top: 175px;
+      left: 45px;
+      bottom: 10px;
+      right: 10px;
+      line-height: 25px;
+      overflow: hidden;
+      outline: none;
+    }
+    .service-card-background:nth-child(even) {
+      @apply ml-0;
+    }
+    .service-card-background:nth-child(odd) {
+      @apply -ml-0;
+    }
   }
 }
