@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Elements";
@@ -40,6 +41,8 @@ export const Header = () => {
     access.scrollIntoView({ behavior: "smooth" }, true);
   }
 
+  const router = useRouter();
+
   return (
     <nav
       className={`w-full top-0 fixed bg-brand-background-100 z-10 trasition ease-in-out duration-500 ${
@@ -74,8 +77,15 @@ export const Header = () => {
           >
             <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 font-clashgrotesk-500 font-semibold">
               {navigation.map((item) => (
-                <li key={item.name}>
-                  <Link href={item.to} className="px-4 py-2 hover:text-black">
+                <li
+                  key={item.name}
+                  className={
+                    router.pathname == item.to
+                      ? "text-black"
+                      : "text-brand-primary-700"
+                  }
+                >
+                  <Link href={item.to} className="px-2 py-2 hover:text-black">
                     {item.name}
                   </Link>
                 </li>
