@@ -15,7 +15,7 @@ export const Services = () => {
         </p>
       </div>
       <div className="w-2/3">
-        {serviceData.map((item) => (
+        {serviceData?.map((item) => (
           <Card
             key={item.id}
             cardBgColor={item.color}
@@ -33,12 +33,12 @@ export const Services = () => {
                 <Button
                   variant="sketch"
                   isSketch={true}
-                  className="font-clashgrotesk-500"
+                  className="font-clashgrotesk-500 h-14"
                 >
                   Read More
                 </Button>
               </div>
-              <div className="card-overlay w-3/5 2xl:w-2/6">
+              <div className="card-overlay w-3/5">
                 <Image
                   priority
                   src={item.overlay}

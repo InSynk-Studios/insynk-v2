@@ -7,7 +7,7 @@ import TeamBuilding from "@/assets/illustration/carouselCard/team_building.svg";
 export const CarouselData = [
   {
     id: 1,
-    name: "be flexible to changes",
+    title: "be flexible to changes",
     image: GirlDoingYoga,
     cardColor: "bg-brand-background-500",
     description:
@@ -15,7 +15,7 @@ export const CarouselData = [
   },
   {
     id: 2,
-    name: "bias for action",
+    title: "bias for action",
     image: LadyRushing,
     cardColor: "bg-brand-background-600",
     description:
@@ -23,7 +23,7 @@ export const CarouselData = [
   },
   {
     id: 3,
-    name: "being builders not business machines",
+    title: "being builders not business machines",
     image: TeamWork,
     cardColor: "bg-brand-background-700",
     description:
@@ -31,18 +31,18 @@ export const CarouselData = [
   },
   {
     id: 4,
-    name: "have fun while building",
+    title: "Becoming obsessed with the craft",
     image: ConceptOfResearch,
     cardColor: "bg-brand-background-800",
     description:
-      "Last but not the least, we are the most fun folks to work with. We simply enjoy building something cool with cool people!  ",
+      "We like to be extremely detail-oriented with whatever we build. Chasing perfection is something we always do at InSynk. ",
   },
   {
     id: 5,
-    name: "Becoming obsessed with the craft",
+    title: "have fun while building",
     image: TeamBuilding,
     cardColor: "bg-brand-background-800",
     description:
-      "We like to be extremely detail-oriented with whatever we build. Chasing perfection is something we always do at InSynk. ",
+      "Last but not the least, we are the most fun folks to work with. We simply enjoy building something cool with cool people!  ",
   },
 ];

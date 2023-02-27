@@ -4,22 +4,22 @@ import { Carousel, Card } from "@/components/Elements";
 import { CarouselData } from "./CarouselData";
 
 export const Principles = () => {
-  const [animateHeader, setAnimateHeader] = useState(false);
+  const [removePadding, setRemovePadding] = useState(false);
 
-  const handleHeaderAnimation = () => {
+  const handleRemovePadding = () => {
     if (window.scrollX > 50) {
-      setAnimateHeader(true);
-    } else setAnimateHeader(false);
+      setRemovePadding(true);
+    } else setRemovePadding(false);
   };
 
   useEffect(() => {
-    handleHeaderAnimation();
+    handleRemovePadding();
     const listener = () => {
-      handleHeaderAnimation();
+      handleRemovePadding();
     };
-    window.addEventListener("scrollX", listener);
+    window.addEventListener("scroll", listener);
     return () => {
-      window.removeEventListener("scrollX", listener);
+      window.removeEventListener("scroll", listener);
     };
   }, []);
 
@@ -35,12 +35,12 @@ export const Principles = () => {
           <strong>makes working with us special.</strong>
         </p>
       </div>
-      <div className={`w-full pl-36 ${animateHeader && "pl-0"}`}>
-        <Carousel CarouselData={CarouselData} className="">
+      <div className="w-full">
+        <Carousel className={removePadding ? "pl-0" : "pl-36"}>
           {CarouselData?.map((item) => (
             <div key={item.id} className="inline-block">
               <Card
-                title={item.name}
+                title={item.title}
                 cardTitleClass="border-b-2 border-black px-4 py-2 md:py-3 text-xl md:text-2xl lg:text-4xl"
                 cardBgColor={item.cardColor}
                 className="w-56 h-72 md:w-430 md:h-460"
