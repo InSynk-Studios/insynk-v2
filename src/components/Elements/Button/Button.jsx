@@ -63,13 +63,13 @@ export const Button = React.forwardRef(
         ) : null}
         {isSketch ? (
           <span
-            className={`${sketchFrontColor} absolute rounded inset-0 h-full w-full border-2 skew-y-2 border-black group-hover:bg-white`}
+            className={`${sketchFrontColor} absolute hover:cursor-pointer rounded inset-0 h-full w-full border-2 skew-y-2 border-black group-hover:bg-white`}
           />
         ) : null}
 
         <span
           className={twMerge(
-            "mx-1 relative flex gap-2 group-hover:text-black",
+            "mx-1 relative flex gap-2 group-hover:text-black hover:cursor-pointer",
             childrenWrapperClassName
           )}
         >

@@ -5,8 +5,16 @@
 @tailwind utilities;
 
 @layer base {
+  *,
+  *:before,
+  *:after {
+    @apply cursor-default;
+  }
+  *:active {
+    @apply cursor-active;
+  }
   body {
-    @apply bg-brand-background-100;
+    @apply bg-brand-background-100 selection:bg-brand-primary-200;
   }
 }
 

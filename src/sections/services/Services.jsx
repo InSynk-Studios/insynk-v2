@@ -21,7 +21,7 @@ export const Services = () => {
             cardBgColor={item.color}
             className="w-full h-96 mb-12 service-card-background"
           >
-            <div className="flex items-center justify-between 2xl:justify-center 2xl:gap-32 p-12">
+            <div className="flex items-center justify-between 2xl:justify-center 2xl:gap-12 p-12">
               <Image priority src={item.image} alt="" />
               <div className="text-left w-11/12 md:w-2/3">
                 <h1 className="font-tanker-400 font-normal text-3xl md:text-5xl">

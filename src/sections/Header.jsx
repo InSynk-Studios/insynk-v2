@@ -52,7 +52,7 @@ export const Header = () => {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex md:px-14                        ">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link href="/">
+            <Link href="/" className="hover:cursor-pointer">
               <Image priority src={Logo} height={100} width={100} alt="logo" />
             </Link>
             <div className="md:hidden">
@@ -61,9 +61,9 @@ export const Header = () => {
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
-                  <Image priority src={CrossIcon} alt="CrossIcon" />
+                  <Image src={CrossIcon} alt="CrossIcon" />
                 ) : (
-                  <Image priority src={HamburgerIcon} alt="HamBurger" />
+                  <Image src={HamburgerIcon} alt="HamBurger" />
                 )}
               </button>
             </div>
@@ -85,13 +85,17 @@ export const Header = () => {
                       : "text-brand-primary-700"
                   }
                 >
-                  <Link href={item.to} className="px-2 py-2 hover:text-black">
+                  <Link
+                    href={item.to}
+                    className="px-2 py-2 hover:text-black hover:cursor-pointer"
+                  >
                     {item.name}
                   </Link>
                 </li>
               ))}
               <Button
                 onClick={scrollToForm}
+                varient="primary"
                 className="h-10 text-xs sm:text-lg w-full"
               >
                 Contact Us
