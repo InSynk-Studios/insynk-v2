@@ -23,7 +23,7 @@ export const About = () => {
               </span>
             </span>
           </h1>
-          <p className="font-dmsans-400 font-normal leading-7 tracking-tight text-base lg:text-xl">
+          <p className="font-dmsans-400 font-normal leading-7 tracking-tight text-base lg:text-xl xl:text-2xl">
             Our mission is to help founders and teams with the boldest, most
             visionary ideas bring them to life. With our technical expertise, we
             help turn those ideas into disruptive products that change the game.

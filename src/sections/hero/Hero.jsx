@@ -18,7 +18,7 @@ export const Hero = () => {
 
   return (
     <section className="flex flex-col justify-center items-center text-center h-screen mt-8 w-11/12 md:w-2/3">
-      <div className="font-tanker-400 text-brand-primary-400 font-normal h-32 text-5xl sm:text-6xl">
+      <div className="font-tanker-400 text-brand-primary-400 font-normal h-32 w-3/4 text-5xl sm:text-6xl">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -35,14 +35,14 @@ export const Hero = () => {
             typewriter
               .changeDelay(50)
               .typeString(
-                `<span style="color: #FDA567;">collaborative</span> team you need`
+                `<span style="color: #FDA567;">collaborative</span> team that you need`
               )
               .callFunction(() => {
                 setDisplayCreativity(true);
               })
               .pauseFor(2500)
               .changeDeleteSpeed(30)
-              .deleteChars(35);
+              .deleteChars(40);
             typewriter
               .changeDelay(50)
               .typeString(
@@ -72,50 +72,48 @@ export const Hero = () => {
       </div>
       <div className="grid h-3/5 grid-cols-4 w-full">
         <div
-          className={`place-self-center xl:-mr-12 ${
+          className={`relative h-full w-full place-self-center xl:-mr-12 ${
             displayCreativity && "animate__animated animate__fadeInRight"
           }`}
         >
-          {displayCreativity ? (
-            <Image priority src={Creativity} alt="" />
-          ) : null}
+          {displayCreativity && <Image priority fill src={Creativity} alt="" />}
         </div>
-        <div className="row-span-2 col-span-2 place-self-center">
-          <Image priority src={HeroIllustration} alt="" />
-          {displayText ? (
-            <h2 className="font-caveat-700 text-3xl animate__animated animate__fadeUpBig">
-              Insynk studios
-            </h2>
-          ) : null}
+        <div className="relative h-full w-full flex flex-col row-span-2 col-span-2 place-self-center">
+          <Image priority src={HeroIllustration} fill alt="" />
+          <span
+            className={`${
+              displayText && "animate__animated animate__fadeInUp"
+            } absolute bottom-0 left-1/3`}
+          >
+            {displayText && (
+              <h2 className="font-caveat-700 text-3xl">Insynk studios</h2>
+            )}
+          </span>
         </div>
         <div
-          className={`row-span-1 place-self-end ${
-            displayBusinessDriven && "animate__animated animate__fadeInDown"
+          className={`relative h-full w-full row-span-1 place-self-end ${
+            displayBusinessDriven && "animate__animated animate__fadeInLeft"
           }`}
         >
-          {displayBusinessDriven ? (
-            <Image priority src={BusinessDriven} alt="" />
-          ) : null}
+          {displayBusinessDriven && (
+            <Image priority fill src={BusinessDriven} alt="" />
+          )}
         </div>
         <div
-          className={`place-self-end xl:-mr-12 ${
-            displayTech && "animate__animated animate__fadeInLeft"
+          className={`relative h-full w-full place-self-end xl:-mr-12 ${
+            displayTech && "animate__animated animate__fadeInRight"
           }`}
         >
-          {displayTech ? <Image priority src={Tech} alt="" /> : null}
+          {displayTech && <Image priority fill src={Tech} alt="" />}
         </div>
         <div
-          className={`place-self-center xl:-ml-40 ${
+          className={`relative h-full w-full place-self-center xl:-ml-40 ${
             displayBestInIndustry && "animate__animated animate__fadeInLeft"
           }`}
         >
-          {displayBestInIndustry ? (
-            <Image
-              priority
-              src={BestInIndustry}
-              alt=""
-            />
-          ) : null}
+          {displayBestInIndustry && (
+            <Image priority fill src={BestInIndustry} alt="" />
+          )}
         </div>
       </div>
     </section>
