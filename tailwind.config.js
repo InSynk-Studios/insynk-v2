@@ -125,6 +125,7 @@ module.exports = {
       "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
       inner: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
       none: "none",
+      brand: "0px 2px 4px rgba(0, 0, 0, 0.16)",
     },
     boxShadowColor: ({ theme }) => theme("colors"),
     brightness: {
@@ -176,6 +177,7 @@ module.exports = {
        */
       brand: {
         primary: {
+          800: "#3A2411",
           700: "#82766F",
           600: "#654E3B",
           500: "#F38704",
@@ -340,6 +342,7 @@ module.exports = {
     fontFamily: {
       "tanker-400": ["Tanker-400", "sans-serif"],
       "clashgrotesk-500": ["ClashGrotesk-400", "sans-serif"],
+      "clashgrotesk-600": ["ClashGrotesk-600", "sans-serif"],
       "dmsans-400": ["DMSans-400", "sans-serif"],
       "dmsans-500": ["DMSans-500", "sans-serif"],
       "dmsans-700": ["DMSans-700", "sans-serif"],
@@ -805,7 +808,9 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536px",
+      "2xl": "1313px",
+      "3xl": "1404px",
+      "4xl": "1536px",
     },
     scrollMargin: ({ theme }) => ({
       ...theme("spacing"),

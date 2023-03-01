@@ -18,7 +18,7 @@ export const Hero = () => {
 
   return (
     <section className="flex flex-col justify-center items-center text-center h-screen mt-8 w-11/12 md:w-2/3">
-      <div className="font-tanker-400 text-brand-primary-400 font-normal h-32 w-3/4 text-5xl sm:text-6xl">
+      <div className="font-tanker-400 text-brand-primary-400 font-normal h-32 w-4/5 text-5xl lg:text-[64px]">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -73,7 +73,7 @@ export const Hero = () => {
       <div className="grid h-3/5 grid-cols-4 w-full">
         <div
           className={`relative h-full w-full place-self-center xl:-mr-12 ${
-            displayCreativity && "animate__animated animate__fadeInRight"
+            displayCreativity && "animate__animated animate__fadeIn"
           }`}
         >
           {displayCreativity && <Image priority fill src={Creativity} alt="" />}
@@ -82,7 +82,7 @@ export const Hero = () => {
           <Image priority src={HeroIllustration} fill alt="" />
           <span
             className={`${
-              displayText && "animate__animated animate__fadeInUp"
+              displayText && "animate__animated animate__fadeIn"
             } absolute bottom-0 left-1/3`}
           >
             {displayText && (
@@ -91,8 +91,8 @@ export const Hero = () => {
           </span>
         </div>
         <div
-          className={`relative h-full w-full row-span-1 place-self-end ${
-            displayBusinessDriven && "animate__animated animate__fadeInLeft"
+          className={`relative h-full w-full row-span-1 place-self-end xl:-mr-20 ${
+            displayBusinessDriven && "animate__animated animate__fadeIn"
           }`}
         >
           {displayBusinessDriven && (
@@ -100,15 +100,15 @@ export const Hero = () => {
           )}
         </div>
         <div
-          className={`relative h-full w-full place-self-end xl:-mr-12 ${
-            displayTech && "animate__animated animate__fadeInRight"
+          className={`relative h-full w-4/5 place-self-end xl:-mr-7 ${
+            displayTech && "animate__animated animate__fadeIn"
           }`}
         >
           {displayTech && <Image priority fill src={Tech} alt="" />}
         </div>
         <div
-          className={`relative h-full w-full place-self-center xl:-ml-40 ${
-            displayBestInIndustry && "animate__animated animate__fadeInLeft"
+          className={`relative h-full w-full place-self-center xl:-ml-40 xl:-mb-32 ${
+            displayBestInIndustry && "animate__animated animate__fadeIn"
           }`}
         >
           {displayBestInIndustry && (

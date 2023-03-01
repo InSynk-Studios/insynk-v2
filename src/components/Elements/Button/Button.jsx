@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { Spinner } from "../Spinner/Spinner";
 
 const variants = {
-  primary: "bg-brand-primary-100 text-white text-lg rounded-3xl",
+  primary: "bg-brand-primary-100 text-white text-lg rounded-[32px]",
   inverse: "bg-white text-blue-400 border-blue-400 rounded-lg",
   danger: "bg-red-400 text-white rounded-lg",
   sketch:
@@ -69,7 +69,7 @@ export const Button = React.forwardRef(
 
         <span
           className={twMerge(
-            "mx-1 relative flex gap-2 group-hover:text-black hover:cursor-pointer",
+            "mx-2 relative flex gap-2 group-hover:text-black hover:cursor-pointer",
             childrenWrapperClassName
           )}
         >

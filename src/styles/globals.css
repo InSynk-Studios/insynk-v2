@@ -27,13 +27,13 @@
   }
 
   .service-card-background:nth-child(even) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row-reverse -left-full -ml-60 -bottom-5;
+    @apply absolute flex flex-row-reverse -left-full -ml-56 bottom-0;
   }
   .service-card-background:nth-child(even) .arrow-flip:nth-child(odd) {
     @apply transform -scale-x-100;
   }
   .service-card-background:nth-child(odd) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row -right-60 -bottom-10;
+    @apply absolute flex flex-row -right-56 bottom-0;
   }
 
   /************************

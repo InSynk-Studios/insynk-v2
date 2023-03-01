@@ -70,7 +70,7 @@ export const Contact = ({ hideSubmit = false }) => {
               {","}
             </span>
             <span
-              className={`${formStyles} flex-col gap-2 mb-1 bottom-72 w-4/5`}
+              className={`${formStyles} flex-col gap-2 mt-1 top-72 w-4/5`}
             >
               <p>
                 and I have this insane idea that I want to work upon. Here’s the
@@ -89,21 +89,38 @@ export const Contact = ({ hideSubmit = false }) => {
                 // error={formState.errors["description1"]}
                 // registration={register("description1")}
               />
-              <Input
-                name="input-2"
-                onChange={handleChange}
-                border="dashed"
-                maxLength={110}
-                size="full"
-                wrapperClassName="w-full"
-                type="text"
-                className="bg-transparent -mb-1 h-7 p-0"
-                placeholder=""
-                // error={formState.errors["description1"]}
-                // registration={register("description1")}
-              />
+              {showInput && (
+                <>
+                  <Input
+                    name="input-2"
+                    onChange={handleChange}
+                    border="dashed"
+                    maxLength={110}
+                    size="full"
+                    wrapperClassName="w-full"
+                    type="text"
+                    className="bg-transparent -mb-1 h-7 p-0"
+                    placeholder=""
+                    // error={formState.errors["description1"]}
+                    // registration={register("description1")}
+                  />
+                  <Input
+                    name="input-3"
+                    onChange={handleChange}
+                    border="dashed"
+                    maxLength={110}
+                    size="full"
+                    wrapperClassName="w-full"
+                    type="text"
+                    className="bg-transparent mt-1 h-7 p-0"
+                    placeholder=""
+                    // error={formState.errors["description1"]}
+                    // registration={register("description1")}
+                  />
+                </>
+              )}
             </span>
-            <span className={`${formStyles} gap-2 bottom-52 mb-1 w-2/4`}>
+            <span className={`${formStyles} gap-2 bottom-44 w-2/4`}>
               <p className="w-40">Contact me at</p>
               <Input
                 border="dashed"
@@ -117,7 +134,7 @@ export const Contact = ({ hideSubmit = false }) => {
               />
               {"."}
             </span>
-            <span className={`${formStyles} top-96 mt-14`}>
+            <span className={`${formStyles} bottom-36 -mb-1`}>
               <p>Let’s build it out to perfection!</p>
             </span>
 

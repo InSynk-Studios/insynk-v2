@@ -16,18 +16,15 @@ export const Services = () => {
           <Card
             key={item.id}
             cardBgColor={item.color}
-            className="w-full h-96 mb-12 service-card-background"
+            className="w-full h-[338px] mb-16 service-card-background"
           >
-            <h1 className="absolute ml-12 mt-14 font-tanker-400 font-normal text-3xl md:text-5xl">
-              {item.id}.
-            </h1>
-            <div className="flex items-center justify-between 2xl:justify-center 2xl:gap-12 p-12">
+            <div className="flex items-center justify-between 2xl:justify-center 2xl:gap-12 p-10">
               <Image priority src={item.image} alt="" />
-              <div className="text-left w-11/12 md:w-2/3">
-                <h1 className="font-tanker-400 font-normal text-3xl md:text-5xl">
-                  {item.title}
+              <div className="text-left space-y-3 w-11/12 md:w-[598px]">
+                <h1 className="font-tanker-400 font-normal leading-[65px] text-brand-primary-400 text-3xl md:text-5xl">
+                  {item.id}. {item.title}
                 </h1>
-                <p className="h-fit my-5 font-dmsans-500 font-medium text-sm md:text-base">
+                <p className="h-fit font-dmsans-400 tracking-[-0.015em] leading-6 font-normal text-sm md:text-base">
                   {item.description}
                 </p>
                 <Button

@@ -31,8 +31,8 @@ export const Header = () => {
   const navigation = [
     { name: "Home", to: `/` },
     {
-      name: "Blog",
-      to: `Blog`,
+      name: "Blogs",
+      to: `Blogs`,
     },
   ].filter(Boolean);
 
@@ -51,9 +51,9 @@ export const Header = () => {
     >
       <div className="justify-between px-4 mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex md:px-14                        ">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <div className="relative h-14 w-32 flex items-center justify-between py-3 md:py-10 md:block">
             <Link href="/" className="hover:cursor-pointer">
-              <Image priority src={Logo} height={100} width={100} alt="logo" />
+              <Image priority src={Logo} fill alt="logo" />
             </Link>
             <div className="md:hidden">
               <button
@@ -75,13 +75,13 @@ export const Header = () => {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 font-clashgrotesk-500 font-semibold">
+            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-3 md:space-y-0 font-clashgrotesk-600 font-bold">
               {navigation.map((item) => (
                 <li
                   key={item.name}
                   className={
                     router.pathname == item.to
-                      ? "text-black"
+                      ? "text-brand-primary-800"
                       : "text-brand-primary-700"
                   }
                 >
@@ -96,7 +96,7 @@ export const Header = () => {
               <Button
                 onClick={scrollToForm}
                 varient="primary"
-                className="h-10 text-xs sm:text-lg w-full"
+                className="p-[10px] shadow-brand hover:bg-brand-primary-400"
               >
                 Contact Us
               </Button>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { TeamList } from "./TeamList";
+import { TeamList, FounderList } from "./TeamData";
 import CurlyLine from "@/assets/illustration/curly_line.svg";
 import TeamTopLines from "@/assets/illustration/team_top_lines.svg";
 import CurvedLine from "@/assets/illustration/curved_line_team.svg";
@@ -35,7 +35,37 @@ export const Teams = () => {
             <p className="font-dmsans-400 text-left text-base leading-4 mx-5 w-4/6 tracking-tight">
               {member.about}
             </p>
-            <Image priority src={member.signature} className="place-self-start mx-12" alt="" />
+            <Image
+              priority
+              src={member.signature}
+              className="place-self-start mx-12"
+              alt=""
+            />
+          </div>
+        ))}
+      </div>
+      <div className="grid grid-rows-1 sm:grid-cols-2 gap-5 w-3/4">
+        {FounderList.map((founder) => (
+          <div
+            key={founder.name}
+            className="space-y-5 flex flex-col items-center"
+          >
+            <Image priority src={founder.image} alt="" />
+            <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-widest">
+              {founder.name}
+            </h2>
+            <h2 className="font-caveat-400 text-xl leading-5 mx-5 w-4/6">
+              {founder.quote}
+            </h2>
+            <p className="font-dmsans-400 text-left text-base leading-4 mx-5 w-4/6 tracking-tight">
+              {founder.about}
+            </p>
+            <Image
+              priority
+              src={founder.signature}
+              className="place-self-start mx-20"
+              alt=""
+            />
           </div>
         ))}
       </div>

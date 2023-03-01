@@ -32,6 +32,9 @@ export const TeamList = [
       "We tend to go the extra mile and build relationships which we believe in. Much more than just a transaction.",
     signature: AmanSign,
   },
+];
+
+export const FounderList = [
   {
     id: 4,
     image: Aman,

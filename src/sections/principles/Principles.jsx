@@ -45,12 +45,12 @@ export const Principles = () => {
                 cardBgColor={item.cardColor}
                 className="w-56 h-72 md:w-430 md:h-460"
               >
-                <p className="h-fit font-dmsans-500 text-xs md:text-base leading-5 m-2 md:m-3">
+                <p className="h-fit font-dmsans-400 text-xs md:text-base leading-5 tracking-[-0.015em] m-2 md:m-3">
                   {item.description}
                 </p>
                 <Image
                   src={item.image}
-                  className="w-full h-28 md:h-fit"
+                  className="absolute top-32 w-full h-28 md:h-fit"
                   alt=""
                 />
               </Card>
