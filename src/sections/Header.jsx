@@ -45,13 +45,15 @@ export const Header = () => {
 
   return (
     <nav
-      className={`w-full top-0 fixed bg-brand-background-100 z-10 trasition ease-in-out duration-500 ${
-        animateHeader && "bg-brand-background-100 border-b-2"
+      className={`w-full top-0 fixed bg-brand-background-100 px-14 z-10 trasition ease-in-out duration-500 ${
+        animateHeader ? "py-4 border-b-2" : "pt-10"
       }`}
     >
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex md:px-14                        ">
+      <div
+        className={`justify-between mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex `}
+      >
         <div>
-          <div className="relative h-14 w-32 flex items-center justify-between py-3 md:py-10 md:block">
+          <div className="relative h-14 w-32 flex items-center justify-between md:block">
             <Link href="/" className="hover:cursor-pointer">
               <Image priority src={Logo} fill alt="logo" />
             </Link>
@@ -75,7 +77,7 @@ export const Header = () => {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-3 md:space-y-0 font-clashgrotesk-600 font-bold">
+            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
               {navigation.map((item) => (
                 <li
                   key={item.name}
@@ -87,7 +89,7 @@ export const Header = () => {
                 >
                   <Link
                     href={item.to}
-                    className="px-2 py-2 hover:text-black hover:cursor-pointer"
+                    className="px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:text-brand-primary-800 hover:cursor-pointer"
                   >
                     {item.name}
                   </Link>
@@ -96,7 +98,7 @@ export const Header = () => {
               <Button
                 onClick={scrollToForm}
                 varient="primary"
-                className="p-[10px] shadow-brand hover:bg-brand-primary-400"
+                className="p-[10px] font-clashgrotesk-600 leading-6 shadow-brand hover:bg-brand-primary-400"
               >
                 Contact Us
               </Button>

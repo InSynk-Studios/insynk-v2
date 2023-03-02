@@ -23,17 +23,17 @@
     @apply ml-32;
   }
   .service-card-background:nth-child(odd) {
-    @apply -ml-32;
+    @apply -ml-56;
   }
 
   .service-card-background:nth-child(even) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row-reverse -left-full -ml-56 bottom-0;
+    @apply absolute flex flex-row-reverse -left-full -ml-36 xl:-ml-72 3xl:-ml-64 bottom-0;
   }
   .service-card-background:nth-child(even) .arrow-flip:nth-child(odd) {
     @apply transform -scale-x-100;
   }
   .service-card-background:nth-child(odd) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row -right-56 bottom-0;
+    @apply absolute flex flex-row -right-36 xl:-right-72 3xl:-right-64 bottom-0;
   }
 
   /************************

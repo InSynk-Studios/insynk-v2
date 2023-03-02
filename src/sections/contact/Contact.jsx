@@ -26,7 +26,7 @@ export const Contact = ({ hideSubmit = false }) => {
   return (
     <section
       id="ContactForm"
-      className="flex relative justify-start items-center gap-12 text-center mt-32 w-11/12 xl:w-4/5 h-screen"
+      className="flex relative justify-start items-center gap-12 text-center mt-32 -mb-16 xl:-mb-20 2xl:-mb-32 w-11/12 h-screen"
     >
       <Form
         onSubmit={async (values) => {
