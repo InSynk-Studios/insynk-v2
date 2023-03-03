@@ -26,7 +26,7 @@ export const Contact = ({ hideSubmit = false }) => {
   return (
     <section
       id="ContactForm"
-      className="flex relative justify-start items-center gap-12 text-center mt-32 -mb-16 xl:-mb-20 2xl:-mb-32 w-11/12 h-screen"
+      className="flex relative justify-start items-center gap-12 text-center mt-32 -mb-16 xl:-mb-36 3xl:-mb-32 w-11/12 h-screen"
     >
       <Form
         onSubmit={async (values) => {
@@ -69,9 +69,7 @@ export const Contact = ({ hideSubmit = false }) => {
               />
               {","}
             </span>
-            <span
-              className={`${formStyles} flex-col gap-2 mt-1 top-72 w-4/5`}
-            >
+            <span className={`${formStyles} flex-col gap-2 mt-1 top-72 w-4/5`}>
               <p>
                 and I have this insane idea that I want to work upon. Here’s the
                 gist of the idea

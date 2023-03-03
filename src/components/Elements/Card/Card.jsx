@@ -42,7 +42,7 @@ export const Card = React.forwardRef(
         />
         <span
           className={twMerge(
-            `absolute inset-0 h-full w-full border-2 rounded-2xl border-black ${cardBgColor}`,
+            `absolute inset-0 h-full w-full border-[1.5px] rounded-2xl border-brand-secondary-100 ${cardBgColor}`,
             cardFrontClass
           )}
         >
