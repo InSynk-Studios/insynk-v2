@@ -31,13 +31,13 @@ export const Teams = () => {
             className="space-y-5 flex flex-col items-center"
           >
             <Image priority src={member.image} alt="" />
-            <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-widest">
+            <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-[0.185em]">
               {member.name}
             </h2>
             <h2 className="font-caveat-400 text-xl leading-5 mx-5 w-4/6">
               {member.quote}
             </h2>
-            <p className="font-dmsans-400 text-left text-base leading-4 mx-5 w-4/6 tracking-tight">
+            <p className="font-dmsans-400 text-left text-base leading-6 mx-5 w-4/6 tracking-[-0.015em]">
               {member.about}
             </p>
             <Image
@@ -49,20 +49,20 @@ export const Teams = () => {
           </div>
         ))}
       </div>
-      <div className="grid grid-rows-1 sm:grid-cols-2 gap-5 w-5/6">
+      <div className="grid grid-rows-1 sm:grid-cols-2 gap-5 mt-28 w-5/6">
         {FounderList.map((founder) => (
           <div
             key={founder.name}
             className="space-y-5 flex flex-col items-center"
           >
             <Image priority src={founder.image} alt="" />
-            <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-widest">
+            <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-[0.185em]">
               {founder.name}
             </h2>
             <h2 className="font-caveat-400 text-[22.351px] leading-[22px] mx-5 w-5/6">
               {founder.quote}
             </h2>
-            <p className="font-dmsans-400 text-left text-base leading-4 mx-5 w-5/6 tracking-tight">
+            <p className="font-dmsans-400 text-left text-base leading-6 mx-5 w-5/6 tracking-[-0.015em]">
               {founder.about}
             </p>
             <Image
