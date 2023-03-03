@@ -18,7 +18,7 @@ export const Hero = () => {
 
   return (
     <section className="flex flex-col justify-center items-center text-center h-screen mt-16 w-11/12 md:w-2/3">
-      <div className="font-tanker-400 text-brand-primary-400 font-normal leading-[87px] mb-10 h-32 w-4/5 text-5xl lg:text-[64px]">
+      <div className="font-tanker-400 text-brand-primary-400 font-normal leading-[87px] mb-10 h-32 w-4/5 xl:w-11/12 3xl:w-5/6 text-5xl lg:text-[64px]">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -70,9 +70,9 @@ export const Hero = () => {
           }}
         />
       </div>
-      <div className="grid grid-cols-4 h-[363px] w-[1040px]">
+      <div className="grid grid-cols-4 h-[363px] w-[1040px] mt-10">
         <div
-          className={`relative h-full w-full place-self-center xl:-mr-12 ${
+          className={`relative h-full w-full place-self-center xl:-mr-32 ${
             displayCreativity && "animate__animated animate__fadeIn"
           }`}
         >
@@ -85,15 +85,11 @@ export const Hero = () => {
               displayText && "animate__animated animate__fadeIn"
             } absolute bottom-0 left-1/3`}
           >
-            {displayText && (
-              <h2 className="font-caveat-700 text-3xl font-bold uppercase">
-                Insynk studios
-              </h2>
-            )}
+          
           </span>
         </div>
         <div
-          className={`relative h-full w-full row-span-1 place-self-end xl:-mr-5 ${
+          className={`relative h-full w-5/6 place-self-end xl:mr-12 ${
             displayBusinessDriven && "animate__animated animate__fadeIn"
           }`}
         >
@@ -102,7 +98,7 @@ export const Hero = () => {
           )}
         </div>
         <div
-          className={`relative h-full w-4/5 place-self-end xl:-mr-7 ${
+          className={`relative h-full w-3/4 place-self-end xl:-mr-16 ${
             displayTech && "animate__animated animate__fadeIn"
           }`}
         >
@@ -118,6 +114,11 @@ export const Hero = () => {
           )}
         </div>
       </div>
+      {displayText && (
+              <h2 className="font-caveat-700 text-3xl font-bold">
+                Insynk studios
+              </h2>
+            )}
     </section>
   );
 };

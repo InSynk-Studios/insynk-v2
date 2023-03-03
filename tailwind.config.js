@@ -187,6 +187,8 @@ module.exports = {
           100: "#FDA567",
         },
         secondary: {
+          300: "#908174",
+          200: "#251000",
           100: "#33322E",
         },
         background: {

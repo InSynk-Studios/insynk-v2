@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Elements";
 import Logo from "@/assets/logo.svg";
+import LogoInWhite from "@/assets/logo_in_white.svg";
 import CrossIcon from "@/assets/icons/cross.svg";
 import HamburgerIcon from "@/assets/icons/hamburger.svg";
 
@@ -46,7 +47,7 @@ export const Header = () => {
   return (
     <nav
       className={`w-full top-0 fixed bg-brand-background-100 px-14 z-10 trasition ease-in-out duration-500 ${
-        animateHeader ? "py-4 border-b-2" : "pt-10"
+        animateHeader ? "py-4 border-b-2 bg-brand-secondary-200" : "pt-10"
       }`}
     >
       <div
@@ -55,7 +56,11 @@ export const Header = () => {
         <div>
           <div className="relative h-14 w-32 flex items-center justify-between md:block">
             <Link href="/" className="hover:cursor-pointer">
-              <Image priority src={Logo} fill alt="logo" />
+              {animateHeader ? (
+                <Image priority src={LogoInWhite} fill alt="logo" />
+              ) : (
+                <Image priority src={Logo} fill alt="logo" />
+              )}
             </Link>
             <div className="md:hidden">
               <button
@@ -83,8 +88,10 @@ export const Header = () => {
                   key={item.name}
                   className={
                     router.pathname == item.to
-                      ? "text-brand-primary-800"
-                      : "text-brand-primary-700"
+                      ? "text-brand-primary-700" ||
+                        (animateHeader && "text-brand-secondary-300")
+                      : (animateHeader && "text-brand-primary-300") ||
+                        "text-brand-primary-800"
                   }
                 >
                   <Link
@@ -98,7 +105,11 @@ export const Header = () => {
               <Button
                 onClick={scrollToForm}
                 varient="primary"
-                className="p-[10px] font-clashgrotesk-600 leading-6 shadow-brand hover:bg-brand-primary-400"
+                className={`p-[10px] font-clashgrotesk-600 leading-6 shadow-brand ${
+                  animateHeader
+                    ? "bg-brand-primary-300 text-brand-secondary-200 hover:bg-brand-primary-200"
+                    : "bg-brand-primary-100 hover:bg-brand-primary-400"
+                }`}
               >
                 Contact Us
               </Button>

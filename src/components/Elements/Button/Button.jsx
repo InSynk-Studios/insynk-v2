@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { Spinner } from "../Spinner/Spinner";
 
 const variants = {
-  primary: "bg-brand-primary-100 text-white text-lg rounded-[32px]",
+  primary: "bg-brand-primary-100 text-brand-primary-300 text-lg rounded-[32px]",
   inverse: "bg-white text-blue-400 border-blue-400 rounded-lg",
   danger: "bg-red-400 text-white rounded-lg",
   sketch:
@@ -45,7 +45,7 @@ export const Button = React.forwardRef(
         onClick={onClick}
         disabled={disabled}
         className={twMerge(
-          `flex justify-center items-center border border-gray-300`,
+          `flex justify-center items-center`,
           variants[variant],
           disabled
             ? "bg-state-disabled-dark cursor-not-allowed text-t-disabled"
