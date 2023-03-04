@@ -17,7 +17,7 @@ export const Hero = () => {
   const [displayText, setDisplayText] = useState(false);
 
   return (
-    <section className="flex flex-col justify-center items-center text-center h-screen mt-16 w-11/12 md:w-2/3">
+    <section className="flex flex-col justify-center items-center text-center h-screen mt-20 w-11/12 md:w-2/3">
       <div className="font-tanker-400 text-brand-primary-400 font-normal leading-[87px] mb-10 h-32 w-4/5 xl:w-11/12 3xl:w-5/6 text-5xl lg:text-[64px]">
         <Typewriter
           onInit={(typewriter) => {
@@ -72,7 +72,7 @@ export const Hero = () => {
       </div>
       <div className="grid grid-cols-4 h-[363px] w-[1040px] mt-10">
         <div
-          className={`relative h-full w-full place-self-center xl:-mr-32 ${
+          className={`relative h-full w-full place-self-center xl:-mr-36 xl:-mt-12 ${
             displayCreativity && "animate__animated animate__fadeIn"
           }`}
         >
@@ -89,7 +89,7 @@ export const Hero = () => {
           </span>
         </div>
         <div
-          className={`relative h-full w-5/6 place-self-end xl:mr-12 ${
+          className={`relative h-full w-5/6 place-self-end xl:mr-12 xl:pt-12 ${
             displayBusinessDriven && "animate__animated animate__fadeIn"
           }`}
         >
@@ -105,7 +105,7 @@ export const Hero = () => {
           {displayTech && <Image priority fill src={Tech} alt="" />}
         </div>
         <div
-          className={`relative h-full w-full place-self-center xl:-ml-40 xl:-mb-32 ${
+          className={`relative h-full w-full place-self-center xl:-ml-72 xl:-mb-20 ${
             displayBestInIndustry && "animate__animated animate__fadeIn"
           }`}
         >

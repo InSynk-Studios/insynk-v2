@@ -7,7 +7,7 @@ import CurvedLine from "@/assets/illustration/curved_line_team.svg";
 
 export const Teams = () => {
   return (
-    <section className="relative flex flex-col justify-start items-center gap-12 text-center mt-32 w-full">
+    <section className="relative flex flex-col justify-start items-center gap-12 text-center mt-44 w-full">
       <Image
         priority
         src={CurvedLine}
@@ -24,7 +24,7 @@ export const Teams = () => {
           Working tirelessly to bring visions into reality
         </p>
       </div>
-      <div className="grid grid-rows-1 sm:grid-cols-3 w-5/6">
+      <div className="grid grid-rows-1 mt-14 sm:grid-cols-3 w-5/6">
         {TeamList.map((member) => (
           <div
             key={member.name}
