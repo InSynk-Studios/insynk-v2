@@ -36,21 +36,22 @@ export const Principles = () => {
         </p>
       </div>
       <div className="w-full">
-        <Carousel className={removePadding ? "pl-0" : "pl-36"}>
+        <Carousel className={`pr-5 ${removePadding ? "pl-0" : "pl-36"}`}>
           {CarouselData?.map((item) => (
             <div key={item.id} className="inline-block">
               <Card
                 title={item.title}
-                cardTitleClass="border-b-[2.83544px] border-brand-secondary-100 px-6 pb-4 md:pt-6 text-xl md:text-2xl lg:text-4xl"
+                cardTitleClass="border-b-[2.83544px] cursor-grab active:cursor-grabbing border-brand-secondary-100 px-6 pb-4 md:pt-6 text-xl md:text-2xl lg:text-4xl"
                 cardBgColor={item.cardColor}
+                cardFrontClass="cursor-grab active:cursor-grabbing"
                 className="w-56 h-72 md:w-430 md:h-460"
               >
-                <p className="h-fit font-dmsans-400 font-normal text-xs md:text-base leading-6 tracking-[-0.015em] m-2 md:m-6">
+                <p className="h-fit font-dmsans-400 font-normal cursor-grab active:cursor-grabbing text-xs md:text-base leading-6 tracking-[-0.015em] m-2 md:m-6">
                   {item.description}
                 </p>
                 <Image
                   src={item.image}
-                  className="absolute top-20 w-full h-28 md:h-fit"
+                  className="absolute top-20 w-full h-28 md:h-fit cursor-grab active:cursor-grabbing"
                   alt=""
                 />
               </Card>
