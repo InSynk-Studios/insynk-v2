@@ -4,11 +4,12 @@
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/Caveat-Bold.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/Caveat-Bold.ttf?#iefix") format("truetype"),
+  src: local(""), url("../fonts/Caveat-Bold.ttf?#iefix") format("truetype"),
     /* IE6-IE8 */ url("../fonts/Caveat-Bold.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/Caveat-Bold.ttf?#iefix") format("truetype"),
-    /* Modern Browsers */ url("../fonts/Caveat-Bold.ttf?#iefix") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/Caveat-Bold.ttf?#iefix")
+      format("truetype"),
+    /* Modern Browsers */ url("../fonts/Caveat-Bold.ttf?#iefix")
+      format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/Caveat-Bold.ttf#Inter")
       format("svg"); /* Legacy iOS */
 }
@@ -18,13 +19,12 @@
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/Caveat-SemiBold.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/Caveat-SemiBold.ttf") format("truetype"),
+  src: local(""), url("../fonts/Caveat-SemiBold.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/Caveat-SemiBold.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/Caveat-SemiBold.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/Caveat-SemiBold.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/Caveat-SemiBold.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/Caveat-SemiBold.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/Caveat-SemiBold.ttf") format("svg"); /* Legacy iOS */
 }
 /* Caveat-500 */
 @font-face {
@@ -32,13 +32,12 @@
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/Caveat-Medium.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/Caveat-Medium.ttf") format("truetype"),
+  src: local(""), url("../fonts/Caveat-Medium.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/Caveat-Medium.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/Caveat-Medium.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/Caveat-Medium.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/Caveat-Medium.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/Caveat-Medium.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/Caveat-Medium.ttf") format("svg"); /* Legacy iOS */
 }
 /* Caveat-400 */
 @font-face {
@@ -46,13 +45,12 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Caveat-Regular.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/Caveat-Regular.ttf") format("truetype"),
+  src: local(""), url("../fonts/Caveat-Regular.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/Caveat-Regular.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/Caveat-Regular.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/Caveat-Regular.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/Caveat-Regular.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/Caveat-Regular.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/Caveat-Regular.ttf") format("svg"); /* Legacy iOS */
 }
 
 /* Tanker-400 */
@@ -61,13 +59,12 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Tanker-Regular.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/Tanker-Regular.ttf") format("truetype"),
+  src: local(""), url("../fonts/Tanker-Regular.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/Tanker-Regular.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/Tanker-Regular.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/Tanker-Regular.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/Tanker-Regular.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/Tanker-Regular.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/Tanker-Regular.ttf") format("svg"); /* Legacy iOS */
 }
 
 /* Clash Grotesk-500 */
@@ -76,12 +73,28 @@
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/ClashGrotesk-Medium.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
+  src: local(""), url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/ClashGrotesk-Medium.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
-    /* Modern Browsers */ url("../fonts/ClashGrotesk-Medium.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/ClashGrotesk-Medium.ttf")
+      format("truetype"),
+    /* Modern Browsers */ url("../fonts/ClashGrotesk-Medium.ttf")
+      format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/ClashGrotesk-Medium.ttf")
+      format("svg"); /* Legacy iOS */
+}
+/* Clash Grotesk-600 */
+@font-face {
+  font-family: "ClashGrotesk-600";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ClashGrotesk-Semibold.ttf"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/ClashGrotesk-Semibold.ttf") format("truetype"),
+    /* IE6-IE8 */ url("../fonts/ClashGrotesk-Semibold.ttf") format("ttf"),
+    /* Super Modern Browsers */ url("../fonts/ClashGrotesk-Semibold.ttf")
+      format("truetype"),
+    /* Modern Browsers */ url("../fonts/ClashGrotesk-Semibold.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/ClashGrotesk-Semibold.ttf")
       format("svg"); /* Legacy iOS */
 }
 
@@ -91,13 +104,12 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/DMSans-Regular.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/DMSans-Regular.ttf") format("truetype"),
+  src: local(""), url("../fonts/DMSans-Regular.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/DMSans-Regular.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/DMSans-Regular.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/DMSans-Regular.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/DMSans-Regular.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/DMSans-Regular.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/DMSans-Regular.ttf") format("svg"); /* Legacy iOS */
 }
 /* DMSans-500 */
 @font-face {
@@ -105,13 +117,12 @@
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/DMSans-Medium.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/DMSans-Medium.ttf") format("truetype"),
+  src: local(""), url("../fonts/DMSans-Medium.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/DMSans-Medium.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/DMSans-Medium.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/DMSans-Medium.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/DMSans-Medium.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/DMSans-Medium.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/DMSans-Medium.ttf") format("svg"); /* Legacy iOS */
 }
 /* DMSans-700 */
 @font-face {
@@ -119,14 +130,10 @@
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/DMSans-Bold.ttf"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/DMSans-Bold.ttf") format("truetype"),
+  src: local(""), url("../fonts/DMSans-Bold.ttf") format("truetype"),
     /* IE6-IE8 */ url("../fonts/DMSans-Bold.ttf") format("ttf"),
-    /* Super Modern Browsers */ url("../fonts/DMSans-Bold.ttf") format("truetype"),
+    /* Super Modern Browsers */ url("../fonts/DMSans-Bold.ttf")
+      format("truetype"),
     /* Modern Browsers */ url("../fonts/DMSans-Bold.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/DMSans-Bold.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Safari, Android, iOS */ url("../fonts/DMSans-Bold.ttf") format("svg"); /* Legacy iOS */
 }
-
-
-
