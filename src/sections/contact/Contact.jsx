@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import * as z from "zod";
-import { useInputFields } from "@/hooks/useInputFields";
+import useDynamicInputs from "@/hooks/useDynamicInputs";
 
 import { Button } from "@/components/Elements";
 import { Form } from "@/components/Form/Form";
@@ -21,7 +21,7 @@ const formStyles =
   "absolute flex justify-start items-start text-left font-caveat-700 text-2xl left-11 md:left-32";
 
 export const Contact = ({ hideSubmit = false }) => {
-  const { handleChange, showInput } = useInputFields();
+  const renderedInputs = useDynamicInputs(3, 120);
 
   return (
     <section
@@ -74,49 +74,9 @@ export const Contact = ({ hideSubmit = false }) => {
                 and I have this insane idea that I want to work upon. Here’s the
                 gist of the idea
               </p>
-              <Input
-                name="input-1"
-                onChange={handleChange}
-                border="dashed"
-                maxLength={110}
-                size="full"
-                wrapperClassName="w-full"
-                type="text"
-                className="bg-transparent h-7 p-0"
-                placeholder="About what you’re building in brief"
-                // error={formState.errors["description1"]}
-                // registration={register("description1")}
-              />
-              {showInput && (
-                <>
-                  <Input
-                    name="input-2"
-                    onChange={handleChange}
-                    border="dashed"
-                    maxLength={110}
-                    size="full"
-                    wrapperClassName="w-full"
-                    type="text"
-                    className="bg-transparent -mb-1 h-7 p-0"
-                    placeholder=""
-                    // error={formState.errors["description1"]}
-                    // registration={register("description1")}
-                  />
-                  <Input
-                    name="input-3"
-                    onChange={handleChange}
-                    border="dashed"
-                    maxLength={110}
-                    size="full"
-                    wrapperClassName="w-full"
-                    type="text"
-                    className="bg-transparent mt-1 h-7 p-0"
-                    placeholder=""
-                    // error={formState.errors["description1"]}
-                    // registration={register("description1")}
-                  />
-                </>
-              )}
+
+              {/* <DynamicInputs /> */}
+              {renderedInputs}
             </span>
             <span className={`${formStyles} gap-2 bottom-44 w-2/4`}>
               <p className="w-40">Contact me at</p>
