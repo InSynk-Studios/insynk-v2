@@ -16,9 +16,9 @@ export const Services = () => {
           <Card
             key={item.id}
             cardBgColor={item.color}
-            className="w-full 4xl:w-[1019px] h-[338px] mb-16 service-card-background"
+            className="w-full 4xl:w-[1019px] h-[403px] mb-16 service-card-background"
           >
-            <div className="flex items-center justify-between h-full 2xl:justify-center xl:gap-8 3xl:gap-12 px-5 xl:px-12 xl:py-10">
+            <div className="flex items-center justify-between h-full 2xl:justify-center xl:gap-8 3xl:gap-12 px-5 xl:px-16 xl:py-14">
               <Image priority src={item.image} alt="" />
               <div className="flex flex-col items-start justify-between h-full">
                 <div className="text-left space-y-3">
