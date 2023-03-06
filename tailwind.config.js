@@ -1019,5 +1019,8 @@ module.exports = {
       50: "50",
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/typography"),
+  ],
 };

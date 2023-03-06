@@ -33,7 +33,7 @@ export const Header = () => {
     { name: "Home", to: `/` },
     {
       name: "Blogs",
-      to: `Blogs`,
+      to: `blogs`,
     },
   ].filter(Boolean);
 
