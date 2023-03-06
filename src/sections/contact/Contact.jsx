@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import * as z from "zod";
-import useDynamicInputs from "@/hooks/useDynamicInputs";
 
-import { Button } from "@/components/Elements";
+import { Button, Input, Textarea } from "@/components/Elements";
 import { Form } from "@/components/Form/Form";
-import { Input } from "@/components/Elements";
 
 import FormBulb from "@/assets/illustration/form_bulb.svg";
 import PaperPlane from "@/assets/icons/paper_plane.svg";
@@ -13,16 +11,13 @@ import PaperPlane from "@/assets/icons/paper_plane.svg";
 const schema = z.object({
   name: z.string().min(1, "Required"),
   email: z.string().min(1, "Required"),
-  // description1: z.string().min(1, "Required"),
-  description2: z.string().min(1, "Required"),
+  description: z.string().min(1, "Required"),
 });
 
 const formStyles =
   "absolute flex justify-start items-start text-left font-caveat-700 text-2xl left-11 md:left-32";
 
 export const Contact = ({ hideSubmit = false }) => {
-  const renderedInputs = useDynamicInputs(3, 120);
-
   return (
     <section
       id="ContactForm"
@@ -74,9 +69,14 @@ export const Contact = ({ hideSubmit = false }) => {
                 and I have this insane idea that I want to work upon. Here’s the
                 gist of the idea
               </p>
-
-              {/* <DynamicInputs /> */}
-              {renderedInputs}
+              <Textarea
+                placeholder="About what you’re building in brief"
+                wrapperClassName="w-full"
+                rows={3}
+                className="w-full overflow-hidden border-none underline decoration-dashed resize-none bg-transparent underline-offset-8"
+                error={formState.errors["description"]}
+                registration={register("description")}
+              />
             </span>
             <span className={`${formStyles} gap-2 bottom-44 w-2/4`}>
               <p className="w-40">Contact me at</p>
