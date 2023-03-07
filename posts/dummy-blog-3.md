@@ -1,7 +1,7 @@
 ---
 image: https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg
-tag: MVP
-title: "How a well defined design process helps build the most beautiful software "
+tag: Developement
+title: How to scale your product with user feedback and create a PMF
 description: The secret to creating designs which is scalable, intuitive and customers love to use is pretty simple. You just have to be observant. Observant to
 author: "Manish jangir"
 ---
