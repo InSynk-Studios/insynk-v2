@@ -1,65 +1,87 @@
 ---
-image: https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg
-tag: MVP
-title: "How a well defined design process helps build the most beautiful software "
-description: The secret to creating designs which is scalable, intuitive and customers love to use is pretty simple. You just have to be observant. Observant to
-author: "Manish jangir"
+image: "/blog/product_planning.svg"
+tag: ["Product", "Scoping", "Building"]
+tag2: "Scoping"
+date: Feb 22,2023
+title: "How creating a perfect product scope helps build a perfect product"
+description: "A simple roadmap to the process of product scoping which you can easily incorporate in your organization’s workflow"
+authorImage: "/blog/author/vishnu.svg"
+author: "Vishnu Narayan Malviya"
+position: "Co-Founder InSynk Studios"
+featured: true
 ---
 
-<img src="https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg" width="300" height="300"/>
-
-<div>
-  This is a blog post about **ReactJs**. <br/>
-  We'll learn what new in ReactJs v18.0.
-</div>
-
+<br/>
+> “Great things in business are never done by one person. They're done by a team of people.”
+– Steve Jobs
 <br/>
 
-### New Feature: Automatic Batching -
+<div className="flex justify-center">
+<img src="/blog/product_planning.svg" width="300" height="300"/>
+</div>
 
-Batching is when React groups multiple state updates into a single re-render for better performance. Without automatic batching, we only batched updates inside React event handlers. Updates inside of promises, setTimeout, native event handlers, or any other event were not batched in React by default. With automatic batching, these updates will be batched automatically:
+As a team of engineers and creative designers, we know the importance of planning and preparation. Just like you wouldn't build a house without a blueprint, you shouldn't launch a software product without a solid product scope.
 
-```js: // Before: only React events were batched.
-        setTimeout(() => {
-          setCount(c => c + 1);
-          setFlag(f => !f);
-          // React will render twice, once for each state update (no batching)
-        }, 1000);
+We believe that product scoping is a critical part of the development process, and it's an area where we excel because of our prior experience of working with tech startups.
 
-        // After: updates inside of timeouts, promises,
-        // native event handlers or any other event are batched.
-        setTimeout(() => {
-          setCount(c => c + 1);
-          setFlag(f => !f);
-          // React will only re-render once at the end (that's batching!)
-        }, 1000);
-```
+Product scoping is the process of defining the features, requirements, and goals of your software product. It's a crucial step in the product development process as it lays the foundation for everything that comes after.
 
-### New Feature: Transitions -
+At InSynk Studios, we take a comprehensive approach to product scoping to ensure that every aspect of your product is defined in detail.
 
-A transition is a new concept in React to distinguish between urgent and non-urgent updates.
+### Discovery Phase
 
-✅ Urgent updates reflect direct interaction, like typing, clicking, pressing, and so on.<br/>
-✅ Transition updates transition the UI from one view to another.
+<div className="flex flex-row justify-between gap-7">
+<img src="/blog/discovery_phase.svg" width="195" height="300"/>
 
-Urgent updates like typing, clicking, or pressing, need immediate response to match our intuitions about how physical objects behave. Otherwise they feel “wrong”. However, transitions are different because the user doesn’t expect to see every intermediate value on screen.
+<span>
+Our product scoping process starts with a discovery phase. During this phase, we work with you to understand your vision for the product, your target audience, and your product’s unique value proposition
 
-For example, when you select a filter in a dropdown, you expect the filter button itself to respond immediately when you click. However, the actual results may transition separately. A small delay would be imperceptible and often expected. And if you change the filter again before the results are done rendering, you only care to see the latest results.
+We also identify any potential roadblocks that could hinder the product's success, such as technical limitations or market saturation.
 
-Typically, for the best user experience, a single user input should result in both an urgent update and a non-urgent one. You can use startTransition API inside an input event to inform React which updates are urgent and which are “transitions”:
+By the end of the discovery phase, we have a deep understanding of your product and the business goals you want to achieve.
+</span>
 
-```js:
-import {startTransition} from 'react';
+</div>
 
-// Urgent: Show what was typed
-setInputValue(input);
+### Scoping Phase
 
-// Mark any state updates inside as transitions
-startTransition(() => {
-  // Transition: Show the results
-  setSearchQuery(input);
-});
+<div className="flex justify-center">
+<img src="/blog/scoping_phase.svg" width="500" height="500"/>
+</div>
 
-```
+During this phase, we use the information gathered in the discovery phase to define the product's features, requirements, and goals. We take a user-centered approach to scope, focusing on the needs and desires of the end users.
 
-<div> And this is it!!</div>
+We also consider the technical requirements of the product, such as the technology stack, scalability, and security.
+
+The scoping phase is where we define the scope of the product. This includes the product's features, functionality, and design.
+
+We also define the product's MVP (Minimum Viable Product), which is the version of the product that contains the essential features needed to launch. Defining the MVP is a critical step in the scoping process, as it ensures that the product is delivered to the market as quickly as possible.
+
+### Planning Phase
+
+Once we have defined the product scope and MVP, we move on to the planning phase. During this phase, we create a roadmap for the product's development..
+
+This roadmap outlines the development milestones, the timeline for each milestone, and the resources needed to achieve them. The roadmap is designed to ensure that the development process is efficient and cost-effective.
+
+<div className="flex justify-center">
+<img src="/blog/planning_phase.svg" width="300" height="300"/>
+</div>
+
+At InSynk Studios, we understand that software development is an iterative process. As such, we don't consider the scoping process to be a one-and-done task.
+
+Instead, we view it as an ongoing process that evolves as the product develops. As the development process progresses, we revisit the product scope and make any necessary adjustments.
+
+<span className="flex justify-center text-5xl">• • •</span>
+
+<h3 className="flex justify-center">Why is product scoping so essential?</h3>
+
+Well, for one, it helps to ensure that the development process runs smoothly. By defining the product scope upfront, we can avoid surprises and delays later on in the process.
+
+It also helps to ensure that the product meets the needs of the end users. By taking a user-centered approach to scope, we can ensure that the product is designed with the end users in mind.
+
+In addition, product scoping can help to reduce costs. By defining the product scope upfront, we can identify any potential roadblocks that could increase the development time or cost.
+
+We can also identify any unnecessary features that could be removed from the product, thus reducing the cost of development.
+At InSynk Studios, we believe that product scoping is an art form. It requires a deep understanding of the product, the end-users, and the market. It also requires a keen eye for detail and an ability to think creatively.
+
+Our team of experienced software developers and designers have mastered the art of product scoping and is committed to delivering products that will meet your expectation.

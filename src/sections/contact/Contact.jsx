@@ -100,9 +100,9 @@ export const Contact = ({ hideSubmit = false }) => {
               <div className={`${formStyles} bottom-16 mt-12`}>
                 <Button
                   type="submit"
-                  variant="sketch"
+                  variant="none"
                   isSketch={true}
-                  size="lg"
+                  size="md"
                   sketchFrontColor="bg-brand-primary-200"
                   className="uppercase"
                   endIcon={

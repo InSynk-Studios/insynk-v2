@@ -1,9 +1,11 @@
 ---
-image: https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg
-tag: Developement
+image: "/blog/male_employee.svg"
+tag: ["Product", "Developement"]
 title: How to scale your product with user feedback and create a PMF
 description: The secret to creating designs which is scalable, intuitive and customers love to use is pretty simple. You just have to be observant. Observant to
-author: "Manish jangir"
+authorImage: "/blog/author/vishnu.svg"
+author: "Vishnu Narayan Malviya"
+position: "Co-Founder InSynk Studios"
 ---
 
 <img src="https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg" width="300" height="300"/>

@@ -8,7 +8,7 @@ import matter from "gray-matter";
 import ManReadingNewspaper from "@/assets/illustration/man_reading_newspaper.svg";
 
 const tabs = [
-  { id: 1, label: "All" },
+  { id: 1, label: "Product" },
   { id: 2, label: "Design" },
   { id: 3, label: "Scoping" },
   { id: 4, label: "MVP" },
@@ -21,9 +21,13 @@ export default function Blogs({ posts }) {
   const filteredContents =
     activeTab === 1
       ? posts
-      : posts.filter(
-          (post) => post.frontMatter.tag === tabs[activeTab - 1].label
+      : posts.filter((post) =>
+          post.frontMatter.tag.find((tag) => tag === tabs[activeTab - 1].label)
         );
+
+  const featuredPost = posts.filter(
+    (post) => post.frontMatter.featured === true
+  );
 
   return (
     <main className="flex flex-col mt-[185px] mb-32 justify-center items-center">
@@ -40,6 +44,7 @@ export default function Blogs({ posts }) {
         <Image src={ManReadingNewspaper} alt="" />
       </div>
 
+      {/* Filter */}
       <div className="flex flex-col gap-4 justify-start w-4/6 mt-20 mb-10">
         <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em]">
           Categories
@@ -49,19 +54,68 @@ export default function Blogs({ posts }) {
             <Button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`w-fit h-[26px] rounded ${
+              className={`w-fit h-[26px] py-1 px-[10px] text-xs font-dmsans-500 font-medium tracking-[-0.015em] leading-[18px] rounded ${
                 activeTab === tab.id
                   ? "bg-brand-primary-200 text-brand-primary-300"
                   : "bg-brand-background-700 text-brand-secondary-500"
-              } px-4 py-2 rounded-l-md rounded-r-md`}
+              }`}
             >
               {tab.label}
             </Button>
           ))}
         </div>
       </div>
+
       <div className="w-2/3">
-        <ul className="space-x-4">
+        {/* Featured Post */}
+        {activeTab === 1 &&
+          featuredPost.map((post, index) => (
+            <Link
+              href={"/blogs/" + post.slug}
+              passHref
+              key={index}
+              className="hover:cursor-pointer"
+            >
+              <div className="relative flex flex-row hover:cursor-pointer mb-20 gap-3 w-56 h-72 md:w-3/4 md:h-[280px]">
+                <div className="relative w-full">
+                  <Image src={post.frontMatter.image} fill alt="" />
+                </div>
+
+                <div className="w-11/12 relative">
+                  <div className="flex flex-row gap-1">
+                    {post.frontMatter.tag.map((tagName, index) => (
+                      <h3
+                        key={index}
+                        className="font-dmsans-500 mb-1 text-brand-secondary-400 text-xs leading-[18px] tracking-[-0.015em]"
+                      >
+                        {tagName} {index <= 0 ? "●" : null}
+                      </h3>
+                    ))}
+                  </div>
+                  <h1 className="font-dmsans-700 text-lg mb-3 leading-[22px] tracking-[-0.015em]">
+                    {post.frontMatter.title}
+                  </h1>
+                  <p className="font-dmsans-400 text-sm leading-[21px] tracking-[-0.015em]">
+                    {post.frontMatter.description}
+                  </p>
+                  <div className="absolute bottom-0 flex flex-row w-full gap-3 h-16">
+                    <span className="relative w-1/5">
+                      <Image src={post.frontMatter.authorImage} fill alt="" />
+                    </span>
+                    <span className="flex flex-col">
+                      <p className="font-dmsans-500 text-brand-secondary-200 text-base leading-6 tracking-[-0.015em]">
+                        {post.frontMatter.author},
+                      </p>
+                      <p className="font-dmsans-400 text-brand-primary-600 text-base leading-6 tracking-[-0.015em]">
+                        {post.frontMatter.position}
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        <ul className="grid grid-cols-3 gap-8">
           {filteredContents.map((post, index) => (
             <Link
               href={"/blogs/" + post.slug}
@@ -69,22 +123,36 @@ export default function Blogs({ posts }) {
               key={index}
               className="hover:cursor-pointer"
             >
-              <div className="inline-block hover:cursor-pointer space-y-1 w-56 h-72 md:w-[319px] md:h-[484px]">
-                <div className="relative w-full h-[225px]">
+              <div className="relative inline-block hover:cursor-pointer w-56 h-72 md:w-[319px] md:h-[484px]">
+                <div className="relative w-full h-[225px] mb-3 hover:cursor-pointer">
                   <Image src={post.frontMatter.image} fill alt="" />
                 </div>
-                <h3 className="font-dmsans-500 text-brand-secondary-400 text-xs leading-[18px] tracking-[-0.015em]">
-                  Product ● {post.frontMatter.tag}
-                </h3>
-                <h1 className="font-dmsans-700 text-lg leading-[22px] tracking-[-0.015em]">
+                <div className="flex flex-row gap-1 hover:cursor-pointer">
+                  {post.frontMatter.tag.map((tagName, key) => (
+                    <h3
+                      key={key}
+                      className="font-dmsans-500 mb-1 text-brand-secondary-400 text-xs leading-[18px] tracking-[-0.015em]"
+                    >
+                      {tagName} {key <= 0 && "●"}
+                    </h3>
+                  ))}
+                </div>
+                <h1 className="font-dmsans-700 text-lg mb-2 leading-[22px] tracking-[-0.015em]">
                   {post.frontMatter.title}
                 </h1>
-                <p className="font-dmsans-400 text-sm leading-[21px] tracking-[-0.015em]">
+                <p className="font-dmsans-400 text-sm mb-[51px] leading-[21px] tracking-[-0.015em]">
                   {post.frontMatter.description}
                 </p>
-                <p className="font-dmsans-400 text-base leading-6 tracking-[-0.015em]">
-                  {post.frontMatter.author}
-                </p>
+                <div className="absolute bottom-0 flex flex-row w-full h-9 gap-[11px]">
+                  <span className="relative w-8">
+                    <Image src={post.frontMatter.authorImage} fill alt="" />
+                  </span>
+                  <span className="flex items-end">
+                    <p className="font-dmsans-500 text-brand-secondary-200 text-base leading-6 tracking-[-0.015em]">
+                      {post.frontMatter.author}
+                    </p>
+                  </span>
+                </div>
               </div>
             </Link>
           ))}

@@ -1,9 +1,11 @@
 ---
-image: https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg
-tag: Design
+image: "/blog/man_writing_book.svg"
+tag: ["Product", "Design"]
 title: "How a well defined design process helps build the most beautiful software "
 description: "The secret to creating designs which is scalable, intuitive and customers love to use is pretty simple. You just have to be observant. Observant to"
-author: "Manish jangir"
+authorImage: "/blog/author/vishnu.svg"
+author: "Vishnu Narayan Malviya"
+position: "Co-Founder InSynk Studios"
 ---
 
 # How creating a perfect product scope helps build a perfect product
