@@ -94,7 +94,7 @@ const PostPage = ({
       </div>
       <div className="flex flex-col justify-center items-center mt-16">
         <div className="w-1/2">
-          <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em]">
+          <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em] mb-4">
             Share on :
           </h2>
           <span className="h-12 flex flex-row items-center gap-6">

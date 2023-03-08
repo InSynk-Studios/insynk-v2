@@ -30,6 +30,7 @@ export const Button = React.forwardRef(
       disabled = false,
       isSketch = false,
       onClick,
+      BackgroundColor,
       startIcon,
       endIcon,
       childrenWrapperClassName,
