@@ -1,17 +1,18 @@
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
-import ArrowBack from "@/assets/icons/arrow_back.svg";
 import { Contact } from "@/sections";
+import { Carousel } from "@/components/Elements";
+import ArrowBack from "@/assets/icons/arrow_back.svg";
 import LinkSvg from "@/assets/icons/link.svg";
 import FaceBook from "@/assets/icons/facebook.svg";
 import Linkedin from "@/assets/icons/linkedin.svg";
 import Twitter from "@/assets/icons/twitter.svg";
-import BlogCarousel from "@/components/BlogCarousel/BlogCarousel";
 
 const ResponsiveImage = (props) => <Image alt={props.alt} fill {...props} />;
 
@@ -27,21 +28,14 @@ const proseQuoteStyle =
   "prose-blockquote:font-caveat-400 prose-blockquote:text-[28px] prose-blockquote:leading-7";
 
 const PostPage = ({
-  frontMatter: {
-    image,
-    title,
-    tag,
-    date,
-    description,
-    author,
-    authorImage,
-    position,
-  },
+  frontMatter: { title, tag, date, description, author, authorImage, position },
+  posts,
   mdxSource,
 }) => {
   const copyToClipboard = (e) => {
     navigator.clipboard.writeText(window.location.toString());
   };
+
   return (
     <section className="relative mt-44">
       <div className="flex flex-row justify-center">
@@ -99,22 +93,79 @@ const PostPage = ({
           </h2>
           <span className="h-12 flex flex-row items-center gap-6">
             <Link href={"#"} rel="noopener noreferrer" target="_blank">
-              <Image src={Twitter} alt="" />
+              <Image src={Twitter} className="hover:cursor-pointer" alt="" />
             </Link>
             <Link href={"#"} rel="noopener noreferrer" target="_blank">
-              <Image src={Linkedin} alt="" />
+              <Image src={Linkedin} className="hover:cursor-pointer" alt="" />
             </Link>
             <Link href={"#"} rel="noopener noreferrer" target="_blank">
-              <Image src={FaceBook} alt="" />
+              <Image src={FaceBook} className="hover:cursor-pointer" alt="" />
             </Link>
             <button onClick={copyToClipboard}>
-              <Image src={LinkSvg} alt="" />
+              <Image src={LinkSvg} className="hover:cursor-pointer" alt="" />
             </button>
           </span>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mt-[156px] gap-32">
-        <BlogCarousel />
+      
+      <div className="flex flex-col justify-center items-center mt-[156px] gap-24">
+        <div className="w-11/12 border-brand-primary-400 border-t">
+          <div className="flex justify-between mb-6 mt-10">
+            <h2 className="font-dmsans-700 text-2xl mb-2 leading-[22px] tracking-[-0.015em]">
+              Keep Reading
+            </h2>
+            <span className="grid grid-cols-2 gap-6">
+              <button
+                onClick={() => {
+                  document.getElementById("Carousel").scrollLeft += 50;
+                }}
+              >
+                <Image
+                  src={ArrowBack}
+                  className="hover:cursor-pointer"
+                  alt=""
+                />
+              </button>
+              <button
+                onClick={() => {
+                  document.getElementById("Carousel").scrollLeft -= 50;
+                }}
+              >
+                <Image
+                  src={ArrowBack}
+                  className="transform -scale-x-100 hover:cursor-pointer"
+                  alt=""
+                />
+              </button>
+            </span>
+          </div>
+          <div className="w-full">
+            <Carousel>
+              {posts.map((post, index) => (
+                <Link
+                  href={"/blogs/" + post.slug}
+                  passHref
+                  key={index}
+                  className="hover:cursor-pointer w-fit"
+                >
+                  <div className="relative hover:cursor-pointer h-[333px] w-[319px]">
+                    <div className="relative w-full h-[225px] mb-3 hover:cursor-pointer">
+                      <Image src={post.frontMatter.image} fill alt="" />
+                    </div>
+                    <h1 className="font-dmsans-700 text-lg mb-2 leading-[22px] tracking-[-0.015em]">
+                      {post.frontMatter.title}
+                    </h1>
+                    <div className="absolute bottom-0">
+                      <p className="font-dmsans-500 text-brand-secondary-200 text-base leading-6 tracking-[-0.015em]">
+                        {post.frontMatter.author}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </Carousel>
+          </div>
+        </div>
         <Contact />
       </div>
     </section>
@@ -137,6 +188,8 @@ const getStaticPaths = async () => {
 };
 
 const getStaticProps = async ({ params: { slug } }) => {
+  const files = fs.readdirSync(path.join("posts"));
+
   const markdownWithMeta = fs.readFileSync(
     path.join("posts", slug + ".md"),
     "utf-8"
@@ -145,9 +198,22 @@ const getStaticProps = async ({ params: { slug } }) => {
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content);
 
+  const posts = files.map((filename) => {
+    const markdownWithMeta = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
+    const { data: frontMatter } = matter(markdownWithMeta);
+
+    return {
+      frontMatter,
+      slug: filename.split(".")[0],
+    };
+  });
   return {
     props: {
       frontMatter,
+      posts,
       slug,
       mdxSource,
     },
