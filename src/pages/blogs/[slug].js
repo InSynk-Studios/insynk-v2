@@ -11,6 +11,7 @@ import LinkSvg from "@/assets/icons/link.svg";
 import FaceBook from "@/assets/icons/facebook.svg";
 import Linkedin from "@/assets/icons/linkedin.svg";
 import Twitter from "@/assets/icons/twitter.svg";
+import BlogCarousel from "@/components/BlogCarousel/BlogCarousel";
 
 const ResponsiveImage = (props) => <Image alt={props.alt} fill {...props} />;
 
@@ -113,6 +114,7 @@ const PostPage = ({
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-[156px] gap-32">
+        <BlogCarousel />
         <Contact />
       </div>
     </section>

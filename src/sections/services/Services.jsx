@@ -30,7 +30,7 @@ export const Services = () => {
                   </p>
                 </div>
                 <Button
-                  variant="sketch"
+                  variant="none"
                   isSketch={true}
                   className="font-clashgrotesk-500 h-14 bottom-0"
                 >

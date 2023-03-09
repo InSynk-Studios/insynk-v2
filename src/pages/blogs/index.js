@@ -17,11 +17,13 @@ const tabs = [
 
 export default function Blogs({ posts }) {
   const [activeTab, setActiveTab] = useState(1);
-
+  console.log(posts);
+  const nonFeaturedPosts = posts.filter((post) => !post.frontMatter.featured);
+  
   const filteredContents =
     activeTab === 1
-      ? posts
-      : posts.filter((post) =>
+      ? nonFeaturedPosts
+      : nonFeaturedPosts.filter((post) =>
           post.frontMatter.tag.find((tag) => tag === tabs[activeTab - 1].label)
         );
 

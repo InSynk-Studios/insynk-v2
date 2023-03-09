@@ -249,7 +249,7 @@ module.exports = {
     cursor: {
       auto: "auto",
       default: "url(../assets/icons/cursor.svg), default",
-      active: "url('../assets/icons/cross.svg'), default",
+      active: "url('../assets/icons/active_cursor.svg'), default",
       pointer: "pointer",
       wait: "wait",
       text: "text",
