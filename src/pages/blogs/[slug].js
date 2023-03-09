@@ -7,7 +7,6 @@ import matter from "gray-matter";
 import Image from "next/image";
 import ArrowBack from "@/assets/icons/arrow_back.svg";
 import { Contact } from "@/sections";
-import BlogCarousel from "@/components/Elements/BlogCarousel/BlogCarousel";
 import LinkSvg from "@/assets/icons/link.svg";
 import FaceBook from "@/assets/icons/facebook.svg";
 import Linkedin from "@/assets/icons/linkedin.svg";
@@ -114,7 +113,6 @@ const PostPage = ({
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-[156px] gap-32">
-        <BlogCarousel />
         <Contact />
       </div>
     </section>
