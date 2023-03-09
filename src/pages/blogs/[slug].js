@@ -46,7 +46,7 @@ const PostPage = ({
           <Image src={ArrowBack} alt="" />
           All blogs
         </Link>
-        <div className="lg:max-w-[692px] 2xl:max-w-[750px]">
+        <div className="max-w-[400px] lg:max-w-[692px] 2xl:max-w-[750px]">
           <div className="flex flex-row gap-2">
             {tag.map((tagName, index) => (
               <div
@@ -87,7 +87,7 @@ const PostPage = ({
         </div>
       </div>
       <div className="flex flex-col justify-center items-center mt-16">
-        <div className="w-1/2">
+        <div className="w-1/2 lg:w-2/3 xl:w-1/2">
           <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em] mb-4">
             Share on :
           </h2>

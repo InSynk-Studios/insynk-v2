@@ -17,9 +17,9 @@ const tabs = [
 
 export default function Blogs({ posts }) {
   const [activeTab, setActiveTab] = useState(1);
-  console.log(posts);
+
   const nonFeaturedPosts = posts.filter((post) => !post.frontMatter.featured);
-  
+
   const filteredContents =
     activeTab === 1
       ? nonFeaturedPosts

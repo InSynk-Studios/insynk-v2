@@ -18,6 +18,21 @@ const formStyles =
   "absolute flex justify-start items-start text-left font-caveat-700 text-2xl left-11 md:left-32";
 
 export const Contact = ({ hideSubmit = false }) => {
+  const confirmHandler = (values) => {
+    fetch("https://formsubmit.co/ajax/manish@insynkstudios.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: values.name,
+        email: values.email,
+        message: values.description,
+      }),
+    }).then((response) => {});
+  };
+
   return (
     <section
       id="ContactForm"
@@ -25,7 +40,7 @@ export const Contact = ({ hideSubmit = false }) => {
     >
       <Form
         onSubmit={async (values) => {
-          alert(JSON.stringify(values, null, 2));
+          confirmHandler(values);
         }}
         schema={schema}
       >
