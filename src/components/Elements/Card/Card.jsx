@@ -36,13 +36,13 @@ export const Card = React.forwardRef(
       >
         <span
           className={twMerge(
-            "absolute inset-0 h-full w-full rounded-2xl translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0",
+            "absolute inset-0 h-full w-full z-0 rounded-2xl translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0",
             cardRearClass
           )}
         />
         <span
           className={twMerge(
-            `absolute inset-0 h-full w-full border-[1.5px] rounded-2xl border-brand-secondary-100 ${cardBgColor}`,
+            `absolute inset-0 h-full w-full z-0 border-[1.5px] rounded-2xl border-brand-secondary-100 ${cardBgColor}`,
             cardFrontClass
           )}
         >

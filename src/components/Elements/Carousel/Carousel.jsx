@@ -27,6 +27,7 @@ export const Carousel = React.forwardRef(({ className, ...props }, ref) => {
   return (
     <div
       ref={ref}
+      id="Carousel"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
