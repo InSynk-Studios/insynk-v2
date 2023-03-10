@@ -19,7 +19,7 @@ const formStyles =
 
 export const Contact = ({ hideSubmit = false }) => {
   const confirmHandler = (values) => {
-    fetch("https://formsubmit.co/ajax/manish@insynkstudios.com", {
+    fetch("https://formsubmit.co/ajax/support@insynkstudios.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
