@@ -42,7 +42,7 @@ export const FounderList = [
     quote:
       "“I believe in building non-stop. Helping solve problems which have an impact ”",
     about:
-      "Last but not the least, we are the most fun folks to work with. We simply enjoy building something cool with cool people!  ",
+      "Worked in multiple SaaS startups for 5+ years to build scalable and well-tested products. 7+ years experience as a web developer.",
     signature: AmanSign,
   },
   {
@@ -52,7 +52,7 @@ export const FounderList = [
     quote:
       "“I believe in building non-stop. Helping solve problems which have an impact ”",
     about:
-      "We like to be extremely detail-oriented with whatever we build. Chasing perfection is something we always do at InSynk. ",
+      "3+ years of working in multiple startups. CS grad (BKBIET Pilani), Market Research & Strategy.",
     signature: AmanSign,
   },
 ];

@@ -10,9 +10,6 @@
   *:after {
     @apply cursor-default;
   }
-  *:active {
-    @apply cursor-active;
-  }
   body {
     @apply bg-brand-background-100 selection:bg-brand-primary-200;
   }
@@ -20,14 +17,14 @@
 
 @layer utilities {
   .service-card-background:nth-child(even) {
-    @apply ml-32;
+    @apply -mr-32 w-fit;
   }
   .service-card-background:nth-child(odd) {
-    @apply -ml-56;
+    @apply -ml-32 w-fit;
   }
 
   .service-card-background:nth-child(even) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row-reverse -left-full -ml-36 xl:-ml-72 3xl:-ml-64 bottom-0;
+    @apply absolute flex flex-row-reverse -left-full -ml-36 xl:-ml-72 3xl:-ml-80 bottom-0;
   }
   .service-card-background:nth-child(even) .arrow-flip:nth-child(odd) {
     @apply transform -scale-x-100;
@@ -166,7 +163,7 @@
     outline: none;
   }
 
-  @media only screen and (max-width: 426px) {
+  @media only screen and (max-width: 476px) {
     /* For mobile phones: */
     .paper::before {
       content: "";
@@ -187,7 +184,7 @@
       outline: none;
     }
     .service-card-background:nth-child(even) {
-      @apply ml-0;
+      @apply -mr-0;
     }
     .service-card-background:nth-child(odd) {
       @apply -ml-0;

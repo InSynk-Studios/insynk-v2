@@ -11,26 +11,18 @@ export const CarouselData = [
     image: GirlDoingYoga,
     cardColor: "bg-brand-background-500",
     description:
-      "User behaviors can change rapidly while building a new product. New insights are found out everyday. It is crucial that we adapt to these changes quickly.",
+      "As we develop a new product, it's common for user behaviors to shift rapidly, and we uncover new insights daily. To stay on top of these changes, it's vital that we adapt quickly.",
   },
   {
     id: 2,
-    title: "bias for action",
+    title: "bias of action",
     image: LadyRushing,
     cardColor: "bg-brand-background-600",
     description:
-      "We are fast executioners who believe that having an bias for action goes a long way when building out new products which have to be changed quickly in each iteration.",
+      "As quick executioners, we strongly believe that a bias for action is crucial when building new products that require frequent iteration. We understand that speed and agility are essential for success in this process.",
   },
   {
     id: 3,
-    title: "being builders not business machines",
-    image: TeamWork,
-    cardColor: "bg-brand-background-700",
-    description:
-      "We tend to go the extra mile and build relationships which we believe in. Much more than just a transaction.",
-  },
-  {
-    id: 4,
     title: "Becoming obsessed with the craft",
     image: ConceptOfResearch,
     cardColor: "bg-brand-background-800",
@@ -38,7 +30,7 @@ export const CarouselData = [
       "We like to be extremely detail-oriented with whatever we build. Chasing perfection is something we always do at InSynk. ",
   },
   {
-    id: 5,
+    id: 4,
     title: "have fun while building",
     image: TeamBuilding,
     cardColor: "bg-brand-background-800",
