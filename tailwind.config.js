@@ -187,6 +187,8 @@ module.exports = {
           100: "#FDA567",
         },
         secondary: {
+          500: "#6C5B51",
+          400: "#D68952",
           300: "#908174",
           200: "#251000",
           100: "#33322E",
@@ -247,7 +249,6 @@ module.exports = {
     cursor: {
       auto: "auto",
       default: "url(../assets/icons/cursor.svg), default",
-      active: "url('../assets/icons/cross.svg'), default",
       pointer: "pointer",
       wait: "wait",
       text: "text",
@@ -1019,5 +1020,8 @@ module.exports = {
       50: "50",
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/typography"),
+  ],
 };

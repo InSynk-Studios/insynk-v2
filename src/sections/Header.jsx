@@ -33,7 +33,7 @@ export const Header = () => {
     { name: "Home", to: `/` },
     {
       name: "Blogs",
-      to: `Blogs`,
+      to: `/blogs`,
     },
   ].filter(Boolean);
 
@@ -84,19 +84,17 @@ export const Header = () => {
           >
             <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
               {navigation.map((item) => (
-                <li
-                  key={item.name}
-                  className={
-                    router.pathname == item.to
-                      ? "text-brand-primary-700" ||
-                        (animateHeader && "text-brand-secondary-300")
-                      : (animateHeader && "text-brand-primary-300") ||
-                        "text-brand-primary-800"
-                  }
-                >
+                <li key={item.name}>
                   <Link
                     href={item.to}
-                    className="px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:text-brand-primary-800 hover:cursor-pointer"
+                    className={`px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:cursor-pointer ${
+                      router.pathname == item.to
+                        ? "text-brand-primary-700 " ||
+                          (animateHeader && "text-brand-secondary-300")
+                        : (animateHeader &&
+                            "text-brand-primary-300 hover:text-brand-secondary-300") ||
+                          "text-brand-primary-800 hover:text-brand-primary-700"
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -105,9 +103,9 @@ export const Header = () => {
               <Button
                 onClick={scrollToForm}
                 varient="primary"
-                className={`p-[10px] font-clashgrotesk-600 leading-6 shadow-brand ${
+                className={`px-5 py-3 font-clashgrotesk-600 leading-6 shadow-brand ${
                   animateHeader
-                    ? "bg-brand-primary-300 text-brand-secondary-200 hover:bg-brand-primary-200"
+                    ? "bg-brand-primary-300 text-brand-secondary-200 hover:bg-brand-primary-200 hover:text-brand-primary-300"
                     : "bg-brand-primary-100 hover:bg-brand-primary-400"
                 }`}
               >

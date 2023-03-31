@@ -25,7 +25,7 @@ export const Principles = () => {
 
   return (
     <section className="flex flex-col justify-start items-center mt-32 w-full">
-      <div className="grid grid-rows-2 sm:grid-cols-2 gap-2 h-36 w-11/12 xl:w-4/5">
+      <div className="grid grid-rows-2 sm:grid-cols-2 gap-2 w-11/12 xl:w-4/5">
         <h1 className="font-tanker-400 text-brand-primary-400 text-3xl lg:text-[40px] leading-[54px] w-5/6 lg:w-3/4">
           set of principles which we live by
         </h1>
@@ -36,7 +36,9 @@ export const Principles = () => {
         </p>
       </div>
       <div className="w-full">
-        <Carousel className={`pr-5 ${removePadding ? "pl-0" : "pl-36"}`}>
+        <Carousel
+          className={`pr-5 ${removePadding ? "pl-0" : "pl-8 md:pl-36"}`}
+        >
           {CarouselData?.map((item) => (
             <div key={item.id} className="inline-block">
               <Card

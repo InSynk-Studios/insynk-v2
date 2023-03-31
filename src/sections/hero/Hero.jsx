@@ -17,7 +17,7 @@ export const Hero = () => {
   const [displayText, setDisplayText] = useState(false);
 
   return (
-    <section className="flex flex-col justify-center items-center text-center h-screen mt-20 w-11/12 md:w-2/3">
+    <section className="flex flex-col justify-center items-center text-center h-screen mt-20 w-11/12 lg:w-2/3">
       <div className="font-tanker-400 text-brand-primary-400 font-normal leading-[87px] mb-10 h-32 w-4/5 xl:w-11/12 3xl:w-5/6 text-5xl lg:text-[64px]">
         <Typewriter
           onInit={(typewriter) => {
@@ -70,7 +70,7 @@ export const Hero = () => {
           }}
         />
       </div>
-      <div className="grid grid-cols-4 h-[363px] w-[1040px] mt-10">
+      <div className="grid grid-cols-4 w-full h-[200px] md:h-[363px] lg:w-[1040px] mt-10">
         <div
           className={`relative h-full w-full place-self-center xl:-mr-36 xl:-mt-12 ${
             displayCreativity && "animate__animated animate__fadeIn"
@@ -84,9 +84,7 @@ export const Hero = () => {
             className={`${
               displayText && "animate__animated animate__fadeIn"
             } absolute bottom-0 left-1/3`}
-          >
-          
-          </span>
+          ></span>
         </div>
         <div
           className={`relative h-full w-5/6 place-self-end xl:mr-12 xl:pt-12 ${
@@ -115,10 +113,8 @@ export const Hero = () => {
         </div>
       </div>
       {displayText && (
-              <h2 className="font-caveat-700 text-3xl font-bold">
-                Insynk studios
-              </h2>
-            )}
+        <h2 className="font-caveat-700 text-3xl font-bold">Insynk studios</h2>
+      )}
     </section>
   );
 };

@@ -4,11 +4,10 @@ import { twMerge } from "tailwind-merge";
 import { Spinner } from "../Spinner/Spinner";
 
 const variants = {
+  none: "",
   primary: "bg-brand-primary-100 text-brand-primary-300 text-lg rounded-[32px]",
   inverse: "bg-white text-blue-400 border-blue-400 rounded-lg",
   danger: "bg-red-400 text-white rounded-lg",
-  sketch:
-    "group relative h-12 inline-block px-2 py-3 font-caveat-700 font-bold border-none",
 };
 
 const sizes = {
@@ -31,6 +30,7 @@ export const Button = React.forwardRef(
       disabled = false,
       isSketch = false,
       onClick,
+      BackgroundColor,
       startIcon,
       endIcon,
       childrenWrapperClassName,
@@ -39,44 +39,39 @@ export const Button = React.forwardRef(
     ref
   ) => {
     return (
-      <button
-        ref={ref}
-        type={type}
-        onClick={onClick}
-        disabled={disabled}
-        className={twMerge(
-          `flex justify-center items-center`,
-          variants[variant],
-          disabled
-            ? "bg-state-disabled-dark cursor-not-allowed text-t-disabled"
-            : null,
-          sizes[size],
-          className
-        )}
-        {...props}
-      >
-        {isLoading && <Spinner size="sm" className="text-current" />}
-        {!isLoading && startIcon}
-
-        {isSketch ? (
-          <span className="absolute rounded inset-0 h-full w-full skew-y-2 translate-x-1 translate-y-1 transform bg-black transition duration-200 ease-out group-hover:-translate-x-0 group-hover:-translate-y-0" />
-        ) : null}
-        {isSketch ? (
-          <span
-            className={`${sketchFrontColor} absolute hover:cursor-pointer rounded inset-0 h-full w-full border-2 skew-y-2 border-black group-hover:bg-white`}
-          />
-        ) : null}
-
-        <span
+      <div className="relative w-max hover:cursor-pointer">
+        <button
+          ref={ref}
+          type={type}
+          onClick={onClick}
+          disabled={disabled}
           className={twMerge(
-            "mx-2 relative flex gap-2 group-hover:text-black hover:cursor-pointer",
-            childrenWrapperClassName
+            `flex justify-center items-center`,
+            isSketch &&
+              `${sketchFrontColor} h-full w-full block py-1 border-2 skew-y-2 border-black rounded`,
+            variants[variant],
+            disabled &&
+              "bg-state-disabled-dark cursor-not-allowed text-t-disabled",
+            sizes[size],
+            className
           )}
+          {...props}
         >
-          {props.children}
-          {!isLoading && endIcon}
-        </span>
-      </button>
+          {isLoading && <Spinner size="sm" className="text-current" />}
+          {!isLoading && startIcon}
+
+          <span
+            className={twMerge(
+              "relative flex gap-2 group-hover:text-black hover:cursor-pointer",
+              childrenWrapperClassName
+            )}
+          >
+            {props.children}
+            {!isLoading && endIcon}
+          </span>
+        </button>
+        {isSketch && <div className="button-bg" />}
+      </div>
     );
   }
 );
@@ -88,7 +83,7 @@ Button.propTypes = {
   children: PropTypes.node,
   type: PropTypes.string,
   size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
-  variant: PropTypes.oneOf(["primary", "inverse", "danger", "sketch"]),
+  variant: PropTypes.oneOf(["primary", "inverse", "danger", "none"]),
   isLoading: PropTypes.bool,
   disabled: PropTypes.bool,
   isSketch: PropTypes.bool,

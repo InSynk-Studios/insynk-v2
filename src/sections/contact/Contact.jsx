@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import * as z from "zod";
-import { useInputFields } from "@/hooks/useInputFields";
 
-import { Button } from "@/components/Elements";
+import { Button, Input, Textarea } from "@/components/Elements";
 import { Form } from "@/components/Form/Form";
-import { Input } from "@/components/Elements";
 
 import FormBulb from "@/assets/illustration/form_bulb.svg";
 import PaperPlane from "@/assets/icons/paper_plane.svg";
@@ -13,15 +11,27 @@ import PaperPlane from "@/assets/icons/paper_plane.svg";
 const schema = z.object({
   name: z.string().min(1, "Required"),
   email: z.string().min(1, "Required"),
-  // description1: z.string().min(1, "Required"),
-  description2: z.string().min(1, "Required"),
+  description: z.string().min(1, "Required"),
 });
 
 const formStyles =
   "absolute flex justify-start items-start text-left font-caveat-700 text-2xl left-11 md:left-32";
 
 export const Contact = ({ hideSubmit = false }) => {
-  const { handleChange, showInput } = useInputFields();
+  const confirmHandler = (values) => {
+    fetch("https://formsubmit.co/ajax/support@insynkstudios.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: values.name,
+        email: values.email,
+        message: values.description,
+      }),
+    }).then((response) => {});
+  };
 
   return (
     <section
@@ -30,7 +40,7 @@ export const Contact = ({ hideSubmit = false }) => {
     >
       <Form
         onSubmit={async (values) => {
-          alert(JSON.stringify(values, null, 2));
+          confirmHandler(values);
         }}
         schema={schema}
       >
@@ -74,49 +84,14 @@ export const Contact = ({ hideSubmit = false }) => {
                 and I have this insane idea that I want to work upon. Here’s the
                 gist of the idea
               </p>
-              <Input
-                name="input-1"
-                onChange={handleChange}
-                border="dashed"
-                maxLength={110}
-                size="full"
-                wrapperClassName="w-full"
-                type="text"
-                className="bg-transparent h-7 p-0"
+              <Textarea
                 placeholder="About what you’re building in brief"
-                // error={formState.errors["description1"]}
-                // registration={register("description1")}
+                wrapperClassName="w-full"
+                rows={3}
+                className="w-full overflow-hidden border-none underline decoration-dashed resize-none bg-transparent underline-offset-8"
+                error={formState.errors["description"]}
+                registration={register("description")}
               />
-              {showInput && (
-                <>
-                  <Input
-                    name="input-2"
-                    onChange={handleChange}
-                    border="dashed"
-                    maxLength={110}
-                    size="full"
-                    wrapperClassName="w-full"
-                    type="text"
-                    className="bg-transparent -mb-1 h-7 p-0"
-                    placeholder=""
-                    // error={formState.errors["description1"]}
-                    // registration={register("description1")}
-                  />
-                  <Input
-                    name="input-3"
-                    onChange={handleChange}
-                    border="dashed"
-                    maxLength={110}
-                    size="full"
-                    wrapperClassName="w-full"
-                    type="text"
-                    className="bg-transparent mt-1 h-7 p-0"
-                    placeholder=""
-                    // error={formState.errors["description1"]}
-                    // registration={register("description1")}
-                  />
-                </>
-              )}
             </span>
             <span className={`${formStyles} gap-2 bottom-44 w-2/4`}>
               <p className="w-40">Contact me at</p>
@@ -140,9 +115,9 @@ export const Contact = ({ hideSubmit = false }) => {
               <div className={`${formStyles} bottom-16 mt-12`}>
                 <Button
                   type="submit"
-                  variant="sketch"
+                  variant="none"
                   isSketch={true}
-                  size="lg"
+                  size="md"
                   sketchFrontColor="bg-brand-primary-200"
                   className="uppercase"
                   endIcon={
