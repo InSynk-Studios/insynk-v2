@@ -7,7 +7,7 @@ export const Services = () => {
   return (
     <section className="flex flex-col justify-start items-center gap-12 text-center mt-32 w-full bg-brand-background-200">
       <div className="mt-10">
-        <h1 className="font-tanker-400 font-normal text-4xl text-brand-primary-400">
+        <h1 className="font-recoleta-500 font-normal text-4xl text-brand-primary-400">
           We can help you with
         </h1>
       </div>
@@ -24,7 +24,7 @@ export const Services = () => {
                 <Image priority src={item.image} alt="" />
                 <div className="flex flex-col gap-3 items-start justify-between h-full">
                   <div className="text-left space-y-3">
-                    <h1 className="font-tanker-400 font-normal leading-[65px] text-brand-primary-400 text-3xl md:text-5xl w-full">
+                    <h1 className="font-recoleta-500 font-normal leading-[65px] text-brand-primary-400 text-3xl md:text-5xl w-full">
                       {item.id}. {item.title}
                     </h1>
                     <p className="h-fit font-dmsans-400 tracking-[-0.015em] leading-6 font-normal text-sm md:text-base w-full">

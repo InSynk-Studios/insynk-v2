@@ -1,3 +1,18 @@
+/* Recoleta-500 */
+@font-face {
+  font-family: "Recoleta-500";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Recoleta-Medium.ttf"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/Recoleta-Medium.ttf") format("truetype"),
+    /* IE6-IE8 */ url("../fonts/Recoleta-Medium.ttf") format("ttf"),
+    /* Super Modern Browsers */ url("../fonts/Recoleta-Medium.ttf")
+      format("truetype"),
+    /* Modern Browsers */ url("../fonts/Recoleta-Medium.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/Recoleta-Medium.ttf")
+      format("svg"); /* Legacy iOS */
+}
 /* Caveat-700 */
 @font-face {
   font-family: "Caveat-700";

@@ -35,7 +35,7 @@ export default function Blogs({ posts }) {
     <main className="flex flex-col mt-[185px] mb-32 justify-center items-center">
       <div className="flex flex-row justify-between items-center w-4/6">
         <span className="flex flex-col gap-2">
-          <h1 className="text-4xl lg:text-5xl font-tanker-400 leading-[65px] text-brand-secondary-200">
+          <h1 className="text-4xl lg:text-5xl font-recoleta-500 leading-[65px] text-brand-secondary-200">
             InSynk blogs
           </h1>
           <p className="font-dmsans-400 text-base leading-6 tracking-[-0.015em] w-4/5">

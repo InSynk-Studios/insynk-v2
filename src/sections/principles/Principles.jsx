@@ -26,7 +26,7 @@ export const Principles = () => {
   return (
     <section className="flex flex-col justify-start items-center mt-32 w-full">
       <div className="grid grid-rows-2 sm:grid-cols-2 gap-2 w-11/12 xl:w-4/5">
-        <h1 className="font-tanker-400 text-brand-primary-400 text-3xl lg:text-[40px] leading-[54px] w-5/6 lg:w-3/4">
+        <h1 className="font-recoleta-500 text-brand-primary-400 text-3xl lg:text-[40px] leading-[54px] w-5/6 lg:w-3/4">
           set of principles which we live by
         </h1>
         <p className="font-dmsans-400 leading-7 tracking-[-0.015em] font-normal w-11/12 text-base lg:text-xl">

@@ -7,7 +7,7 @@ import TeamBuilding from "@/assets/illustration/carouselCard/team_building.svg";
 export const CarouselData = [
   {
     id: 1,
-    title: "be flexible to changes",
+    title: "Be flexible to changes",
     image: GirlDoingYoga,
     cardColor: "bg-brand-background-500",
     description:
@@ -15,7 +15,7 @@ export const CarouselData = [
   },
   {
     id: 2,
-    title: "bias of action",
+    title: "Bias of action",
     image: LadyRushing,
     cardColor: "bg-brand-background-600",
     description:
@@ -31,7 +31,7 @@ export const CarouselData = [
   },
   {
     id: 4,
-    title: "have fun while building",
+    title: "Have fun while building",
     image: TeamBuilding,
     cardColor: "bg-brand-background-800",
     description:

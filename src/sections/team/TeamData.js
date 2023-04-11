@@ -1,4 +1,5 @@
-import Aman from "@/assets/illustration/team/aman_picture.svg";
+import Aman from "@/assets/aman.png";
+import Vishnu from "@/assets/vishnu.png";
 import AmanSign from "@/assets/illustration/team/aman_sign.svg";
 
 export const TeamList = [
@@ -47,7 +48,7 @@ export const FounderList = [
   },
   {
     id: 5,
-    image: Aman,
+    image: Vishnu,
     name: "Vishnu malviya, co-founder",
     quote:
       "“I believe in building non-stop. Helping solve problems which have an impact ”",

@@ -38,7 +38,7 @@ export const Card = React.forwardRef(
         >
           <h1
             className={twMerge(
-              "relative text-black font-tanker-400 font-normal",
+              "relative text-black font-recoleta-500 font-normal",
               cardTitleClass
             )}
           >

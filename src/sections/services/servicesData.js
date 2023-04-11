@@ -7,7 +7,7 @@ import Overlay from "../../assets/illustration/services/overlay.svg";
 export const serviceData = [
   {
     id: 1,
-    title: "product scoping",
+    title: "Product scoping",
     color: "bg-brand-background-300",
     image: ProductScoping,
     description:
@@ -16,7 +16,7 @@ export const serviceData = [
   },
   {
     id: 2,
-    title: "designs",
+    title: "Designs",
     color: "bg-brand-background-400",
     image: Design,
     description:

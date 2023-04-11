@@ -5,11 +5,11 @@ import ManWithCape from "@/assets/illustration/man_with_cape.svg";
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-center bg-brand-background-200 h-[543px] items-center">
-      <div className="grid grid-cols-1 place-content-between sm:grid-cols-2 3xl:gap-x-40">
+    <footer className="flex justify-center bg-brand-background-200 sm:h-[543px] items-center">
+      <div className="grid grid-cols-1 place-content-between mt-12 sm:mt-0 px-5 sm:px-0 sm:grid-cols-2 3xl:gap-x-40">
         <div className="flex flex-col gap-6 justify-center">
           <Image src={Logo} alt="" width={94} height={40} />
-          <h1 className="font-tanker-400 text-5xl md:text-[64px] w-5/6 xl:w-4/6">
+          <h1 className="font-recoleta-500 text-5xl md:text-[64px] w-5/6 xl:w-4/6">
             build great products
           </h1>
           <p className="font-dmsans-400 text-xs">

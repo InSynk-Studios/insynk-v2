@@ -19,7 +19,7 @@ const ResponsiveImage = (props) => <Image alt={props.alt} fill {...props} />;
 const components = { img: ResponsiveImage };
 
 const proseHeadingStyle =
-  "prose-h1:text-brand-primary-400 prose-h1:text-5xl prose-h1:font-tanker-400 prose-h1:leading-[65px] prose-h3:font-dmsans-700 prose-h3:text-xl prose-h3:leading-[30px] prose-h3:tracking-[-0.015em]";
+  "prose-h1:text-brand-primary-400 prose-h1:text-5xl prose-h1:font-recoleta-500 prose-h1:leading-[65px] prose-h3:font-dmsans-700 prose-h3:text-xl prose-h3:leading-[30px] prose-h3:tracking-[-0.015em]";
 
 const proseParagraphStyle =
   "prose-p:text-lg prose-p:font-dmsans-400 prose-p:leading-[27px] prose-p:tracking-[-0.015em]";
@@ -57,7 +57,7 @@ const PostPage = ({
               </div>
             ))}
           </div>
-          <h1 className="text-brand-primary-400 text-5xl mb-5 font-tanker-400 leading-[65px]">
+          <h1 className="text-brand-primary-400 text-5xl mb-5 font-recoleta-500 leading-[65px]">
             {title}
           </h1>
           <p className="font-dmsans-400 text-base tracking-[-0.015em] leading-6">
@@ -107,7 +107,7 @@ const PostPage = ({
           </span>
         </div>
       </div>
-      
+
       <div className="flex flex-col justify-center items-center mt-[156px] gap-24">
         <div className="w-11/12 border-brand-primary-400 border-t">
           <div className="flex justify-between mb-6 mt-10">
