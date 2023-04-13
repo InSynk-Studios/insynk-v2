@@ -25,7 +25,7 @@ export const CarouselData = [
     id: 3,
     title: "Becoming obsessed with the craft",
     image: ConceptOfResearch,
-    cardColor: "bg-brand-background-800",
+    cardColor: "bg-brand-background-500",
     description:
       "We like to be extremely detail-oriented with whatever we build. Chasing perfection is something we always do at InSynk. ",
   },
@@ -33,7 +33,7 @@ export const CarouselData = [
     id: 4,
     title: "Have fun while building",
     image: TeamBuilding,
-    cardColor: "bg-brand-background-800",
+    cardColor: "bg-brand-background-500",
     description:
       "Last but not the least, we are the most fun folks to work with. We simply enjoy building something cool with cool people!  ",
   },

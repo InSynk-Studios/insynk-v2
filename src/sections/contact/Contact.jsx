@@ -36,7 +36,7 @@ export const Contact = ({ hideSubmit = false }) => {
   return (
     <section
       id="ContactForm"
-      className="flex relative justify-start items-center gap-12 text-center -mb-14 xl:-mb-40 3xl:-mb-36 4xl:-mb-24 w-11/12 h-screen"
+      className="flex relative mx-auto justify-start items-center gap-12 text-center -mb-14 xl:-mb-40 3xl:-mb-36 4xl:-mb-24 w-11/12 h-screen"
     >
       <Form
         onSubmit={async (values) => {
@@ -118,8 +118,9 @@ export const Contact = ({ hideSubmit = false }) => {
                   variant="none"
                   isSketch={true}
                   size="md"
+                  childrenWrapperClassName="text-sm text-xl"
                   sketchFrontColor="bg-brand-primary-200"
-                  className="uppercase"
+                  className="uppercase py-2 px-2 sm:px-4"
                   endIcon={
                     <Image
                       priority

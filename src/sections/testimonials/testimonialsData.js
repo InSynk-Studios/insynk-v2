@@ -5,6 +5,7 @@ import VishnuPic from "@/assets/vishnu.png";
 export const testimonialsData = [
   {
     id: 1,
+    organization: "Grail",
     name: "Aman sharma",
     position: "Founder",
     logo: logo,
@@ -14,6 +15,7 @@ export const testimonialsData = [
   },
   {
     id: 2,
+    organization: "Openpark",
     name: "Vishnu Malviya",
     position: "Founder",
     logo: logo,
@@ -23,6 +25,7 @@ export const testimonialsData = [
   },
   {
     id: 3,
+    organization: "Openpark",
     name: "Aman sharma",
     position: "Founder",
     logo: logo,
@@ -32,6 +35,7 @@ export const testimonialsData = [
   },
   {
     id: 4,
+    organization: "Grail",
     name: "Vishnu Malviya",
     position: "Founder",
     logo: logo,
@@ -41,6 +45,7 @@ export const testimonialsData = [
   },
   {
     id: 5,
+    organization: "Grail",
     name: "Aman sharma",
     position: "Founder",
     logo: logo,
@@ -50,6 +55,7 @@ export const testimonialsData = [
   },
   {
     id: 6,
+    organization: "Grail",
     name: "Vishnu Malviya",
     position: "Founder",
     logo: logo,

@@ -16,6 +16,26 @@
 }
 
 @layer utilities {
+  .work-card-button span {
+    transform: translateX(-101%);
+    transition: transform 0.2s ease-in;
+  }
+  .work-card-button:hover span {
+    transform: translateX(0);
+  }
+  .stretched-image {
+    width: 100%;
+  }
+  .card-flip {
+    @apply flex-row-reverse bg-brand-background-500;
+  }
+  .card-flip:nth-child(even) {
+    @apply flex-row-reverse bg-brand-background-500;
+  }
+  .card-flip:nth-child(odd) {
+    @apply flex-row-reverse;
+  }
+
   .service-card-background:nth-child(even) {
     @apply -mr-32 w-fit;
   }

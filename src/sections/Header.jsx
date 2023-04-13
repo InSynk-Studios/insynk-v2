@@ -31,6 +31,7 @@ export const Header = () => {
 
   const navigation = [
     { name: "Home", to: `/` },
+    { name: "Work", to: `/work` },
     {
       name: "Blogs",
       to: `/blogs`,

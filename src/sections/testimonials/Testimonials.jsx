@@ -10,6 +10,7 @@ import OpenParkLogo from "@/assets/openpark_logo.svg";
 import Jared from "@/assets/testimonials/jared.png";
 import TestmonilaEdgeLines from "@/assets/illustration/testimonial_edgelines.svg";
 import TestimonialOverlayButton from "@/assets/icons/testimonial_overlay_button.svg";
+import TestimonialCard from "./components/TestimonialCard";
 
 export const Testimonials = () => {
   const [removePadding, setRemovePadding] = useState(false);
@@ -91,33 +92,7 @@ export const Testimonials = () => {
         >
           {testimonialsData?.map((item) => (
             <div key={item.id} className="inline-block">
-              <div className="flex flex-col pl-3 pt-[38px] pb-[46px] justify-center items-center bg-white h-[222px] w-[584px]">
-                <div className="w-5/6">
-                  <p className="leading-6 font-recoleta-500 text-brand-primary-400">
-                    {'"'} {item.testimonial}
-                    {'"'}
-                  </p>
-                  <div className="flex flex-row gap-4 mt-6 items-center">
-                    <Image
-                      priority
-                      src={item.image}
-                      alt=""
-                      className="rounded-full w-10 h-10"
-                    />
-                    <div className="flex flex-row justify-between w-full">
-                      <span>
-                        <h3 className="font-dmsans-700 leading-6 tracking-[-0.015em]">
-                          {item.name}
-                        </h3>
-                        <h4 className="font-dmsans-400 leading-6 tracking-[-0.015em]">
-                          {item.position}
-                        </h4>
-                      </span>
-                      <Image priority src={item.logo} alt="" className="h-11" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TestimonialCard item={item} />
             </div>
           ))}
         </Carousel>

@@ -1,12 +1,10 @@
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
-import { Contact } from "@/sections";
 import { Carousel } from "@/components/Elements";
 import ArrowBack from "@/assets/icons/arrow_back.svg";
 import LinkSvg from "@/assets/icons/link.svg";
@@ -166,7 +164,6 @@ const PostPage = ({
             </Carousel>
           </div>
         </div>
-        <Contact />
       </div>
     </section>
   );

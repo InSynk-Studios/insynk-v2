@@ -194,7 +194,6 @@ module.exports = {
           100: "#33322E",
         },
         background: {
-          800: "#F9F3E5",
           700: "#EDEFE3",
           600: "#FFDBC2",
           500: "#F9F3E5",
