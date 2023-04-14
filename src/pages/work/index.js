@@ -8,13 +8,13 @@ import ArrowBold from "@/assets/icons/arrow_bold.svg";
 
 export default function Work({ posts }) {
   return (
-    <main className="flex flex-col mt-[185px] justify-center items-center mb-10 sm:mb-0">
+    <main className="flex flex-col mt-36 sm:mt-[185px] justify-center items-center mb-10 sm:mb-0">
       <div className="flex flex-col justify-between gap-9 w-full items-center">
         <span className="flex flex-col justify-center items-center text-center gap-2">
-          <h1 className="text-4xl lg:text-[64px] font-recoleta-500 leading-[65px] text-brand-secondary-200">
+          <h1 className="text-5xl lg:text-[64px] font-recoleta-500 leading-[65px] text-brand-secondary-200">
             Case Studies
           </h1>
-          <p className="font-dmsans-400 text-base leading-6 tracking-[-0.015em] sm:w-3/5">
+          <p className="font-dmsans-400 text-sm sm:text-base leading-6 tracking-[-0.015em] sm:w-3/5">
             We help founders and teams with the craziest world-changing vision
             to build out their ideas to disruptive products with our technical
             expertise.
