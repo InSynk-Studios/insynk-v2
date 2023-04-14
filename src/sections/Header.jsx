@@ -32,10 +32,6 @@ export const Header = () => {
 
   useEffect(() => {}, [navbar]);
 
-  function toggleSidebar() {
-    setNavbar(!navbar);
-  }
-
   const navigation = [
     { name: "Home", to: `/` },
     { name: "Work", to: `/work` },
@@ -55,55 +51,56 @@ export const Header = () => {
   return (
     <nav
       className={`w-full top-0 fixed bg-brand-background-100 px-5 sm:px-14 z-10 trasition ease-in-out duration-500 ${
-        animateHeader ? "py-4 border-b-2 bg-brand-secondary-200" : "pt-5 sm:pt-10"
+        animateHeader
+          ? "py-4 border-b-2 bg-brand-secondary-200"
+          : "pt-5 sm:pt-10"
       }`}
     >
       <div
         className={`justify-between mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex `}
       >
-        <div>
-          <div className="relative h-14 w-full sm:w-32 flex items-center justify-between md:block">
-            <Link href="/">
-              {animateHeader ? (
-                <Image
-                  priority
-                  src={LogoInWhite}
-                  className="hover:cursor-pointer h-10 w-full sm:h-full"
-                  alt="logo"
-                />
+        <div className="relative h-14 w-full lg:w-32 flex items-center justify-between lg:block">
+          <Link href="/">
+            {animateHeader ? (
+              <Image
+                priority
+                src={LogoInWhite}
+                className="hover:cursor-pointer h-10 w-full sm:h-full"
+                alt="logo"
+              />
+            ) : (
+              <Image
+                priority
+                src={Logo}
+                className="hover:cursor-pointer h-10 w-full sm:h-full"
+                alt="logo"
+              />
+            )}
+          </Link>
+          {/* Sidebar toggle button */}
+          <div className="lg:hidden">
+            <button
+              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+              onClick={() => setNavbar(!navbar)}
+              data-te-sidenav-toggle-ref
+              data-te-target="#sidenav"
+              aria-controls="#sidenav"
+              aria-haspopup="true"
+            >
+              {navbar ? (
+                <Image src={CrossIcon} alt="CrossIcon" />
+              ) : animateHeader ? (
+                <Image src={HamburgerWhiteIcon} alt="HamBurger" />
               ) : (
-                <Image
-                  priority
-                  src={Logo}
-                  className="hover:cursor-pointer h-10 w-full sm:h-full"
-                  alt="logo"
-                />
+                <Image src={HamburgerBlackIcon} alt="HamBurger" />
               )}
-            </Link>
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-                data-te-sidenav-toggle-ref
-                data-te-target="#sidenav"
-                aria-controls="#sidenav"
-                aria-haspopup="true"
-              >
-                {navbar ? (
-                  <Image src={CrossIcon} alt="CrossIcon" />
-                ) : animateHeader ? (
-                  <Image src={HamburgerWhiteIcon} alt="HamBurger" />
-                ) : (
-                  <Image src={HamburgerBlackIcon} alt="HamBurger" />
-                )}
-              </button>
-            </div>
+            </button>
           </div>
         </div>
         <div>
           {/* Desktop navigation */}
-          <div className={"hidden sm:block mx-auto"}>
-            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
+          <div className={"hidden lg:block mx-auto"}>
+            <ul className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:flex lg:space-x-4 lg:space-y-0">
               {navigation.map((navigate) => (
                 <li key={navigate.name}>
                   <Link
@@ -149,7 +146,7 @@ export const Header = () => {
                 <Image src={CrossIcon} className="bg-white" alt="CrossIcon" />
               </button>
             </span>
-            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
+            <ul className="flex flex-col lg:flex-row items-center justify-center space-y-8 md:flex lg:space-x-4 lg:space-y-0">
               {navigation.map((navigate) => (
                 <li key={navigate.name}>
                   <Link
