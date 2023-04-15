@@ -39,7 +39,9 @@ about: ["700K+ Users",
 
 <img src="/work/grail_issuer.svg" weight="800" height="600" alt="" />
 
-<p className="text-center prose-p:font-caveat-400">Bringing out the best possible solutions in the most creative way </p>
+<div className="flex justify-center mb-12">
+<span className="text-center font-caveat-400">Bringing out the best possible solutions in the most creative way </span>
+</div>
 
 <div className="grid grid-cols-2">
 <span>

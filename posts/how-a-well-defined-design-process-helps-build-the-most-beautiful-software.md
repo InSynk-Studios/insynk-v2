@@ -17,7 +17,7 @@ featured: true
 <br/>
 
 <div className="flex justify-center">
-<img src="/blog/product_planning.svg" width="300" height="300"/>
+<img src="/blog/product_planning.svg" width="600" height="400"/>
 </div>
 
 As a team of engineers and creative designers, we know the importance of planning and preparation. Just like you wouldn't build a house without a blueprint, you shouldn't launch a software product without a solid product scope.

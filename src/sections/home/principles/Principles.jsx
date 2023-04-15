@@ -25,8 +25,8 @@ export const Principles = () => {
 
   return (
     <section className="flex flex-col justify-start items-center mt-14 lg:mt-32 w-full">
-      <div className="grid grid-rows-2 lg:grid-cols-2 w-11/12 xl:w-4/5">
-        <h1 className="font-recoleta-500 text-brand-primary-400 text-xl sm:text-[32px] lg:text-[40px] leading-[27px] sm:leading-[43px] lg:leading-[54px] w-full lg:w-3/4">
+      <div className="grid grid-rows-2 sm:grid-cols-2 w-11/12 xl:w-4/5">
+        <h1 className="font-recoleta-500 text-brand-primary-400 text-xl sm:text-[32px] lg:text-[40px] leading-[27px] sm:leading-[43px] lg:leading-[54px] w-full sm:w-11/12 lg:w-3/4">
           set of principles which we live by
         </h1>
         <p className="font-dmsans-400 leading-[18px] lg:leading-7 tracking-[-0.015em] font-normal w-11/12 text-xs sm:text-sm lg:text-xl">

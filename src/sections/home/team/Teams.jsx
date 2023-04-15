@@ -15,12 +15,12 @@ export const Teams = () => {
         alt=""
       />
       <div className="flex flex-col items-center mt-12 lg:mt-32">
-        <h1 className="flex items-start justify-center w-full font-recoleta-500 font-normal text-4xl text-brand-primary-400">
+        <h1 className="flex items-start justify-center w-full font-recoleta-500 font-normal text-xl lg:text-4xl text-brand-primary-400">
           the team
           <Image priority src={TeamTopLines} alt="" />
         </h1>
         <Image priority src={CurlyLine} alt="" />
-        <p className="font-dmsans-400 font-normal text-xl leading-7 tracking-tight text-brand-primary-400">
+        <p className="font-dmsans-400 font-normal lg:text-xl leading-7 tracking-tight text-brand-primary-400">
           Working tirelessly to bring visions into reality
         </p>
       </div>
@@ -49,7 +49,7 @@ export const Teams = () => {
           </div>
         ))}
       </div> */}
-      <div className="grid grid-rows-1 sm:grid-cols-2 gap-5 mt-20 lg:mt-28 w-5/6">
+      <div className="grid grid-rows-1 sm:grid-cols-2 gap-8 lg:gap-5 mt-12 lg:mt-28 w-5/6">
         {FounderList.map((founder) => (
           <div
             key={founder.name}
@@ -58,25 +58,25 @@ export const Teams = () => {
             <Image
               priority
               src={founder.image}
-              className="rounded-full"
+              className="rounded-full h-32 w-32 sm:h-[211px] sm:w-[211px]"
               alt=""
             />
             <h2 className="font-dmsans-400 text-xs leading-4 inline-block tracking-[0.185em]">
               {founder.name}
             </h2>
-            <h2 className="font-caveat-400 text-[22.351px] leading-[22px] mx-5 w-5/6">
+            <h2 className="font-caveat-400 text-[22.351px] leading-[22px] lg:mx-5 lg:w-5/6">
               {founder.quote}
             </h2>
-            <span className="w-5/6">
-              <p className="font-dmsans-400 text-left text-base leading-6 tracking-[-0.015em]">
+            <span className="lg:w-5/6">
+              <p className="font-dmsans-400 text-left text-base leading-[21px] lg:leading-6 tracking-[-0.015em]">
                 {founder.about}
               </p>
-              <Image
+              {/* <Image
                 priority
                 src={founder.signature}
                 className="place-self-start mt-[42px]"
                 alt=""
-              />
+              /> */}
             </span>
           </div>
         ))}

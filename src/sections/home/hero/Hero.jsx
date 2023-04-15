@@ -8,12 +8,12 @@ import BestInIndustry from "@/assets/illustration/hero/best_in_industry.svg";
 
 export const Hero = () => {
   return (
-    <section className="flex flex-col justify-center items-center text-center h-screen mt-5 sm:mt-36 lg:mt-20 w-11/12 lg:w-5/6">
-      <h1 className="font-recoleta-500 text-brand-primary-400 font-medium leading-8 sm:leading-[87px] mb-10 w-full 3xl:w-5/6 text-2xl sm:text-5xl lg:text-[64px]">
+    <section className="flex flex-col justify-center items-center text-center mt-32 sm:mt-36 lg:mt-40 w-11/12 lg:w-5/6">
+      <h1 className="font-recoleta-500 text-brand-primary-400 font-medium leading-[33px] sm:leading-[60px] lg:leading-[87px] mb-10 w-full 3xl:w-5/6 text-2xl sm:text-5xl lg:text-[64px]">
         We believe in creating products which are{" "}
         <span className="text-brand-primary-100">InSynk</span> with the future
       </h1>
-      <div className="grid grid-cols-4 w-full h-[200px] md:h-[363px] lg:w-[1040px] lg:mt-10">
+      <div className="grid grid-cols-4 w-full h-[158px] md:h-[363px] lg:w-[1040px] lg:mt-10">
         <div
           className={`relative h-full w-full place-self-center xl:-mr-36 xl:-mt-12`}
         >
@@ -36,7 +36,7 @@ export const Hero = () => {
           <Image priority fill src={BestInIndustry} alt="" />
         </div>
       </div>
-      <h2 className="font-caveat-700 text-3xl font-bold">Insynk studios</h2>
+      <h2 className="font-caveat-700 text-base lg:text-3xl font-bold">Insynk studios</h2>
     </section>
   );
 };

@@ -8,7 +8,7 @@ import ArrowBold from "@/assets/icons/arrow_bold.svg";
 
 export default function Work({ posts }) {
   return (
-    <main className="flex flex-col mt-36 sm:mt-[185px] justify-center items-center mb-10 sm:mb-0">
+    <main className="flex flex-col w-full mt-36 sm:mt-[185px] justify-center items-center mb-10 sm:mb-0">
       <div className="flex flex-col justify-between gap-9 w-full items-center">
         <span className="flex flex-col justify-center items-center text-center gap-2">
           <h1 className="text-5xl lg:text-[64px] font-recoleta-500 leading-[65px] text-brand-secondary-200">
@@ -32,15 +32,15 @@ export default function Work({ posts }) {
       </div>
 
       {posts.map((post, index) => (
-        <div key={index}>
+        <div key={index} className="w-full">
           <div
             className={`flex flex-col ${
               index === 1
                 ? "bg-brand-background-500 sm:card-flip"
                 : "sm:flex-row"
-            } bg-brand-background-300 sm:gap-3 h-full`}
+            } bg-brand-background-300 sm:gap-3 w-full h-full`}
           >
-            <div className="grid grid-rows-2 gap-5 place-self-center sm:gap-3 w-full p-5 sm:py-[90px] sm:pr-[106px] sm:pl-16">
+            <div className="grid grid-rows-2 gap-3 lg:gap-5 place-self-center sm:gap-3 w-full p-5 sm:py-[90px] sm:pr-[106px] sm:pl-16">
               <span className="w-fit">
                 <Image
                   src={post.frontMatter.image}
@@ -51,7 +51,7 @@ export default function Work({ posts }) {
                   alt=""
                 />
               </span>
-              <div className="flex flex-row gap-5 h-fit">
+              <div className="flex flex-row gap-3 lg:gap-5 h-fit">
                 <span>
                   <Image
                     src={post.frontMatter.image3}
@@ -100,9 +100,9 @@ export default function Work({ posts }) {
               <div className="w-fit mt-10">
                 <Link
                   href={"/work/" + post.slug}
-                  className="relative work-card-button pb-2 overflow-hidden flex justify-start items-start gap-2 font-dmsans-700 text-brand-secondary-200 sm:text-xl leading-6 tracking-[-0.015em] hover:cursor-pointer h-fit"
+                  className="relative work-card-button pb-2 overflow-hidden flex justify-start items-center gap-2 font-dmsans-700 text-brand-secondary-200 sm:text-xl leading-6 tracking-[-0.015em] hover:cursor-pointer h-fit"
                 >
-                  <span class="absolute inset-x-0 h-1 bottom-0 bg-white"></span>
+                  <span class="absolute inset-x-0 h-1 bottom-0 bg-brand-primary-400"></span>
                   {post.frontMatter.link}
                   <Image
                     src={ArrowBold}

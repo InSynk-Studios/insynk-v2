@@ -5,8 +5,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
-import TestimonialCard from "@/sections/testimonials/components/TestimonialCard";
-import { testimonialsData } from "@/sections/testimonials/testimonialsData";
+import TestimonialCard from "@/sections/home/testimonials/components/TestimonialCard";
+import { testimonialsData } from "@/sections/home/testimonials/testimonialsData";
 import ArrowBack from "@/assets/icons/arrow_back.svg";
 
 const ResponsiveImage = (props) => <Image alt={props.alt} fill {...props} />;

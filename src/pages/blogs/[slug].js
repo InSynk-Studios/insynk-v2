@@ -93,12 +93,12 @@ const PostPage = ({
             <Link href={"#"} rel="noopener noreferrer" target="_blank">
               <Image src={Twitter} className="hover:cursor-pointer" alt="" />
             </Link>
-            <Link href={"#"} rel="noopener noreferrer" target="_blank">
+            <Link href={"https://www.linkedin.com/company/0xinsynkstudios/"} rel="noopener noreferrer" target="_blank">
               <Image src={Linkedin} className="hover:cursor-pointer" alt="" />
             </Link>
-            <Link href={"#"} rel="noopener noreferrer" target="_blank">
+            {/* <Link href={"#"} rel="noopener noreferrer" target="_blank">
               <Image src={FaceBook} className="hover:cursor-pointer" alt="" />
-            </Link>
+            </Link> */}
             <button onClick={copyToClipboard}>
               <Image src={LinkSvg} className="hover:cursor-pointer" alt="" />
             </button>

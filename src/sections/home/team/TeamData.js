@@ -53,7 +53,7 @@ export const FounderList = [
     quote:
       "“I believe in building non-stop. Helping solve problems which have an impact ”",
     about:
-      "3+ years of working in multiple startups. CS grad (BKBIET Pilani), Market Research & Strategy.",
+      "3+ years of working in multiple startups. CS grad, Market Research & Strategy.",
     signature: AmanSign,
   },
 ];

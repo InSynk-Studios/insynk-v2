@@ -36,7 +36,7 @@ export default function Blogs({ posts }) {
       <div className="flex flex-col sm:flex-row gap-8 lg:gap-0 justify-between items-center mx-5 lg:mx-0 lg:w-4/6">
         <span className="flex flex-col gap-2">
           <h1 className="text-4xl lg:text-5xl text-center sm:text-left font-recoleta-500 leading-[65px] text-brand-secondary-200">
-            InSynk blogs
+            InSynk Blogs
           </h1>
           <p className="font-dmsans-400 text-center sm:text-left text-base leading-6 tracking-[-0.015em] sm:w-4/5">
             Insights, stories, guides and experiences in building from the
@@ -49,7 +49,7 @@ export default function Blogs({ posts }) {
       <div className="mx-5 lg:mx-0 lg:w-4/5">
         <div className="3xl:w-11/12 4xl:w-5/6 mx-auto">
           {/* Filter */}
-          <div className="flex flex-col gap-4 justify-start sm:w-4/6 mt-20 mb-10">
+          <div className="flex flex-col gap-4 justify-start mt-20 mb-10">
             <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em]">
               Categories
             </h2>
@@ -79,7 +79,7 @@ export default function Blogs({ posts }) {
                 key={index}
                 className="hover:cursor-pointer"
               >
-                <div className="relative flex flex-col sm:flex-row hover:cursor-pointer mb-20 gap-3 w-full h-[450px] sm:w-full md:w-3/4 sm:h-[250px] md:h-[280px]">
+                <div className="relative flex flex-col sm:flex-row hover:cursor-pointer gap-3 w-full h-[450px] xl:w-3/4 sm:h-[250px] md:h-[280px]">
                   <div className="relative w-full h-full">
                     <Image src={post.frontMatter.image} fill alt="" />
                   </div>
@@ -119,7 +119,10 @@ export default function Blogs({ posts }) {
               </Link>
             ))}
         </div>
-        <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:w-11/12 4xl:w-5/6 mx-auto">
+
+        <hr class="h-px my-20 bg-brand-primary-400 mx-auto border-0 3xl:w-11/12 4xl:w-5/6" />
+
+        <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:w-11/12 4xl:w-5/6 mx-auto">
           {filteredContents.map((post, index) => (
             <Link
               href={"/blogs/" + post.slug}
@@ -127,8 +130,8 @@ export default function Blogs({ posts }) {
               key={index}
               className="hover:cursor-pointer h-5/6"
             >
-              <div className="relative inline-block hover:cursor-pointer mb-20 gap-3 w-full h-[300px] lg:h-[480px]">
-                <div className="relative w-full h-[225px] mb-3">
+              <div className="relative inline-block hover:cursor-pointer mb-20 gap-3 w-full h-[350px] lg:h-[480px]">
+                <div className="relative w-full h-5/6 lg:h-[225px] lg:mb-3">
                   <Image
                     src={post.frontMatter.image}
                     className="hover:cursor-pointer"

@@ -35,7 +35,7 @@ export const Testimonials = () => {
 
   return (
     <section className="flex flex-col justify-start items-center mt-14 w-full bg-brand-background-200">
-      <h1 className="flex flex-col items-center mt-16 justify-center w-fit text-center font-recoleta-500 font-normal text-3xl lg:text-[40px] text-brand-primary-400">
+      <h1 className="flex flex-col items-center mt-16 justify-center w-fit text-center font-recoleta-500 font-normal text-xl lg:text-[40px] text-brand-primary-400">
         what people are saying about us
         <Image priority src={Underline} className="mt-2" alt="" />
       </h1>
