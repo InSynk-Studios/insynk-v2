@@ -32,13 +32,13 @@ export default function Blogs({ posts }) {
   );
 
   return (
-    <main className="flex flex-col mt-[185px] mb-32 justify-center items-center">
-      <div className="flex flex-row justify-between items-center w-4/6">
+    <main className="flex flex-col mt-32 sm:mt-[185px] mb-32 justify-center items-center">
+      <div className="flex flex-col sm:flex-row gap-8 lg:gap-0 justify-between items-center mx-5 lg:mx-0 lg:w-4/6">
         <span className="flex flex-col gap-2">
-          <h1 className="text-4xl lg:text-5xl font-recoleta-500 leading-[65px] text-brand-secondary-200">
+          <h1 className="text-4xl lg:text-5xl text-center sm:text-left font-recoleta-500 leading-[65px] text-brand-secondary-200">
             InSynk blogs
           </h1>
-          <p className="font-dmsans-400 text-base leading-6 tracking-[-0.015em] w-4/5">
+          <p className="font-dmsans-400 text-center sm:text-left text-base leading-6 tracking-[-0.015em] sm:w-4/5">
             Insights, stories, guides and experiences in building from the
             InSynk team
           </p>
@@ -46,14 +46,14 @@ export default function Blogs({ posts }) {
         <Image src={ManReadingNewspaper} alt="" />
       </div>
 
-      <div className="w-4/5">
+      <div className="mx-5 lg:mx-0 lg:w-4/5">
         <div className="3xl:w-11/12 4xl:w-5/6 mx-auto">
           {/* Filter */}
-          <div className="flex flex-col gap-4 justify-start w-4/6 mt-20 mb-10">
+          <div className="flex flex-col gap-4 justify-start sm:w-4/6 mt-20 mb-10">
             <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em]">
               Categories
             </h2>
-            <div className="flex justify-start gap-1">
+            <div className="flex flex-wrap justify-start gap-2 sm:gap-1">
               {tabs.map((tab) => (
                 <Button
                   key={tab.id}
@@ -79,12 +79,12 @@ export default function Blogs({ posts }) {
                 key={index}
                 className="hover:cursor-pointer"
               >
-                <div className="relative flex flex-row hover:cursor-pointer mb-20 gap-3 w-56 h-72 md:w-3/4 md:h-[280px]">
+                <div className="relative flex flex-col sm:flex-row hover:cursor-pointer mb-20 gap-3 w-full h-[450px] sm:w-full md:w-3/4 sm:h-[250px] md:h-[280px]">
                   <div className="relative w-full h-full">
                     <Image src={post.frontMatter.image} fill alt="" />
                   </div>
 
-                  <div className="w-11/12 relative">
+                  <div className="sm:w-11/12 relative">
                     <div className="flex flex-row gap-1">
                       {post.frontMatter.tag.map((tagName, index) => (
                         <h3
@@ -101,15 +101,15 @@ export default function Blogs({ posts }) {
                     <p className="font-dmsans-400 text-sm leading-[21px] tracking-[-0.015em]">
                       {post.frontMatter.description}
                     </p>
-                    <div className="absolute bottom-0 flex flex-row w-full gap-3 h-16">
+                    <div className="sm:absolute bottom-0 mt-3 sm:mt-0 flex flex-row w-full gap-3 lg:h-16">
                       <span className="relative w-1/5">
                         <Image src={post.frontMatter.authorImage} fill alt="" />
                       </span>
                       <span className="flex flex-col">
-                        <p className="font-dmsans-500 text-brand-secondary-200 text-base leading-6 tracking-[-0.015em]">
+                        <p className="font-dmsans-500 text-brand-secondary-200 text-sm sm:text-base leading-6 tracking-[-0.015em]">
                           {post.frontMatter.author},
                         </p>
-                        <p className="font-dmsans-400 text-brand-primary-600 text-base leading-6 tracking-[-0.015em]">
+                        <p className="font-dmsans-400 text-brand-primary-600 text-sm sm:text-base leading-6 tracking-[-0.015em]">
                           {post.frontMatter.position}
                         </p>
                       </span>
@@ -119,7 +119,7 @@ export default function Blogs({ posts }) {
               </Link>
             ))}
         </div>
-        <div className="grid gap-x-8 gap-y-10 grid-cols-3 xl:grid-cols-3 3xl:w-11/12 4xl:w-5/6 mx-auto">
+        <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:w-11/12 4xl:w-5/6 mx-auto">
           {filteredContents.map((post, index) => (
             <Link
               href={"/blogs/" + post.slug}
@@ -127,7 +127,7 @@ export default function Blogs({ posts }) {
               key={index}
               className="hover:cursor-pointer w-fit"
             >
-              <div className="relative inline-block hover:cursor-pointer w-56 h-72 md:w-[319px] md:h-[484px]">
+              <div className="relative inline-block hover:cursor-pointer mb-20 gap-3 w-full h-[300px] lg:w-3/4 lg:h-[280px]">
                 <div className="relative w-full h-[225px] mb-3 hover:cursor-pointer">
                   <Image src={post.frontMatter.image} fill alt="" />
                 </div>
@@ -144,10 +144,10 @@ export default function Blogs({ posts }) {
                 <h1 className="font-dmsans-700 text-lg mb-2 leading-[22px] tracking-[-0.015em]">
                   {post.frontMatter.title}
                 </h1>
-                <p className="font-dmsans-400 text-sm mb-[51px] leading-[21px] tracking-[-0.015em]">
+                <p className="font-dmsans-400 text-sm lg:mb-[51px] leading-[21px] tracking-[-0.015em]">
                   {post.frontMatter.description}
                 </p>
-                <div className="absolute bottom-0 flex flex-row w-full h-9 gap-[11px]">
+                <div className="lg:absolute bottom-0 mt-3 lg:mt-0 flex flex-row w-full gap-3 lg:h-16">
                   <span className="relative w-8">
                     <Image src={post.frontMatter.authorImage} fill alt="" />
                   </span>

@@ -50,7 +50,7 @@ export const Header = () => {
 
   return (
     <nav
-      className={`w-full top-0 fixed bg-brand-background-100 px-5 sm:px-14 z-10 trasition ease-in-out duration-500 ${
+      className={`w-full top-0 fixed bg-brand-background-100 px-5 lg:px-14 z-10 trasition ease-in-out duration-500 ${
         animateHeader
           ? "py-4 border-b-2 bg-brand-secondary-200"
           : "pt-5 sm:pt-10"
