@@ -7,14 +7,14 @@ import CurvedLine from "@/assets/illustration/curved_line_team.svg";
 
 export const Teams = () => {
   return (
-    <section className="relative flex flex-col justify-start items-center gap-12 text-center mt-44 w-full">
+    <section className="relative flex flex-col justify-start items-center gap-12 text-center mt-20 lg:mt-44 w-full">
       <Image
         priority
         src={CurvedLine}
         className="w-full absolute top-0"
         alt=""
       />
-      <div className="flex flex-col items-center mt-32">
+      <div className="flex flex-col items-center mt-12 lg:mt-32">
         <h1 className="flex items-start justify-center w-full font-recoleta-500 font-normal text-4xl text-brand-primary-400">
           the team
           <Image priority src={TeamTopLines} alt="" />
@@ -49,7 +49,7 @@ export const Teams = () => {
           </div>
         ))}
       </div> */}
-      <div className="grid grid-rows-1 sm:grid-cols-2 gap-5 mt-28 w-5/6">
+      <div className="grid grid-rows-1 sm:grid-cols-2 gap-5 mt-20 lg:mt-28 w-5/6">
         {FounderList.map((founder) => (
           <div
             key={founder.name}

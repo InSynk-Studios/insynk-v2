@@ -11,7 +11,7 @@ export const Services = () => {
           We can help you with
         </h1>
       </div>
-      <div className="w-11/12 md:w-2/3 z-0">
+      <div className="w-11/12 lg:w-2/3 z-0">
         {serviceData?.map((item) => (
           <Card
             key={item.id}
@@ -19,12 +19,12 @@ export const Services = () => {
             wrapperClassName="service-card-background"
             className="w-full 4xl:w-[1019px] md:h-[403px] mb-16"
           >
-            <div className="flex items-center justify-between h-full 2xl:justify-center  px-5 md:px-16 md:py-14">
-              <div className="flex flex-col my-7 xl:gap-8 3xl:gap-12 items-center md:my-0 md:flex-row h-full">
+            <div className="flex items-center justify-between h-full 2xl:justify-center px-5 md:px-16 md:py-14">
+              <div className="flex flex-col my-7 gap-4 xl:gap-8 3xl:gap-12 lg:items-center md:my-0 sm:flex-row h-full">
                 <Image priority src={item.image} alt="" />
                 <div className="flex flex-col gap-3 items-start justify-between h-full">
                   <div className="text-left space-y-3">
-                    <h1 className="font-recoleta-500 font-normal leading-[65px] text-brand-primary-400 text-3xl md:text-5xl w-full">
+                    <h1 className="font-recoleta-500 font-normal leading-10 lg:leading-[65px] text-brand-primary-400 text-3xl md:text-5xl w-full">
                       {item.id}. {item.title}
                     </h1>
                     <p className="h-fit font-dmsans-400 tracking-[-0.015em] leading-6 font-normal text-sm md:text-base w-full">

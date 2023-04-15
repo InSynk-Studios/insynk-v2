@@ -16,7 +16,6 @@ export const Card = React.forwardRef(
       className,
       cardBgColor = "bg-brand-primary-100",
       cardRearClass,
-      cardFrontClass,
       shadow,
       title,
       wrapperClassName,
@@ -30,7 +29,7 @@ export const Card = React.forwardRef(
         <div
           ref={ref}
           className={twMerge(
-            `h-full w-full block border-[1.5px] rounded-2xl border-brand-secondary-100 ${cardBgColor}`,
+            `h-full w-full block relative border-[1.5px] rounded-2xl border-brand-secondary-100 ${cardBgColor}`,
             SHADOWS[shadow],
             className
           )}
@@ -38,13 +37,13 @@ export const Card = React.forwardRef(
         >
           <h1
             className={twMerge(
-              "relative text-black font-recoleta-500 font-normal",
+              "relative text-black font-recoleta-500 font-medium",
               cardTitleClass
             )}
           >
             {title}
           </h1>
-          <span className="relative">{props.children}</span>
+          <div className="relative">{props.children}</div>
         </div>
         <div
           className={twMerge(

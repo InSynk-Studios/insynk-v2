@@ -1,8 +1,8 @@
-import ProductScoping from "../../assets/illustration/principles/product_scoping.svg";
-import Design from "../../assets/illustration/principles/design.svg";
-import Mvp from "../../assets/illustration/principles/mvp.svg";
-import DevelopmentPartnership from "../../assets/illustration/principles/development_partnership.svg";
-import Overlay from "../../assets/illustration/services/overlay.svg";
+import ProductScoping from "@/assets/illustration/principles/product_scoping.svg";
+import Design from "@/assets/illustration/principles/design.svg";
+import Mvp from "@/assets/illustration/principles/mvp.svg";
+import DevelopmentPartnership from "@/assets/illustration/principles/development_partnership.svg";
+import Overlay from "@/assets/illustration/services/overlay.svg";
 
 export const serviceData = [
   {

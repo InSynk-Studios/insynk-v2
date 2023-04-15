@@ -37,10 +37,10 @@
   }
 
   .service-card-background:nth-child(even) {
-    @apply -mr-32 w-fit;
+    @apply lg:-mr-32 w-fit;
   }
   .service-card-background:nth-child(odd) {
-    @apply -ml-32 w-fit;
+    @apply lg:-ml-32 w-fit;
   }
 
   .service-card-background:nth-child(even) .card-overlay:nth-child(odd) {

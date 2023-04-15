@@ -4,7 +4,6 @@ import {
   Services,
   Principles,
   Teams,
-  Contact,
   Testimonials,
 } from "@/sections";
 
@@ -18,7 +17,6 @@ export default function Home() {
         <Principles />
         <Teams />
         <Testimonials />
-        {/* <Contact /> */}
       </main>
     </>
   );

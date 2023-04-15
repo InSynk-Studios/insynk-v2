@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TestimonialCard = ({ item }) => {
   return (
-    <div className="flex flex-col shadow-md pl-3 pt-[38px] pb-[46px] justify-center items-center bg-white h-[222px] sm:w-[584px]">
+    <div className="flex flex-col shadow-md pl-3 pt-[38px] pb-[46px] justify-center items-center bg-white h-[222px] w-[584px]">
       <div className="w-5/6">
         <p className="leading-6 font-recoleta-500 text-brand-primary-400">
           {'"'} {item.testimonial}

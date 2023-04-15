@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Logo from "@/assets/logo.svg";
 import ManWithCape from "@/assets/illustration/man_with_cape.svg";
 
 export const Footer = () => {
+  const [hideOnMobile, setHideOnMobile] = useState(false);
+  const [showOnMobile, setShowOnMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 430) {
+        setHideOnMobile(true);
+        setShowOnMobile(false);
+      } else if (window.innerWidth < 430) {
+        setHideOnMobile(false);
+        setShowOnMobile(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <footer className="flex justify-center bg-brand-background-200 sm:h-[543px] items-center">
-      <div className="grid grid-cols-1 place-content-between mt-12 sm:mt-0 px-5 sm:px-0 sm:grid-cols-2 3xl:gap-x-40">
-        <div className="flex flex-col gap-6 justify-center">
+    <footer className="flex justify-center bg-brand-background-200 h-[543px] items-center">
+      <div className="grid grid-cols-1 place-content-between pt-40 -mt-2 lg:mt-0 sm:pt-0 px-5 sm:grid-cols-2 3xl:gap-x-40">
+        <div className="flex order-last sm:order-first mb-5 sm:mb-0 flex-col gap-6 justify-center">
+          {showOnMobile && (
+            <span className="flex justify-center">
+              <p className="font-caveat-400 leading-5 text-xl w-9/12">
+                Bringing out the best possible solutions in the most creative
+                way
+              </p>
+            </span>
+          )}
           <Image src={Logo} alt="" width={94} height={40} />
-          <h1 className="font-recoleta-500 text-5xl md:text-[64px] w-5/6 xl:w-4/6">
-            build great products
-          </h1>
+          {hideOnMobile && (
+            <h1 className="font-recoleta-500 text-5xl md:text-[64px] w-5/6 xl:w-4/6">
+              build great products
+            </h1>
+          )}
           <p className="font-dmsans-400 text-xs">
             GETINSYNK TECH PRIVATE LIMITED
             <br /> SOLUS Building, Office No. 1913Thane 400607, Maharashtra{" "}
@@ -19,11 +48,18 @@ export const Footer = () => {
             CIN: U72900MH2022PTC37695
           </p>
         </div>
+        {showOnMobile && (
+          <h1 className="font-recoleta-500 text-[32px] flex justify-center md:text-[64px]">
+            build great products
+          </h1>
+        )}
         <div className="flex items-start justify-end">
           <Image src={ManWithCape} alt="" />
-          <p className="font-caveat-400 leading-5 text-sm md:text-xl -ml-32 sm:-ml-36 w-36 sm:w-44">
-            Bringing out the best possible solutions in the most creative way
-          </p>
+          {hideOnMobile && (
+            <p className="font-caveat-400 leading-5 text-sm md:text-xl -ml-32 sm:-ml-36 w-36 sm:w-44">
+              Bringing out the best possible solutions in the most creative way
+            </p>
+          )}
         </div>
       </div>
     </footer>
