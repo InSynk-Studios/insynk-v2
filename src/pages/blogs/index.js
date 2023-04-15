@@ -102,7 +102,7 @@ export default function Blogs({ posts }) {
                       {post.frontMatter.description}
                     </p>
                     <div className="sm:absolute bottom-0 mt-3 sm:mt-0 flex flex-row w-full gap-3 lg:h-16">
-                      <span className="relative w-1/5">
+                      <span className="relative w-12">
                         <Image src={post.frontMatter.authorImage} fill alt="" />
                       </span>
                       <span className="flex flex-col">
@@ -125,34 +125,39 @@ export default function Blogs({ posts }) {
               href={"/blogs/" + post.slug}
               passHref
               key={index}
-              className="hover:cursor-pointer w-fit"
+              className="hover:cursor-pointer h-5/6"
             >
-              <div className="relative inline-block hover:cursor-pointer mb-20 gap-3 w-full h-[300px] lg:w-3/4 lg:h-[280px]">
-                <div className="relative w-full h-[225px] mb-3 hover:cursor-pointer">
-                  <Image src={post.frontMatter.image} fill alt="" />
+              <div className="relative inline-block hover:cursor-pointer mb-20 gap-3 w-full h-[300px] lg:h-[480px]">
+                <div className="relative w-full h-[225px] mb-3">
+                  <Image
+                    src={post.frontMatter.image}
+                    className="hover:cursor-pointer"
+                    fill
+                    alt=""
+                  />
                 </div>
                 <div className="flex flex-row gap-1 hover:cursor-pointer">
                   {post.frontMatter.tag.map((tagName, key) => (
                     <h3
                       key={key}
-                      className="font-dmsans-500 mb-1 text-brand-secondary-400 text-xs leading-[18px] tracking-[-0.015em]"
+                      className="font-dmsans-500 mb-1 text-brand-secondary-400 text-xs leading-[18px] tracking-[-0.015em] hover:cursor-pointer"
                     >
                       {key < 2 && tagName} {key <= 0 && "●"}
                     </h3>
                   ))}
                 </div>
-                <h1 className="font-dmsans-700 text-lg mb-2 leading-[22px] tracking-[-0.015em]">
+                <h1 className="font-dmsans-700 text-lg mb-2 leading-[22px] tracking-[-0.015em] hover:cursor-pointer">
                   {post.frontMatter.title}
                 </h1>
-                <p className="font-dmsans-400 text-sm lg:mb-[51px] leading-[21px] tracking-[-0.015em]">
+                <p className="font-dmsans-400 text-sm lg:mb-[51px] leading-[21px] tracking-[-0.015em] hover:cursor-pointer">
                   {post.frontMatter.description}
                 </p>
-                <div className="lg:absolute bottom-0 mt-3 lg:mt-0 flex flex-row w-full gap-3 lg:h-16">
-                  <span className="relative w-8">
+                <div className="lg:absolute bottom-0 mt-3 lg:mt-0 flex flex-row w-full gap-3 lg:h-16 hover:cursor-pointer">
+                  <span className="relative w-10">
                     <Image src={post.frontMatter.authorImage} fill alt="" />
                   </span>
                   <span className="flex items-end">
-                    <p className="font-dmsans-500 text-brand-secondary-200 text-base leading-6 tracking-[-0.015em]">
+                    <p className="font-dmsans-500 text-brand-secondary-200 text-base leading-6 tracking-[-0.015em] hover:cursor-pointer">
                       {post.frontMatter.author}
                     </p>
                   </span>
