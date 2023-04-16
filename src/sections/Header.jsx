@@ -6,7 +6,8 @@ import { Button } from "@/components/Elements";
 import Logo from "@/assets/logo.svg";
 import LogoInWhite from "@/assets/logo_in_white.svg";
 import CrossIcon from "@/assets/icons/cross.svg";
-import HamburgerIcon from "@/assets/icons/hamburger.svg";
+import HamburgerBlackIcon from "@/assets/icons/hamburgerBlack.svg";
+import HamburgerWhiteIcon from "@/assets/icons/hamburgerWhite.svg";
 
 export const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -29,8 +30,11 @@ export const Header = () => {
     };
   }, []);
 
+  useEffect(() => {}, [navbar]);
+
   const navigation = [
     { name: "Home", to: `/` },
+    { name: "Work", to: `/work` },
     {
       name: "Blogs",
       to: `/blogs`,
@@ -46,49 +50,63 @@ export const Header = () => {
 
   return (
     <nav
-      className={`w-full top-0 fixed bg-brand-background-100 px-14 z-10 trasition ease-in-out duration-500 ${
-        animateHeader ? "py-4 border-b-2 bg-brand-secondary-200" : "pt-10"
+      className={`w-full top-0 fixed bg-brand-background-100 px-5 lg:px-14 z-10 trasition ease-in-out duration-500 ${
+        animateHeader
+          ? "py-4 border-b-2 bg-brand-secondary-200"
+          : "pt-5 sm:pt-10"
       }`}
     >
       <div
         className={`justify-between mx-auto lg:max-w-7xl xl:max-w-full md:items-center md:flex `}
       >
-        <div>
-          <div className="relative h-14 w-32 flex items-center justify-between md:block">
-            <Link href="/" className="hover:cursor-pointer">
-              {animateHeader ? (
-                <Image priority src={LogoInWhite} fill alt="logo" />
+        <div className="relative h-14 w-full lg:w-32 flex items-center justify-between lg:block">
+          <Link href="/">
+            {animateHeader ? (
+              <Image
+                priority
+                src={LogoInWhite}
+                className="hover:cursor-pointer h-10 w-full sm:h-full"
+                alt="logo"
+              />
+            ) : (
+              <Image
+                priority
+                src={Logo}
+                className="hover:cursor-pointer h-10 w-full sm:h-full"
+                alt="logo"
+              />
+            )}
+          </Link>
+          {/* Sidebar toggle button */}
+          <div className="lg:hidden">
+            <button
+              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+              onClick={() => setNavbar(!navbar)}
+              data-te-sidenav-toggle-ref
+              data-te-target="#sidenav"
+              aria-controls="#sidenav"
+              aria-haspopup="true"
+            >
+              {navbar ? (
+                <Image src={CrossIcon} alt="CrossIcon" />
+              ) : animateHeader ? (
+                <Image src={HamburgerWhiteIcon} alt="HamBurger" />
               ) : (
-                <Image priority src={Logo} fill alt="logo" />
+                <Image src={HamburgerBlackIcon} alt="HamBurger" />
               )}
-            </Link>
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? (
-                  <Image src={CrossIcon} alt="CrossIcon" />
-                ) : (
-                  <Image src={HamburgerIcon} alt="HamBurger" />
-                )}
-              </button>
-            </div>
+            </button>
           </div>
         </div>
         <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
-          >
-            <ul className="flex flex-col sm:flex-row items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
-              {navigation.map((item) => (
-                <li key={item.name}>
+          {/* Desktop navigation */}
+          <div className={"hidden lg:block mx-auto"}>
+            <ul className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:flex lg:space-x-4 lg:space-y-0">
+              {navigation.map((navigate) => (
+                <li key={navigate.name}>
                   <Link
-                    href={item.to}
+                    href={navigate.to}
                     className={`px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:cursor-pointer ${
-                      router.pathname == item.to
+                      router.pathname == navigate.to
                         ? "text-brand-primary-700 " ||
                           (animateHeader && "text-brand-secondary-300")
                         : (animateHeader &&
@@ -96,7 +114,7 @@ export const Header = () => {
                           "text-brand-primary-800 hover:text-brand-primary-700"
                     }`}
                   >
-                    {item.name}
+                    {navigate.name}
                   </Link>
                 </li>
               ))}
@@ -108,6 +126,44 @@ export const Header = () => {
                     ? "bg-brand-primary-300 text-brand-secondary-200 hover:bg-brand-primary-200 hover:text-brand-primary-300"
                     : "bg-brand-primary-100 hover:bg-brand-primary-400"
                 }`}
+              >
+                Contact Us
+              </Button>
+            </ul>
+          </div>
+          {/* Mobile sidebar */}
+          <div
+            id="sidenav"
+            className={`fixed h-screen top-0 right-0 z-[1035] w-60 overflow-hidden bg-black transition-transform duration-300 ease-in-out${
+              navbar ? "transform translate-x-0" : "transform translate-x-full"
+            }`}
+            data-te-sidenav-init
+            data-te-sidenav-hidden="false"
+            data-te-sidenav-right="true"
+          >
+            <span className="flex mt-5 mr-5 mb-10 items-center justify-end">
+              <button onClick={() => setNavbar(!navbar)}>
+                <Image src={CrossIcon} className="bg-white" alt="CrossIcon" />
+              </button>
+            </span>
+            <ul className="flex flex-col lg:flex-row items-center justify-center space-y-8 md:flex lg:space-x-4 lg:space-y-0">
+              {navigation.map((navigate) => (
+                <li key={navigate.name}>
+                  <Link
+                    href={navigate.to}
+                    className={`px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:cursor-pointer ${
+                      router.pathname == navigate.to
+                        ? "text-brand-primary-700"
+                        : "text-white"
+                    }`}
+                  >
+                    {navigate.name}
+                  </Link>
+                </li>
+              ))}
+              <Button
+                onClick={() => setNavbar(!navbar) || scrollToForm}
+                className={`py-3 w-full font-clashgrotesk-600 leading-6 shadow-brand bg-brand-primary-100 hover:bg-brand-primary-400`}
               >
                 Contact Us
               </Button>

@@ -194,7 +194,6 @@ module.exports = {
           100: "#33322E",
         },
         background: {
-          800: "#F9F3E5",
           700: "#EDEFE3",
           600: "#FFDBC2",
           500: "#F9F3E5",
@@ -346,6 +345,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      "recoleta-500": ["Recoleta-500", "sans-serif"],
       "tanker-400": ["Tanker-400", "sans-serif"],
       "clashgrotesk-500": ["ClashGrotesk-400", "sans-serif"],
       "clashgrotesk-600": ["ClashGrotesk-600", "sans-serif"],

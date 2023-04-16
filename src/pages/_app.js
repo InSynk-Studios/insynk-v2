@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
-import { Footer, Header } from "@/sections";
+import { Contact, Footer, Header } from "@/sections";
 import { FollowCursor } from "@/components/FollowCursor/FollowCursor";
 
 export default function App({ Component, pageProps }) {
@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }) {
       <Header />
       {displayComponent && <FollowCursor />}
       <Component {...pageProps} />
+      <Contact />
       <Footer />
     </Fragment>
   );
