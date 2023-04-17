@@ -6,6 +6,7 @@ import { Button } from "@/components/Elements";
 import Logo from "@/assets/logo.svg";
 import LogoInWhite from "@/assets/logo_in_white.svg";
 import CrossIcon from "@/assets/icons/cross.svg";
+import WhiteCrossIcon from "@/assets/icons/whiteCross.svg";
 import HamburgerBlackIcon from "@/assets/icons/hamburgerBlack.svg";
 import HamburgerWhiteIcon from "@/assets/icons/hamburgerWhite.svg";
 
@@ -47,6 +48,11 @@ export const Header = () => {
   }
 
   const router = useRouter();
+
+  const contactOnclickHideSidebar = () => {
+    setNavbar(!navbar);
+    scrollToForm();
+  };
 
   return (
     <nav
@@ -143,7 +149,7 @@ export const Header = () => {
           >
             <span className="flex mt-5 mr-5 mb-10 items-center justify-end">
               <button onClick={() => setNavbar(!navbar)}>
-                <Image src={CrossIcon} className="bg-white" alt="CrossIcon" />
+                <Image src={WhiteCrossIcon} alt="CrossIcon" />
               </button>
             </span>
             <ul className="flex flex-col lg:flex-row items-center justify-center space-y-8 md:flex lg:space-x-4 lg:space-y-0">
@@ -151,6 +157,7 @@ export const Header = () => {
                 <li key={navigate.name}>
                   <Link
                     href={navigate.to}
+                    onClick={() => setNavbar(!navbar)}
                     className={`px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:cursor-pointer ${
                       router.pathname == navigate.to
                         ? "text-brand-primary-700"
@@ -161,12 +168,12 @@ export const Header = () => {
                   </Link>
                 </li>
               ))}
-              <Button
-                onClick={() => setNavbar(!navbar) || scrollToForm}
-                className={`py-3 w-full font-clashgrotesk-600 leading-6 shadow-brand bg-brand-primary-100 hover:bg-brand-primary-400`}
+              <button
+                onClick={contactOnclickHideSidebar}
+                className={`absolute bottom-0 py-3 w-full font-clashgrotesk-600 leading-6 shadow-brand bg-brand-primary-100 hover:bg-brand-primary-400`}
               >
                 Contact Us
-              </Button>
+              </button>
             </ul>
           </div>
         </div>

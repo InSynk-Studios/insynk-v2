@@ -21,7 +21,7 @@ export default function Work({ posts }) {
           </p>
         </span>
         <div className="w-full overflow-x-hidden">
-          <div className="-mx-12 sm:-mx-96 flex flex-row justify-center items-center gap-4 bg-white mb-[70px]">
+          <div className="-mx-12 sm:-mx-40 lg:-mx-96 flex flex-row justify-center items-center gap-4 bg-white mb-[70px]">
             {workData?.map((item) => (
               <div key={item.id} className="inline-block h-full">
                 <Image priority src={item.image} alt="" />
@@ -102,7 +102,7 @@ export default function Work({ posts }) {
                   href={"/work/" + post.slug}
                   className="relative work-card-button pb-2 overflow-hidden flex justify-start items-center gap-2 font-dmsans-700 text-brand-secondary-200 sm:text-xl leading-6 tracking-[-0.015em] hover:cursor-pointer h-fit"
                 >
-                  <span class="absolute inset-x-0 h-1 bottom-0 bg-brand-primary-400"></span>
+                  <span className="absolute inset-x-0 h-1 bottom-0 bg-brand-primary-400"></span>
                   {post.frontMatter.link}
                   <Image
                     src={ArrowBold}
