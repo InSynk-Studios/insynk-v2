@@ -5,8 +5,8 @@ import ManWithCape from "@/assets/illustration/man_with_cape.svg";
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-center bg-brand-background-200 h-[543px] items-center">
-      <div className="grid grid-cols-1 place-content-between pt-40 -mt-2 lg:mt-0 sm:pt-0 px-5 sm:grid-cols-2 3xl:gap-x-40">
+    <footer className="flex justify-center bg-brand-background-200 sm:h-[543px] items-center">
+      <div className="grid grid-cols-1 place-content-between pt-24 -mt-2 lg:mt-0 sm:pt-0 px-5 sm:grid-cols-2 3xl:gap-x-40">
         <div className="flex order-last sm:order-first mb-5 sm:mb-0 flex-col gap-6 justify-center">
           <span className="flex justify-center sm:hidden">
             <p className="font-caveat-400 leading-5 text-xl w-9/12">
