@@ -8,7 +8,7 @@ import ArrowBold from "@/assets/icons/arrow_bold.svg";
 
 export default function Work({ posts }) {
   return (
-    <main className="flex flex-col w-full mt-36 sm:mt-[185px] justify-center items-center mb-10 sm:mb-0">
+    <main className="flex flex-col w-full mt-36 sm:mt-[185px] justify-center items-center mb-24 sm:mb16 lg:mb-0">
       <div className="flex flex-col justify-between gap-9 w-full items-center">
         <span className="flex flex-col justify-center items-center text-center gap-2">
           <h1 className="text-5xl lg:text-[64px] font-recoleta-500 leading-[65px] text-brand-secondary-200">
@@ -21,7 +21,7 @@ export default function Work({ posts }) {
           </p>
         </span>
         <div className="w-full overflow-x-hidden">
-          <div className="-mx-12 sm:-mx-96 flex flex-row justify-center items-center gap-4 bg-white mb-[70px]">
+          <div className="-mx-12 sm:-mx-40 lg:-mx-96 flex flex-row justify-center items-center gap-4 bg-white mb-[70px]">
             {workData?.map((item) => (
               <div key={item.id} className="inline-block h-full">
                 <Image priority src={item.image} alt="" />
@@ -40,7 +40,7 @@ export default function Work({ posts }) {
                 : "sm:flex-row"
             } bg-brand-background-300 sm:gap-3 w-full h-full`}
           >
-            <div className="grid grid-rows-2 gap-3 lg:gap-5 place-self-center sm:gap-3 w-full p-5 sm:py-[90px] sm:pr-[106px] sm:pl-16">
+            <div className="grid grid-rows-2 gap-3 lg:gap-5 place-self-center sm:gap-3 w-full p-5 lg:py-[90px] lg:pr-[106px] lg:pl-16">
               <span className="w-fit">
                 <Image
                   src={post.frontMatter.image}
@@ -76,17 +76,17 @@ export default function Work({ posts }) {
             <div
               className={`w-full ${
                 index / 2 ? "sm:ml-12" : "sm:mr-12"
-              } sm:my-[90px] px-5 sm:px-0 mb-5 sm:mb-0`}
+              } sm:my-10 lg:my-[90px] px-5 sm:px-0 mb-5 sm:mb-0`}
             >
               <div className="flex flex-row items-center mb-3 gap-1">
-                <span className="relative w-16 sm:w-20 h-8">
+                <span className="relative w-16 lg:w-20 h-8">
                   <Image src={post.frontMatter.logo} fill alt="" />
                 </span>
                 <h3 className="font-dmsans-500 text-xs leading-[21px] tracking-[-0.015em]">
                   {post.frontMatter.organizationDetail}
                 </h3>
               </div>
-              <h1 className="text-2xl sm:text-5xl font-recoleta-500 w-fit sm:w-4/5 mb-[34px] leading-9 sm:leading-[65px] tracking-[-0.015em]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-recoleta-500 w-fit lg:w-4/5 mb-2 sm:mb-3 lg:mb-[34px] leading-9 sm:leading-[50px] lg:leading-[65px] tracking-[-0.015em]">
                 {post.frontMatter.title}
               </h1>
               {post.frontMatter.about?.map((item) => (
@@ -97,12 +97,12 @@ export default function Work({ posts }) {
                   ● {item}
                 </p>
               ))}
-              <div className="w-fit mt-10">
+              <div className="w-fit mt-5 sm:mt-3 lg:mt-10 mb-5 lg:mb-0">
                 <Link
                   href={"/work/" + post.slug}
-                  className="relative work-card-button pb-2 overflow-hidden flex justify-start items-center gap-2 font-dmsans-700 text-brand-secondary-200 sm:text-xl leading-6 tracking-[-0.015em] hover:cursor-pointer h-fit"
+                  className="relative work-card-button pb-2 overflow-hidden flex justify-start items-center gap-2 font-dmsans-700 text-brand-secondary-200 text-base lg:text-xl leading-6 tracking-[-0.015em] hover:cursor-pointer h-fit"
                 >
-                  <span class="absolute inset-x-0 h-1 bottom-0 bg-brand-primary-400"></span>
+                  <span className="absolute inset-x-0 h-1 bottom-0 bg-brand-primary-400"></span>
                   {post.frontMatter.link}
                   <Image
                     src={ArrowBold}

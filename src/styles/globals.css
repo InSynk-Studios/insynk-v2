@@ -185,6 +185,14 @@
 
   @media only screen and (max-width: 476px) {
     /* For mobile phones: */
+    .paper {
+      position: absolute;
+      height: 760px;
+      width: 100%;
+      z-index: 0;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0px 0px 5px 0px #888;
+    }
     .paper::before {
       content: "";
       position: absolute;
@@ -193,9 +201,19 @@
       width: 2px;
       background: #877464;
     }
+    .lines {
+      margin-top: 120px;
+      height: calc(80% - 45px);
+      width: 100%;
+      background-image: repeating-linear-gradient(
+        white -10px,
+        white 24px,
+        #8db4e1b2 26px
+      );
+    }
     .text {
       position: absolute;
-      top: 175px;
+      top: 157px;
       left: 45px;
       bottom: 10px;
       right: 10px;
