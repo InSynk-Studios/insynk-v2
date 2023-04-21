@@ -3,7 +3,7 @@ import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { workData } from "./workData";
+import { workData } from "@/assets/workData";
 import ArrowBold from "@/assets/icons/arrow_bold.svg";
 
 export default function Work({ posts }) {
