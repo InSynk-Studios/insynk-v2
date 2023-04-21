@@ -30,7 +30,7 @@ At InSynk Studios, we take a comprehensive approach to product scoping to ensure
 
 ### Discovery Phase
 
-<div className="flex flex-row justify-between gap-7">
+<div className="flex flex-col sm:flex-row justify-between gap-7">
 <img src="/blog/discovery_phase.svg" width="195" height="300"/>
 
 <span>

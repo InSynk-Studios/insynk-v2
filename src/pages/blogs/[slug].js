@@ -39,12 +39,12 @@ const PostPage = ({
       <div className="flex flex-row justify-center">
         <Link
           href={"/blogs"}
-          className="absolute left-14 top-5 hover:cursor-pointer flex justify-start items-start font-dmsans-500 text-base leading-6 tracking-[-0.015em] gap-3 h-fit"
+          className="absolute left-3 lg:left-14 -top-11 sm:-top-0 lg:top-5 hover:cursor-pointer flex justify-start items-start font-dmsans-500 text-base leading-6 tracking-[-0.015em] gap-3 h-fit"
         >
           <Image src={ArrowBack} alt="" />
           All blogs
         </Link>
-        <div className="max-w-[400px] lg:max-w-[692px] 2xl:max-w-[750px]">
+        <div className="mx-5 sm:mx-0 max-w-[500px] lg:max-w-[692px] 2xl:max-w-[750px]">
           <div className="flex flex-row gap-2">
             {tag.map((tagName, index) => (
               <div
@@ -78,13 +78,13 @@ const PostPage = ({
             </div>
           </div>
           <article
-            className={`prose max-w-full ${proseHeadingStyle} ${proseQuoteStyle} ${proseParagraphStyle}`}
+            className={`prose lg:max-w-full ${proseHeadingStyle} ${proseQuoteStyle} ${proseParagraphStyle}`}
           >
             <MDXRemote {...mdxSource} components={components} />
           </article>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mt-16">
+      <div className="flex flex-col justify-start md:justify-center items-start md:items-center mt-16 mx-5 md:mx-0">
         <div className="w-1/2 lg:w-2/3 xl:w-1/2">
           <h2 className="font-dmsans-700 text-base leading-6 tracking-[-0.015em] mb-4">
             Share on :
@@ -93,7 +93,11 @@ const PostPage = ({
             <Link href={"#"} rel="noopener noreferrer" target="_blank">
               <Image src={Twitter} className="hover:cursor-pointer" alt="" />
             </Link>
-            <Link href={"https://www.linkedin.com/company/0xinsynkstudios/"} rel="noopener noreferrer" target="_blank">
+            <Link
+              href={"https://www.linkedin.com/company/0xinsynkstudios/"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <Image src={Linkedin} className="hover:cursor-pointer" alt="" />
             </Link>
             {/* <Link href={"#"} rel="noopener noreferrer" target="_blank">
