@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2159dae-a7cb-4f25-a984-d91a2612f418/deploy-status)](https://app.netlify.com/sites/kaleidoscopic-beijinho-a31fdc/deploys)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
