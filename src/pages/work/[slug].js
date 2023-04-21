@@ -35,12 +35,12 @@ const PostPage = ({
       <div className="flex flex-row justify-center">
         <Link
           href={"/work"}
-          className="absolute left-14 top-5 hover:cursor-pointer flex justify-start items-start font-dmsans-500 text-base leading-6 tracking-[-0.015em] gap-3 h-fit"
+          className="absolute left-3 lg:left-14 -top-11 sm:-top-0 lg:top-5 hover:cursor-pointer flex justify-start items-start font-dmsans-500 text-base leading-6 tracking-[-0.015em] gap-3 h-fit"
         >
           <Image src={ArrowBack} className="hover:cursor-pointer" alt="" />
           All Work
         </Link>
-        <div className="max-w-[400px] lg:max-w-[6892px] 2xl:max-w-[950px]">
+        <div className="mx-5 sm:mx-0 max-w-[500px] lg:max-w-[6892px] 2xl:max-w-[950px]">
           <div className="flex justify-center items-center mb-6">
             <span className="relative bg-white w-32 h-14">
               <Image src={logo} fill alt="" />
@@ -53,7 +53,7 @@ const PostPage = ({
             {description}
           </p>
           <article
-            className={`prose mx-5 sm:mx-auto max-w-full ${proseHeadingStyle} ${proseQuoteStyle} ${proseParagraphStyle}`}
+            className={`prose max-w-full ${proseHeadingStyle} ${proseQuoteStyle} ${proseParagraphStyle}`}
           >
             <MDXRemote {...mdxSource} components={components} />
           </article>

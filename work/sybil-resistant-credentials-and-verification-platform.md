@@ -1,7 +1,7 @@
 ---
 organization: "Grail"
-image: "/work/grail_website.svg"
-image2: "/work/grail_issuer.svg"
+image: "/work/grail-website.png"
+image2: "/work/grail-issuer.png"
 image3: "/work/grail_issuer_2.svg"
 organizationDetail: "— Private Credential Issuance and Verification"
 logo: "/logo/grail_logo.svg"
@@ -14,7 +14,7 @@ about: ["700K+ Users",
 "20+ Team size"]
 ---
 
-<img src="/work/grail_website.svg" weight="800" height="600" alt="" />
+<img src="/work/grail-website.png" weight="800" height="600" alt="" />
 
 > Great things in business are never done by one person. They're done by a team of people.
 > – Steve Jobs
@@ -37,13 +37,13 @@ about: ["700K+ Users",
 
 <p>This roadmap outlines the development milestones, the timeline for each milestone, and the resources needed to achieve them. The roadmap is designed to ensure that the development process is efficient and cost-effective.</p>
 
-<img src="/work/grail_issuer.svg" weight="800" height="600" alt="" />
+<img src="/work/grail-issuer.png" weight="800" height="600" alt="" />
 
 <div className="flex justify-center mb-12">
 <span className="text-center font-caveat-400">Bringing out the best possible solutions in the most creative way </span>
 </div>
 
-<div className="grid grid-cols-2">
+<div className="grid grid-cols-1 sm:grid-cols-2">
 <span>
 # Our Process
 
@@ -52,6 +52,6 @@ about: ["700K+ Users",
 <p>During this phase, we use the information gathered in the discovery phase to define the product's</p>
 </span>
 <span className="w-full">
-<img src="/work/grail_issuer.svg" weight="100" height="100" alt="" />
+<img src="/work/grail-issuer.png" weight="100" height="100" alt="" />
 </span>
 </div>
