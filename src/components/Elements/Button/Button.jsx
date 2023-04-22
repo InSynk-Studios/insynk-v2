@@ -46,9 +46,9 @@ export const Button = React.forwardRef(
           onClick={onClick}
           disabled={disabled}
           className={twMerge(
-            `flex justify-center items-center`,
+            `flex justify-center items-center hover:cursor-pointer`,
             isSketch &&
-              `${sketchFrontColor} h-full w-full block py-1 border-2 skew-y-2 border-black rounded`,
+              `${sketchFrontColor} h-full w-full block z-10 py-1 border-2 skew-y-2 border-black rounded group relative overflow-hidden`,
             variants[variant],
             disabled &&
               "bg-state-disabled-dark cursor-not-allowed text-t-disabled",
@@ -60,6 +60,9 @@ export const Button = React.forwardRef(
           {isLoading && <Spinner size="sm" className="text-current" />}
           {!isLoading && startIcon}
 
+          {isSketch && (
+            <div className="absolute inset-0 hover:cursor-pointer w-0 bg-white transition-all duration-[450ms] ease-out group-hover:w-full" />
+          )}
           <span
             className={twMerge(
               "relative flex gap-2 group-hover:text-black hover:cursor-pointer",
