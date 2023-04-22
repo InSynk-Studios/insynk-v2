@@ -36,26 +36,26 @@ export const Services = () => {
                   <Button
                     variant="none"
                     isSketch={true}
-                    childrenWrapperClassName="-skew-y-2 font-clashgrotesk-500"
-                    className="font-clashgrotesk-500 lg:h-14 bottom-0"
+                    childrenWrapperClassName="-skew-y-2 text-sm lg:text-xl leading-6 font-clashgrotesk-500"
+                    className="lg:h-14 bottom-0"
                   >
                     Read More
                   </Button>
                 </div>
               </div>
-              {/* <div className="card-overlay xl:w-4/5 3xl:w-3/4 4xl:w-2/3">
-                <Image
-                  priority
-                  src={item.overlay}
-                  className="arrow-flip"
-                  alt=""
-                />
-                <p className="font-caveat-400 text-xl">
-                  Bringing out the best possible solutions in the most creative
-                  way
-                </p>
-              </div> */}
             </div>
+            {/* <div className="card-overlay xl:w-4/5 3xl:w-3/4 4xl:w-2/3">
+              <Image
+                priority
+                src={item.overlay}
+                className="arrow-flip"
+                alt=""
+              />
+              <p className="font-caveat-400 text-xl">
+                Bringing out the best possible solutions in the most creative
+                way
+              </p>
+            </div> */}
           </Card>
         ))}
       </div>

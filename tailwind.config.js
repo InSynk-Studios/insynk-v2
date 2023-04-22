@@ -347,7 +347,7 @@ module.exports = {
     fontFamily: {
       "recoleta-500": ["Recoleta-500", "sans-serif"],
       "tanker-400": ["Tanker-400", "sans-serif"],
-      "clashgrotesk-500": ["ClashGrotesk-400", "sans-serif"],
+      "clashgrotesk-500": ["ClashGrotesk-500", "sans-serif"],
       "clashgrotesk-600": ["ClashGrotesk-600", "sans-serif"],
       "dmsans-400": ["DMSans-400", "sans-serif"],
       "dmsans-500": ["DMSans-500", "sans-serif"],

@@ -39,7 +39,7 @@ export const Testimonials = () => {
         what people are saying about us
         <Image priority src={Underline} className="mt-2" alt="" />
       </h1>
-      <div className="flex flex-col-reverse lg:flex-row mt-[86px] gap-16 text-center justify-center items-center">
+      <div className="flex flex-col-reverse lg:flex-row mt-[86px] gap-16 text-center justify-center items-center mb-[70px]">
         <div className="w-5/6 lg:w-1/5 flex flex-col justify-center items-center gap-16">
           <p className="font-caveat-400 text-[27px] leading-[31.29px]">
             “We are indebted to InSynk Studios. They have helped us design and
@@ -86,7 +86,7 @@ export const Testimonials = () => {
           />
         </div>
       </div>
-      <div className="w-full my-[70px]">
+      {/* <div className="w-full my-[70px]">
         <Carousel
           className={`pr-5 ${removePadding ? "pl-0" : "pl-8 md:pl-36"}`}
         >
@@ -96,7 +96,7 @@ export const Testimonials = () => {
             </div>
           ))}
         </Carousel>
-      </div>
+      </div> */}
     </section>
   );
 };

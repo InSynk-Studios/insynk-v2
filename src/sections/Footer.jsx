@@ -29,7 +29,7 @@ export const Footer = () => {
         </h1>
         <div className="flex items-start justify-end">
           <Image src={ManWithCape} alt="" />
-          <p className="font-caveat-400 leading-5 text-sm md:text-xl -ml-32 sm:-ml-36 w-36 sm:w-44 hidden sm:block">
+          <p className="font-caveat-400 leading-5 text-sm md:text-xl -ml-32 sm:-ml-36 w-36 sm:w-52 lg:w-44 hidden sm:block">
             Bringing out the best possible solutions in the most creative way
           </p>
         </div>

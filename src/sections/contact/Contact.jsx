@@ -156,14 +156,14 @@ export const Contact = ({ hideSubmit = false }) => {
 
             {!hideSubmit && (
               <div
-                className={` absolute left-11 md:left-32 bottom-12 sm:bottom-16 mt-12`}
+                className={`absolute left-11 sm:left-32 bottom-12 sm:bottom-16 mt-12`}
               >
                 <Button
                   type="submit"
                   variant="none"
                   isSketch={true}
                   size="md"
-                  childrenWrapperClassName="text-sm lg:text-xl"
+                  childrenWrapperClassName="text-sm lg:text-xl -skew-y-2 font-caveat-700"
                   sketchFrontColor="bg-brand-primary-200"
                   className="uppercase py-2 px-3 sm:px-4"
                   endIcon={
