@@ -817,6 +817,7 @@ module.exports = {
       "2xl": "1313px",
       "3xl": "1404px",
       "4xl": "1536px",
+      "5xl": "1700px",
     },
     scrollMargin: ({ theme }) => ({
       ...theme("spacing"),

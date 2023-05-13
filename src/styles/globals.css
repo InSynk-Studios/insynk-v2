@@ -37,20 +37,20 @@
   }
 
   .service-card-background:nth-child(even) {
-    @apply lg:-mr-32 w-fit;
+    @apply lg:ml-20 5xl:ml-96;
   }
   .service-card-background:nth-child(odd) {
-    @apply lg:-ml-32 w-fit;
+    @apply lg:-ml-24 5xl:-ml-96;
   }
 
   .service-card-background:nth-child(even) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row-reverse -left-full -ml-36 xl:-ml-72 3xl:-ml-80 bottom-0;
+    @apply absolute flex flex-row-reverse -left-[155px] xl:-left-56 3xl:-left-64 4xl:-left-72 -bottom-14;
   }
   .service-card-background:nth-child(even) .arrow-flip:nth-child(odd) {
     @apply transform -scale-x-100;
   }
   .service-card-background:nth-child(odd) .card-overlay:nth-child(odd) {
-    @apply absolute flex flex-row -right-36 xl:-right-72 3xl:-right-64 bottom-0;
+    @apply absolute flex flex-row -right-[158px] xl:-right-56 3xl:-right-64 4xl:-right-72 -bottom-14;
   }
   .button-bg {
     margin-left: 5px;

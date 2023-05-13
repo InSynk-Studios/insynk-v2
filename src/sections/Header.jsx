@@ -170,7 +170,7 @@ export const Header = () => {
               ))}
               <button
                 onClick={contactOnclickHideSidebar}
-                className={`absolute bottom-0 py-3 w-full font-clashgrotesk-600 leading-6 shadow-brand bg-brand-primary-100 hover:bg-brand-primary-400`}
+                className={`py-3 w-full font-clashgrotesk-600 leading-6 shadow-brand bg-brand-primary-100 hover:bg-brand-primary-400`}
               >
                 Contact Us
               </button>

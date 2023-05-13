@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
@@ -32,6 +33,24 @@ const PostPage = ({
 }) => {
   const copyToClipboard = (e) => {
     navigator.clipboard.writeText(window.location.toString());
+  };
+
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollRef.current.scrollBy({
+      top: 0,
+      left: -300,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current.scrollBy({
+      top: 0,
+      left: 300,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -117,22 +136,14 @@ const PostPage = ({
               Keep Reading
             </h2>
             <span className="grid grid-cols-2 gap-6">
-              <button
-                onClick={() => {
-                  document.getElementById("Carousel").scrollLeft += 50;
-                }}
-              >
+              <button onClick={scrollLeft}>
                 <Image
                   src={ArrowBack}
                   className="hover:cursor-pointer"
                   alt=""
                 />
               </button>
-              <button
-                onClick={() => {
-                  document.getElementById("Carousel").scrollLeft -= 50;
-                }}
-              >
+              <button onClick={scrollRight}>
                 <Image
                   src={ArrowBack}
                   className="transform -scale-x-100 hover:cursor-pointer"
@@ -142,7 +153,7 @@ const PostPage = ({
             </span>
           </div>
           <div className="w-full">
-            <Carousel>
+            <Carousel ref={scrollRef}>
               {posts.map((post, index) => (
                 <Link
                   href={"/blogs/" + post.slug}
