@@ -8,7 +8,7 @@ export const Modal = ({
   onClose,
   children,
   className,
-  WrapperClassName,
+  wrapperClassName,
   childrenClassName,
 }) => {
   useEffect(() => {
@@ -28,7 +28,6 @@ export const Modal = ({
   }, [isOpen, onClose]);
 
   const closeModal = () => {
-    setModalOpen(false);
     onClose();
   };
 
@@ -38,11 +37,16 @@ export const Modal = ({
         `fixed z-50 inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 ${
           isOpen ? "visible" : "invisible"
         }`,
-        WrapperClassName
+        wrapperClassName
       )}
     >
-      <div className={twMerge("bg-white rounded-lg p-6", className)}>
-        <div className="flex justify-end mt-1 mb-10">
+      <div
+        className={twMerge(
+          "bg-white relative mx-4 md:mx-0 rounded-2xl p-6",
+          className
+        )}
+      >
+        <div className="flex justify-end mt-1 mb-5">
           <button onClick={closeModal}>
             <Image
               src={Cross}
@@ -52,6 +56,11 @@ export const Modal = ({
           </button>
         </div>
         <div className={twMerge("w-full", childrenClassName)}>{children}</div>
+        <div
+          className={twMerge(
+            "absolute top-0 left-0 h-full w-full z-[-1] rounded-2xl translate-x-1 translate-y-1  bg-black"
+          )}
+        />
       </div>
     </div>
   );
