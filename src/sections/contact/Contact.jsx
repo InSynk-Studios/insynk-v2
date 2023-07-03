@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import * as z from "zod";
 
-import { Button, Input, Textarea } from "@/components/Elements";
+import { Button, Input, Textarea, Modal } from "@/components/Elements";
 import { Form } from "@/components/Form/Form";
 
 import FormBulb from "@/assets/illustration/form_bulb.svg";
@@ -18,56 +18,60 @@ const formStyles =
   "text flex justify-start items-start text-left font-caveat-700 text-2xl left-11 md:left-32";
 
 export const Contact = ({ hideSubmit = false }) => {
-  const confirmHandler = (values) => {
-    fetch("https://formsubmit.co/ajax/aman@insynkstudios.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name: values.name,
-        email: values.email,
-        message: values.description,
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Form data sent successfully!");
-        } else {
-          console.log("Failed to send form data. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error sending form data:", error);
-      });
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-    // Another email address
-    fetch("https://formsubmit.co/ajax/vishnu@insynkstudios.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name: values.name,
-        email: values.email,
-        message: values.description,
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Successful response
-        } else {
-          // Handle error if sending to the second email address fails
+  const confirmHandler = async (values) => {
+    setIsLoading(true);
+
+    try {
+      const response1 = await fetch(
+        "https://formsubmit.co/ajax/aman@insynkstudios.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            message: values.description,
+          }),
         }
-      })
-      .catch((error) => {
-        console.error(
-          "Error sending form data to second email address:",
-          error
-        );
-      });
+      );
+
+      const response2 = await fetch(
+        "https://formsubmit.co/ajax/vishnu@insynkstudios.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            message: values.description,
+          }),
+        }
+      );
+
+      if (response1.ok && response2.ok) {
+        // if sent successfully
+        setModalOpen(true);
+      } else {
+        console.log("Failed to send form data. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending form data:", error);
+    }
+
+    setIsLoading(false);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -78,7 +82,6 @@ export const Contact = ({ hideSubmit = false }) => {
       <Form
         onSubmit={async (values) => {
           confirmHandler(values);
-          console.log(values);
         }}
         schema={schema}
       >
@@ -162,6 +165,8 @@ export const Contact = ({ hideSubmit = false }) => {
                   type="submit"
                   variant="none"
                   isSketch={true}
+                  isLoading={isLoading}
+                  disabled={isLoading}
                   size="md"
                   childrenWrapperClassName="text-sm lg:text-xl -skew-y-2 font-caveat-700"
                   sketchFrontColor="bg-brand-primary-200"
@@ -176,13 +181,31 @@ export const Contact = ({ hideSubmit = false }) => {
                     />
                   }
                 >
-                  Send message
+                  {isLoading ? "Sending..." : "Send message"}
                 </Button>
               </div>
             )}
           </>
         )}
       </Form>
+      <Modal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        className="bg-brand-background-200 border-2 border-brand-primary-400"
+        childrenClassName="lg:px-16 pb-5"
+      >
+        <div className="flex flex-col gap-3">
+          <h1 className="font-recoleta-500 leading-10 font-normal text-3xl md:text-[32px] text-brand-primary-400">
+            Thank you for reaching out to us!
+          </h1>
+          <p className="font-dmsans-400 text-sm lg:text-base text-brand-primary-400 -mb-2 md:-mb-4">
+            We have received your idea!
+          </p>
+          <p className="font-dmsans-400 text-sm md:text-base text-brand-primary-400">
+            Our team will back to you in one business day.
+          </p>
+        </div>
+      </Modal>
     </section>
   );
 };
