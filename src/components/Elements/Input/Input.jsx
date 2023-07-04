@@ -34,12 +34,11 @@ export const Input = React.forwardRef(
       maxLength,
       border = "default",
       size = "md",
-      onChange = () => {},
+      onChange,
       value,
       disabled = false,
       icon,
       labelClassName,
-      button,
       labelTextClassName,
       ...remainingProps
     },
@@ -58,7 +57,6 @@ export const Input = React.forwardRef(
           className={twMerge(icon && "block relative", sizes[size])}
         >
           <input
-            onChange={(event) => onChange(event)}
             disabled={disabled}
             name={name}
             type={type}
@@ -71,6 +69,7 @@ export const Input = React.forwardRef(
             {...registration}
             defaultValue={defaultValue}
             value={value}
+            onChange={onChange}
             placeholder={placeholder}
             {...remainingProps}
           />

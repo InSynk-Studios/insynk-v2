@@ -24,6 +24,8 @@ export const Textarea = React.forwardRef(
       disabled = false,
       wrapperClassName,
       name,
+      value,
+      onChange,
       labelClassName,
       labelTextClassName,
     },
@@ -47,7 +49,9 @@ export const Textarea = React.forwardRef(
           )}
           {...registration}
           rows={rows}
+          value={value}
           disabled={disabled}
+          onChange={onChange}
           defaultValue={defaultValue}
           placeholder={placeholder}
         />
