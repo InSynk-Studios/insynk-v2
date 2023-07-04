@@ -30,7 +30,7 @@ export const Contact = ({ hideSubmit = false }) => {
 
     try {
       const response1 = await fetch(
-        "https://formsubmit.co/ajax/manish@insynkstudios.com",
+        "https://formsubmit.co/ajax/aman@insynkstudios.com",
         {
           method: "POST",
           headers: {
@@ -46,7 +46,7 @@ export const Contact = ({ hideSubmit = false }) => {
       );
 
       const response2 = await fetch(
-        "https://formsubmit.co/ajax/manish@insynkstudios.com",
+        "https://formsubmit.co/ajax/vishnu@insynkstudios.com",
         {
           method: "POST",
           headers: {
