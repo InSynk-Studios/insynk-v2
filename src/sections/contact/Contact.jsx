@@ -20,13 +20,17 @@ const formStyles =
 export const Contact = ({ hideSubmit = false }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    description: "",
+  });
   const confirmHandler = async (values) => {
     setIsLoading(true);
 
     try {
       const response1 = await fetch(
-        "https://formsubmit.co/ajax/aman@insynkstudios.com",
+        "https://formsubmit.co/ajax/manish@insynkstudios.com",
         {
           method: "POST",
           headers: {
@@ -42,7 +46,7 @@ export const Contact = ({ hideSubmit = false }) => {
       );
 
       const response2 = await fetch(
-        "https://formsubmit.co/ajax/vishnu@insynkstudios.com",
+        "https://formsubmit.co/ajax/manish@insynkstudios.com",
         {
           method: "POST",
           headers: {
@@ -60,6 +64,11 @@ export const Contact = ({ hideSubmit = false }) => {
       if (response1.ok && response2.ok) {
         // if sent successfully
         setModalOpen(true);
+        setFormValues(() => ({
+          name: "",
+          email: "",
+          description: "",
+        }));
       } else {
         console.log("Failed to send form data. Please try again.");
       }
@@ -117,6 +126,10 @@ export const Contact = ({ hideSubmit = false }) => {
                   placeholder="Name"
                   error={formState.errors["name"]}
                   registration={register("name")}
+                  value={formValues.name}
+                  onChange={(event) =>
+                    setFormValues({ ...formValues, name: event.target.value })
+                  }
                 />
                 {","}
               </span>
@@ -135,6 +148,13 @@ export const Contact = ({ hideSubmit = false }) => {
                 className="w-full overflow-hidden border-none leading-8 sm:leading-none underline decoration-dashed resize-none bg-transparent underline-offset-8"
                 error={formState.errors["description"]}
                 registration={register("description")}
+                value={formValues.description}
+                onChange={(event) =>
+                  setFormValues({
+                    ...formValues,
+                    description: event.target.value,
+                  })
+                }
               />
             </span>
             <span
@@ -150,6 +170,10 @@ export const Contact = ({ hideSubmit = false }) => {
                 placeholder="Email"
                 error={formState.errors["email"]}
                 registration={register("email")}
+                value={formValues.email}
+                onChange={(event) =>
+                  setFormValues({ ...formValues, email: event.target.value })
+                }
               />
               <p className="hidden sm:block">{"."}</p>
             </span>
