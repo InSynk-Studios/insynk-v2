@@ -28,7 +28,7 @@ export const Services = () => {
                   </p>
                 </div>
               </div>
-              <div className="sm:absolute bottom-0 sm:bottom-10 lg:bottom-5 sm:left-[230px] md:left-[276px] xl:left-[294px] 2xl:left-[310px]">
+              <div className="sm:absolute bottom-0 sm:bottom-10 lg:bottom-0 sm:left-[230px] md:left-[276px] xl:left-[294px] 2xl:left-[310px]">
                 <Button
                   variant="none"
                   isSketch={true}
