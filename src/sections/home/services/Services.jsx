@@ -39,7 +39,7 @@ export const Services = () => {
                 </Button>
               </div>
 
-              <div className="lg:card-overlay hidden md:w-1/3 lg:w-[230px] xl:w-1/3">
+              {/* <div className="lg:card-overlay hidden md:w-1/3 lg:w-[230px] xl:w-1/3">
                 <Image
                   priority
                   src={item.overlay}
@@ -50,7 +50,7 @@ export const Services = () => {
                   Bringing out the best possible solutions in the most creative
                   way
                 </p>
-              </div>
+              </div> */}
             </div>
           </Card>
         ))}
