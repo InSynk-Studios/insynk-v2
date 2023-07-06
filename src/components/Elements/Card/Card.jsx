@@ -43,7 +43,7 @@ export const Card = React.forwardRef(
           >
             {title}
           </h1>
-          <div className="relative h-full">{props.children}</div>
+          <div className="relative">{props.children}</div>
         </div>
         <div
           className={twMerge(
