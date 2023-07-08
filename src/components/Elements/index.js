@@ -5,3 +5,5 @@ export * from "./Input/Input";
 export * from "./Card/Card";
 export * from "./Carousel";
 export * from "./Modal/Modal";
+export * from "./Breadcrumb";
+export * from "./Timeline";

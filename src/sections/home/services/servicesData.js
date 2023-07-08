@@ -1,7 +1,7 @@
-import ProductScoping from "@/assets/illustration/principles/product_scoping.svg";
-import Design from "@/assets/illustration/principles/design.svg";
-import Mvp from "@/assets/illustration/principles/mvp.svg";
-import DevelopmentPartnership from "@/assets/illustration/principles/development_partnership.svg";
+import ProductScoping from "@/assets/illustration/services/product_scoping.svg";
+import Design from "@/assets/illustration/services/design.svg";
+import Mvp from "@/assets/illustration/services/mvp.svg";
+import DevelopmentPartnership from "@/assets/illustration/services/development_partnership.svg";
 import Overlay from "@/assets/illustration/services/overlay.svg";
 
 export const serviceData = [
@@ -13,6 +13,7 @@ export const serviceData = [
     description:
       "You wouldn't build a house without a blueprint, so why launch a product without a solid product scope? Unleash your curiosity and learn more about our product scoping processes.",
     overlay: Overlay,
+    route: "/product-scoping",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const serviceData = [
     description:
       "Being a crucial part of product development, a well-designed software product is not only aesthetically pleasing but also intuitive and easy to use. A great design can make a product stand out in a crowded market. Explore our product design approach.",
     overlay: Overlay,
+    route: "/designs",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const serviceData = [
     description:
       "A key benefit of building an MVP is that, it helps you to reduce the risk of product failure. By testing the MVP with real users, you can obtain feedback, identify potential issues, and make informed decisions about the product's development. Dive into our MVP development process.",
     overlay: Overlay,
+    route: "/mvp-development",
   },
   {
     id: 4,

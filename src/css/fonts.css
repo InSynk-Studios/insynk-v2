@@ -8,10 +8,8 @@
     /* IE6-IE8 */ url("../fonts/Recoleta-Medium.ttf") format("ttf"),
     /* Super Modern Browsers */ url("../fonts/Recoleta-Medium.ttf")
       format("truetype"),
-    /* Modern Browsers */ url("../fonts/Recoleta-Medium.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("../fonts/Recoleta-Medium.ttf")
-      format("svg"); /* Legacy iOS */
+    /* Modern Browsers */ url("../fonts/Recoleta-Medium.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/Recoleta-Medium.ttf") format("svg"); /* Legacy iOS */
 }
 /* Caveat-700 */
 @font-face {
@@ -151,4 +149,34 @@
       format("truetype"),
     /* Modern Browsers */ url("../fonts/DMSans-Bold.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/DMSans-Bold.ttf") format("svg"); /* Legacy iOS */
+}
+/* ClashDisplay-500 */
+@font-face {
+  font-family: "ClashDisplay-500";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/ClashDisplay-Medium.otf"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/ClashDisplay-Medium.otf") format("opentype"),
+    /* IE6-IE8 */ url("../fonts/ClashDisplay-Medium.otf") format("otf"),
+    /* Super Modern Browsers */ url("../fonts/ClashDisplay-Medium.otf")
+      format("truetype"),
+    /* Modern Browsers */ url("../fonts/ClashDisplay-Medium.otf")
+      format("opentype"),
+    /* Safari, Android, iOS */ url("../fonts/ClashDisplay-Medium.otf")
+      format("svg"); /* Legacy iOS */
+}
+/* ClashDisplay-600 */
+@font-face {
+  font-family: "ClashDisplay-600";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ClashDisplay-Semibold.otf"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/ClashDisplay-Semibold.otf") format("opentype"),
+    /* IE6-IE8 */ url("../fonts/ClashDisplay-Semibold.otf") format("otf"),
+    /* Super Modern Browsers */ url("../fonts/ClashDisplay-Semibold.otf")
+      format("truetype"),
+    /* Modern Browsers */ url("../fonts/ClashDisplay-Semibold.otf")
+      format("opentype"),
+    /* Safari, Android, iOS */ url("../fonts/ClashDisplay-Semibold.otf")
+      format("svg"); /* Legacy iOS */
 }

@@ -1,7 +1,7 @@
 import {
   Hero,
   About,
-  Services,
+  ServicesSection,
   Principles,
   Teams,
   Testimonials,
@@ -13,7 +13,7 @@ export default function Home() {
       <main className="flex flex-col justify-center items-center">
         <Hero />
         <About />
-        <Services />
+        <ServicesSection />
         <Principles />
         <Teams />
         <Testimonials />
