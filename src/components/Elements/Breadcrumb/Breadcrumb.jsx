@@ -11,12 +11,12 @@ export const Breadcrumb = () => {
   const segments = asPath.split("/").filter((segment) => segment);
 
   return (
-    <nav className="text-sm" aria-label="Breadcrumb">
+    <nav className="text-sm mx-1" aria-label="Breadcrumb">
       <ol className="list-none p-0 inline-flex">
         <li className="flex items-center">
           <Link
             href="/"
-            className="text-brand-primary-700 text-lg cursor-pointer uppercase font-clashdisplay-500 hover:text-brand-primary-400 hover:font-semibold"
+            className="text-brand-primary-700 text-xs sm:text-lg cursor-pointer uppercase font-clashdisplay-500 hover:text-brand-primary-400 hover:font-semibold"
           >
             Insynk studios
           </Link>
@@ -27,12 +27,12 @@ export const Breadcrumb = () => {
 
           return (
             <li key={index} className="flex items-center">
-              <span className="mx-7 text-gray-500">
+              <span className="mx-4 sm:mx-7 text-brand-primary-700">
                 <Image src={BreadcrumbArrow} alt="" />
               </span>
               <Link
                 href={segmentPath}
-                className={`text-lg uppercase cursor-pointer font-clashdisplay-500 font-medium hover:text-brand-primary-400 hover:font-semibold ${
+                className={`text-xs sm:text-lg uppercase cursor-pointer font-clashdisplay-500 font-medium hover:text-brand-primary-400 hover:font-semibold ${
                   isLastSegment
                     ? "text-brand-primary-400 font-clashgrotesk-600 font-semibold"
                     : "text-brand-primary-700"

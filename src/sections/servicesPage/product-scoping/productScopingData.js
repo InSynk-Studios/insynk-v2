@@ -1,13 +1,16 @@
-import ProductScopingIllustration from "@/assets/illustration/services/product_scoping.svg";
+import DiscoveryPhaseSvg from "./assets/discovery_phase.svg";
+import ScopingPhaseSvg from "./assets/scoping_phase.svg";
+import PlanningPhaseSvg from "./assets/planning_phase.svg";
 
 const titleStyles = "text-[40px] text-brand-secondary-100 font-tanker-400";
-const paragraphStyles = "text-lg font-dmsans-400 tracking-[-0.27px] space-y-6";
+const paragraphStyles =
+  "text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
 
 export const productScopingData = [
   {
-    imageUrl: ProductScopingIllustration,
+    imageUrl: DiscoveryPhaseSvg,
     content: (
-      <div className="space-y-8">
+      <div className="space-y-5 lg:space-y-8">
         <h3 className={titleStyles}>Discovery Phase</h3>
         <div className={paragraphStyles}>
           <p>
@@ -30,9 +33,9 @@ export const productScopingData = [
     ),
   },
   {
-    imageUrl: ProductScopingIllustration,
+    imageUrl: ScopingPhaseSvg,
     content: (
-      <div className="space-y-8">
+      <div className="space-y-5 lg:space-y-8">
         <h3 className={titleStyles}>scoping phase</h3>
         <div className={paragraphStyles}>
           <p>
@@ -62,9 +65,9 @@ export const productScopingData = [
     ),
   },
   {
-    imageUrl: ProductScopingIllustration,
+    imageUrl: PlanningPhaseSvg,
     content: (
-      <div className="space-y-8">
+      <div className="space-y-5 lg:space-y-8">
         <h3 className={titleStyles}>Planning Phase</h3>
         <div className={paragraphStyles}>
           <p>

@@ -30,7 +30,7 @@ export const ServicesSection = ({ isOnServicesPage = false }) => {
                 </div>
               </div>
               <div className="sm:absolute bottom-0 sm:bottom-10 lg:bottom-0 sm:left-[230px] md:left-[276px] xl:left-[294px] 2xl:left-[310px]">
-                <Link href={`/services/${isOnServicesPage ? item.route : ""}`}>
+                <Link href={`/services${isOnServicesPage ? item.route : ""}`}>
                   <Button
                     variant="none"
                     isSketch={true}
