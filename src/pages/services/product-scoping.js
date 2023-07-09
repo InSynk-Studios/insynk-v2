@@ -12,7 +12,7 @@ export default function ProductScoping() {
     <div className="flex flex-col w-full mt-36 sm:mt-[155px] justify-center items-center mb-24 sm:mb-16 lg:mb-32">
       <Breadcrumb />
       <div className="mt-16 flex flex-col items-center justify-center mx-5 sm:mx-9 lg:mx-0 max-w-full lg:max-w-[1000px] 2xl:max-w-[1250px]">
-        <Image src={ProductScopingSvg} className="w-64 sm:w-full" alt="" />
+        <Image src={ProductScopingSvg} className="w-64 sm:w-72" alt="" />
         <Image
           src={ProductScopingIllustration}
           className="mb-8 mt-16 h-52 sm:h-full"

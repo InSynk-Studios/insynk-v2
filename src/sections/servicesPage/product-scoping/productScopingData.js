@@ -2,7 +2,8 @@ import DiscoveryPhaseSvg from "./assets/discovery_phase.svg";
 import ScopingPhaseSvg from "./assets/scoping_phase.svg";
 import PlanningPhaseSvg from "./assets/planning_phase.svg";
 
-const titleStyles = "text-[40px] text-brand-secondary-100 font-tanker-400";
+const titleStyles =
+  "text-[40px] text-brand-secondary-100 leading-[45px] font-tanker-400";
 const paragraphStyles =
   "text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
 
