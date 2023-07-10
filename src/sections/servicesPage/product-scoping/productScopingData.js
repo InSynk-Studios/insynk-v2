@@ -2,16 +2,17 @@ import DiscoveryPhaseSvg from "./assets/discovery_phase.svg";
 import ScopingPhaseSvg from "./assets/scoping_phase.svg";
 import PlanningPhaseSvg from "./assets/planning_phase.svg";
 
+const wrapperStyles = "space-y-0 sm:space-y-5 lg:space-y-8";
 const titleStyles =
-  "text-[40px] text-brand-secondary-100 leading-[45px] font-tanker-400";
+  "text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400";
 const paragraphStyles =
-  "text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export const productScopingData = [
   {
     imageUrl: DiscoveryPhaseSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+      <div className={wrapperStyles}>
         <h3 className={titleStyles}>Discovery Phase</h3>
         <div className={paragraphStyles}>
           <p>
@@ -36,11 +37,10 @@ export const productScopingData = [
   {
     imageUrl: ScopingPhaseSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+      <div className={wrapperStyles}>
         <h3 className={titleStyles}>scoping phase</h3>
         <div className={paragraphStyles}>
           <p>
-            {" "}
             During this phase, we use the information gathered in the discovery
             phase to define the product&apos;s features, requirements, and
             goals. We take a user-centered approach to scope, focusing on the
@@ -68,7 +68,7 @@ export const productScopingData = [
   {
     imageUrl: PlanningPhaseSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+      <div className={`${wrapperStyles} sm:mt-5 lg:mt-8`}>
         <h3 className={titleStyles}>Planning Phase</h3>
         <div className={paragraphStyles}>
           <p>

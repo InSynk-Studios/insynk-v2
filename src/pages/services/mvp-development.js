@@ -5,10 +5,10 @@ import MvpPageTitle from "@/sections/servicesPage/mvp-development/assets/mvpPage
 import { mvpDevelopmentPageData } from "@/sections/servicesPage";
 
 const titleStyles =
-  "text-4xl lg:text-5xl text-brand-secondary-100 font-tanker-400";
+  "text-xl sm:text-[48px] text-brand-secondary-100 font-tanker-400 sm:leading-[50px]";
 
 const paragraphStyles =
-  "font-dmsans-400 font-normal text-base lg:text-lg tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracling-[-0.18px] lg:tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export default function MvpDevelopment() {
   return (
@@ -40,13 +40,11 @@ export default function MvpDevelopment() {
           </p>
         </div>
 
-        <div className="space-y-[120px] mt-[115px]">
-          <div className="grid grid-rows-1 sm:grid-cols-3 gap-5 sm:gap-12">
-            <h2 className={`${titleStyles} text-center sm:text-left`}>
-              WHAT IS an mvp?
-            </h2>
+        <div className="space-y-[32px] lg:space-y-[120px] mt-12 sm:mt-[115px]">
+          <div className="grid grid-rows-1 lg:grid-cols-3 gap-6 lg:gap-12">
+            <h2 className={titleStyles}>WHAT IS an mvp?</h2>
             <div
-              className={`sm:col-span-2 sm:w-[97%] sm:place-self-end ${paragraphStyles}`}
+              className={`lg:col-span-2 lg:w-[97%] lg:place-self-end ${paragraphStyles}`}
             >
               <p>
                 An MVP is a product that has just enough features to satisfy its
@@ -65,12 +63,10 @@ export default function MvpDevelopment() {
               </p>
             </div>
           </div>
-          <div className="grid grid-rows-1 sm:grid-cols-3 gap-5 sm:gap-0">
-            <h2 className={`${titleStyles} text-center sm:text-left`}>
-              Why to build an MVP?
-            </h2>
+          <div className="grid grid-rows-1 lg:grid-cols-3 gap-6 lg:gap-12">
+            <h2 className={titleStyles}>Why to build an MVP?</h2>
             <div
-              className={`sm:col-span-2 sm:w-[97%] sm:place-self-end ${paragraphStyles}`}
+              className={`lg:col-span-2 lg:w-[97%] lg:place-self-end ${paragraphStyles}`}
             >
               <p>
                 Building an MVP offers several benefits. Firstly, it helps to
@@ -96,8 +92,8 @@ export default function MvpDevelopment() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 items-center mt-36 text-center">
-          <h2 className={titleStyles}>
+        <div className="flex flex-col gap-4 items-center mt-16 sm:mt-36 text-center">
+          <h2 className="text-2xl sm:text-[48px] text-brand-secondary-100 sm:leading-[50px] font-tanker-400">
             Now let’s have a look at how we develop an MVP
           </h2>
           <p className={`${paragraphStyles} w-11/12 lg:w-3/5`}>
@@ -106,7 +102,11 @@ export default function MvpDevelopment() {
             following simple steps:
           </p>
         </div>
-        <Timeline data={mvpDevelopmentPageData} rows={2} />
+        <Timeline
+          data={mvpDevelopmentPageData}
+          className="grid-rows-2"
+          lineClassName="row-span-2"
+        />
       </div>
     </div>
   );

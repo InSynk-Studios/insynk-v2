@@ -7,16 +7,17 @@ import SixthCircleSvg from "../designs/assets/seventhCircle.svg";
 import SeventhCircleSvg from "./assets/seventhCircle.svg";
 import EighthCircleSvg from "../product-scoping/assets/planning_phase.svg";
 
+const wrapperStyles = "space-y-0 sm:space-y-5 lg:space-y-8";
 const titleStyles =
-  "text-[40px] text-brand-secondary-100 leading-[45px] font-tanker-400";
+"text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400";
 const paragraphStyles =
-  "text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export const mvpDevelopmentPageData = [
   {
     imageUrl: FirsthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>Define the Problem and Goal</h3>
         <p className={paragraphStyles}>
           We start by defining the problem that the MVP will solve and the goal
@@ -29,7 +30,7 @@ export const mvpDevelopmentPageData = [
   {
     imageUrl: SecondCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>USER RESEARCH</h3>
         <p className={paragraphStyles}>
           We conduct extensive research to understand our target audience, their
@@ -68,7 +69,7 @@ export const mvpDevelopmentPageData = [
   {
     imageUrl: FifthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>TEST with real users</h3>
         <p className={paragraphStyles}>
           We test the MVP prototype with real users to gather feedback and
@@ -82,7 +83,7 @@ export const mvpDevelopmentPageData = [
   {
     imageUrl: SixthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>refine the design</h3>
         <p className={paragraphStyles}>
           Based on the user feedback, we refine the MVP design and make
@@ -95,7 +96,7 @@ export const mvpDevelopmentPageData = [
   {
     imageUrl: SeventhCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>build the mvp</h3>
         <p className={paragraphStyles}>
           Once the design is finalized, we begin building the MVP. Our team of
@@ -108,7 +109,7 @@ export const mvpDevelopmentPageData = [
   {
     imageUrl: EighthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>launch the mvp</h3>
 
         <p className={paragraphStyles}>

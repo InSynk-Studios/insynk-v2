@@ -6,7 +6,7 @@ import { designsPageData } from "@/sections/servicesPage";
 import { twMerge } from "tailwind-merge";
 
 const paragraphStyles =
-  "font-dmsans-400 text-lg tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export default function Designs() {
   return (
@@ -22,7 +22,7 @@ export default function Designs() {
         <div
           className={twMerge(
             paragraphStyles,
-            `sm:mx-32 space-y-0 lg:space-y-0`
+            `sm:mx-16 lg:mx-32 space-y-0 lg:space-y-0`
           )}
         >
           <p>
@@ -36,7 +36,11 @@ export default function Designs() {
             process.
           </p>
         </div>
-        <Timeline data={designsPageData} />
+        <Timeline
+          data={designsPageData}
+          className="grid-rows-4 sm:grid-rows-3 lg:grid-rows-2"
+          lineClassName="row-span-4 sm:row-span-3 lg:row-span-2"
+        />
       </div>
     </div>
   );

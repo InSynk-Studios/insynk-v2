@@ -16,7 +16,7 @@ export const Breadcrumb = () => {
         <li className="flex items-center">
           <Link
             href="/"
-            className="text-brand-primary-700 text-xs sm:text-lg cursor-pointer uppercase font-clashdisplay-500 hover:text-brand-primary-400 hover:font-semibold"
+            className="text-brand-primary-700 text-[10px] sm:text-lg cursor-pointer uppercase font-clashdisplay-500 hover:text-brand-primary-400 hover:font-semibold"
           >
             Insynk studios
           </Link>
@@ -32,7 +32,7 @@ export const Breadcrumb = () => {
               </span>
               <Link
                 href={segmentPath}
-                className={`text-xs sm:text-lg uppercase cursor-pointer font-clashdisplay-500 font-medium hover:text-brand-primary-400 hover:font-semibold ${
+                className={`text-[10px] sm:text-lg uppercase cursor-pointer font-clashdisplay-500 font-medium hover:text-brand-primary-400 hover:font-semibold ${
                   isLastSegment
                     ? "text-brand-primary-400 font-clashgrotesk-600 font-semibold"
                     : "text-brand-primary-700"

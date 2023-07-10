@@ -7,16 +7,17 @@ import SixthCircleSvg from "./assets/sixthCircle.svg";
 import SeventhCircleSvg from "./assets/seventhCircle.svg";
 import EighthCircleSvg from "./assets/eighthCircle.svg";
 
+const wrapperStyles = "space-y-5 sm:space-y-5 lg:space-y-8";
 const titleStyles =
-  "text-[40px] text-brand-secondary-100 leading-[45px] font-tanker-400";
+  "text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400";
 const paragraphStyles =
-  "text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export const designsPageData = [
   {
     imageUrl: FirsthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+      <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Research to Get to know Target Audience, Their Needs, and Pain Points
         </h3>
@@ -41,7 +42,7 @@ export const designsPageData = [
   {
     imageUrl: SecondCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Identifying the Product Goals, Features, and Requirements Based on
           User Research and Business Objectives
@@ -64,7 +65,7 @@ export const designsPageData = [
   {
     imageUrl: ThirdCircleSvg,
     content: (
-      <div className="space-y-0 pb-6 lg:space-y-8">
+      <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Developing User Personas and Use Cases to Guide the Design Process
         </h3>
@@ -95,7 +96,7 @@ export const designsPageData = [
   {
     imageUrl: FourthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Creating Wireframes and Prototypes to Visualize the Product&apos;s
           Functionality and Layout.
@@ -119,7 +120,7 @@ export const designsPageData = [
   {
     imageUrl: FifthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Choosing a Visual Style, Color Scheme, Typography, and Other Design
           Elements That Align with the Brand
@@ -143,7 +144,7 @@ export const designsPageData = [
   {
     imageUrl: SixthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Testing the Prototypes with Real Users to Gather Feedback and Identify
           Any Issues with the Design
@@ -163,7 +164,7 @@ export const designsPageData = [
   {
     imageUrl: SeventhCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Refining the Design Based on the User Feedback and Make Necessary
           Changes to Improve the Product&apos;s Usability and User Experience
@@ -182,7 +183,7 @@ export const designsPageData = [
   {
     imageUrl: EighthCircleSvg,
     content: (
-      <div className="space-y-5 lg:space-y-8">
+        <div className={wrapperStyles}>
         <h3 className={titleStyles}>
           Creating a Design System and Style Guide to Ensure Consistency in the
           Product&apos;s Design and Development

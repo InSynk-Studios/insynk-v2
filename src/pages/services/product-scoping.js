@@ -5,11 +5,11 @@ import ProductScopingIllustration from "@/sections/servicesPage/product-scoping/
 import { productScopingData } from "@/sections/servicesPage";
 
 const paragraphStyles =
-  "font-dmsans-400 text-lg tracking-[-0.27px] space-y-4 lg:space-y-6 leading-[27px]";
+"text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export default function ProductScoping() {
   return (
-    <div className="flex flex-col w-full mt-36 sm:mt-[155px] justify-center items-center mb-24 sm:mb-16 lg:mb-32">
+    <div className="flex flex-col w-full mt-36 sm:mt-[155px] justify-center items-center mb-11 sm:mb-16 lg:mb-32">
       <Breadcrumb />
       <div className="mt-16 flex flex-col items-center justify-center mx-5 sm:mx-9 lg:mx-0 max-w-full lg:max-w-[1000px] 2xl:max-w-[1250px]">
         <Image src={ProductScopingSvg} className="w-64 sm:w-72" alt="" />
@@ -42,15 +42,23 @@ export default function ProductScoping() {
             detail.
           </p>
         </div>
-        <Timeline data={productScopingData} />
-        <div className="grid grid-rows-1 sm:grid-cols-3 sm:gap-12 mt-20">
-          <h3 className="text-[40px] text-brand-secondary-100 font-tanker-400">
+        <Timeline
+          data={productScopingData}
+          className="grid-rows-5 sm:grid-rows-3 lg:grid-rows-2"
+          lineClassName="row-span-5 sm:row-span-3 lg:row-span-2"
+        />
+        <div className="grid grid-rows-1 lg:grid-cols-3 lg:gap-12 sm:mt-20">
+          <h3 className="text-[40px] text-brand-secondary-100 font-tanker-400 hidden lg:flex leading-[50px]">
             Why is
             <br />
             product scoping
-            <br /> SO Essential?
+            <br />
+            SO Essential?
           </h3>
-          <div className={`col-span-2 ${paragraphStyles}`}>
+          <h3 className="text-xl sm:text-[40px] text-brand-secondary-100 font-tanker-400 mb-6 lg:hidden flex sm:leading-[50px]">
+            Why is product scoping SO Essential?
+          </h3>
+          <div className={`lg:col-span-2 ${paragraphStyles}`}>
             <p>
               As a team of engineers and creative designers, we know the
               importance of planning and preparation. Just like you
