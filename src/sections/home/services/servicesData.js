@@ -43,5 +43,6 @@ export const serviceData = [
     description:
       "Partnering with us for development offers two significant benefits. Firstly, we provide the ability to experiment, prototype, and validate new ideas. Secondly, we offer our extensive skill set to build your initial MVP and scale it to new heights. Together, we can reach to PMF that you aim for.",
     overlay: Overlay,
+    route: "/",
   },
 ];
