@@ -5,14 +5,14 @@ export const Timeline = ({ data }) => {
   return (
     <div className="flex items-center justify-start w-full mt-[120px] mb-20">
       <div className="flex flex-col items-start">
-        {data.map((item, index) => (
+        {data?.map((item, index) => (
           <>
             <div
               key={item.content}
               className="grid grid-cols-3 space-x-10 lg:space-x-20"
             >
               <div className="grid grid-rows-3 sm:grid-rows-2 place-items-center items-start">
-                <div className="flex justify-center items-center rounded-full bg-brand-primary-100 bg-opacity-[49%] w-[250px] h-[250px] overflow-hidden">
+                <div className="flex justify-center items-center rounded-full bg-brand-primary-100 bg-opacity-[49%] w-[200px] h-[200px] lg:w-[250px] lg:h-[250px] overflow-hidden">
                   <Image
                     src={item.imageUrl}
                     alt="Circle"
