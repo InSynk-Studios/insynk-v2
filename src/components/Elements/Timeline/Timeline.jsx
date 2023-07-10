@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Timeline = ({ data }) => {
   return (
-    <div className="flex items-center justify-start w-full mt-[120px] mb-20">
+    <div className="flex items-center justify-start w-full mt-[120px]">
       <div className="flex flex-col items-start">
         {data?.map((item, index) => (
           <>
