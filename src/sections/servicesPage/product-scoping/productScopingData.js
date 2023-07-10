@@ -68,7 +68,7 @@ export const productScopingData = [
   {
     imageUrl: PlanningPhaseSvg,
     content: (
-      <div className={`${wrapperStyles} sm:mt-5 lg:mt-8`}>
+      <div className={wrapperStyles}>
         <h3 className={titleStyles}>Planning Phase</h3>
         <div className={paragraphStyles}>
           <p>

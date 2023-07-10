@@ -104,7 +104,7 @@ export default function MvpDevelopment() {
         </div>
         <Timeline
           data={mvpDevelopmentPageData}
-          contentWrapperClassName="mb-36"
+          contentWrapperClassName="mb-20 sm:mb-72"
         />
       </div>
     </div>

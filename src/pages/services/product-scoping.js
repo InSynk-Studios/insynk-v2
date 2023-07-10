@@ -42,7 +42,10 @@ export default function ProductScoping() {
             detail.
           </p>
         </div>
-        <Timeline data={productScopingData} />
+        <Timeline
+          data={productScopingData}
+          contentWrapperClassName="mb-20"
+        />
         <div className="grid grid-rows-1 lg:grid-cols-3 lg:gap-12 sm:mt-20">
           <h3 className="text-[40px] text-brand-secondary-100 font-tanker-400 hidden lg:flex leading-[50px]">
             Why is
