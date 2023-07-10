@@ -6,7 +6,7 @@ const wrapperStyles = "space-y-3 sm:space-y-5 lg:space-y-8";
 const titleStyles =
   "text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400";
 const paragraphStyles =
-  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px] lg:pr-10";
 
 export const productScopingData = [
   {
