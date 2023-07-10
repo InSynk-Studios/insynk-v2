@@ -43,7 +43,7 @@ export default function ProductScoping() {
           </p>
         </div>
         <Timeline data={productScopingData} />
-        <div className="grid grid-rows-1 sm:grid-cols-3 sm:gap-12">
+        <div className="grid grid-rows-1 sm:grid-cols-3 sm:gap-12 mt-20">
           <h3 className="text-[40px] text-brand-secondary-100 font-tanker-400">
             Why is
             <br />

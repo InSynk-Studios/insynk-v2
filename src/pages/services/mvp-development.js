@@ -106,7 +106,7 @@ export default function MvpDevelopment() {
             following simple steps:
           </p>
         </div>
-        <Timeline data={mvpDevelopmentPageData} />
+        <Timeline data={mvpDevelopmentPageData} rows={2} />
       </div>
     </div>
   );
