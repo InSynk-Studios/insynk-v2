@@ -33,7 +33,7 @@ export const Timeline = ({ data, className, contentWrapperClassName }) => {
             <div
               className={twMerge(
                 "col-span-1 sm:col-span-2 mb-16",
-                contentWrapperClassName
+                index < data.length - 1 && contentWrapperClassName
               )}
             >
               {item?.content}

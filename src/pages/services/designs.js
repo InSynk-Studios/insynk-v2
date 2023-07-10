@@ -36,7 +36,7 @@ export default function Designs() {
             process.
           </p>
         </div>
-        <Timeline data={designsPageData} contentWrapperClassName="mb-40" />
+        <Timeline data={designsPageData} contentWrapperClassName="mb-20 sm:mb-40" />
       </div>
     </div>
   );
