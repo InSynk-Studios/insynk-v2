@@ -2,7 +2,7 @@ import DiscoveryPhaseSvg from "./assets/discovery_phase.svg";
 import ScopingPhaseSvg from "./assets/scoping_phase.svg";
 import PlanningPhaseSvg from "./assets/planning_phase.svg";
 
-const wrapperStyles = "space-y-0 sm:space-y-5 lg:space-y-8";
+const wrapperStyles = "space-y-3 sm:space-y-5 lg:space-y-8";
 const titleStyles =
   "text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400";
 const paragraphStyles =
