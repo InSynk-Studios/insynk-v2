@@ -36,11 +36,7 @@ export default function Designs() {
             process.
           </p>
         </div>
-        <Timeline
-          data={designsPageData}
-          className="grid-rows-4 sm:grid-rows-3 lg:grid-rows-2"
-          lineClassName="row-span-4 sm:row-span-3 lg:row-span-2"
-        />
+        <Timeline data={designsPageData} contentWrapperClassName="mb-40" />
       </div>
     </div>
   );

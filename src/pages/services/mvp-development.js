@@ -104,8 +104,7 @@ export default function MvpDevelopment() {
         </div>
         <Timeline
           data={mvpDevelopmentPageData}
-          className="grid-rows-2"
-          lineClassName="row-span-2"
+          contentWrapperClassName="mb-36"
         />
       </div>
     </div>

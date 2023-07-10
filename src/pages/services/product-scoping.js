@@ -5,7 +5,7 @@ import ProductScopingIllustration from "@/sections/servicesPage/product-scoping/
 import { productScopingData } from "@/sections/servicesPage";
 
 const paragraphStyles =
-"text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
 
 export default function ProductScoping() {
   return (
@@ -42,11 +42,7 @@ export default function ProductScoping() {
             detail.
           </p>
         </div>
-        <Timeline
-          data={productScopingData}
-          className="grid-rows-5 sm:grid-rows-3 lg:grid-rows-2"
-          lineClassName="row-span-5 sm:row-span-3 lg:row-span-2"
-        />
+        <Timeline data={productScopingData} />
         <div className="grid grid-rows-1 lg:grid-cols-3 lg:gap-12 sm:mt-20">
           <h3 className="text-[40px] text-brand-secondary-100 font-tanker-400 hidden lg:flex leading-[50px]">
             Why is
