@@ -356,6 +356,8 @@ module.exports = {
       "caveat-500": ["Caveat-500", "sans-serif"],
       "caveat-600": ["Caveat-600", "sans-serif"],
       "caveat-700": ["Caveat-700", "sans-serif"],
+      "clashdisplay-500": ["ClashDisplay-500", "sans-serif"],
+      "clashdisplay-600": ["ClashDisplay-600", "sans-serif"],
       sans: [
         "ui-sans-serif",
         "system-ui",

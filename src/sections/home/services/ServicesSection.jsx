@@ -2,8 +2,9 @@ import React from "react";
 import { Button, Card } from "@/components/Elements";
 import Image from "next/image";
 import { serviceData } from "./servicesData";
+import Link from "next/link";
 
-export const Services = () => {
+export const ServicesSection = ({ isOnServicesPage = false }) => {
   return (
     <section className="flex flex-col justify-start items-center gap-12 text-center mt-32 w-full bg-brand-background-200">
       <h1 className="font-recoleta-500 mt-10 font-normal text-xl lg:text-4xl text-brand-primary-400">
@@ -29,14 +30,16 @@ export const Services = () => {
                 </div>
               </div>
               <div className="sm:absolute bottom-0 sm:bottom-10 lg:bottom-0 sm:left-[230px] md:left-[276px] xl:left-[294px] 2xl:left-[310px]">
-                <Button
-                  variant="none"
-                  isSketch={true}
-                  childrenWrapperClassName="-skew-y-2 text-sm lg:text-xl leading-6 font-clashgrotesk-500"
-                  className="lg:h-14 px-4"
-                >
-                  Read More
-                </Button>
+                <Link href={`/services${isOnServicesPage ? item.route : ""}`}>
+                  <Button
+                    variant="none"
+                    isSketch={true}
+                    childrenWrapperClassName="-skew-y-2 text-sm lg:text-xl leading-6 font-clashgrotesk-500"
+                    className="lg:h-14 px-4"
+                  >
+                    Read More
+                  </Button>
+                </Link>
               </div>
 
               {/* <div className="lg:card-overlay hidden md:w-1/3 lg:w-[230px] xl:w-1/3">

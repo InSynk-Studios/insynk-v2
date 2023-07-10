@@ -13,6 +13,7 @@ import HamburgerWhiteIcon from "@/assets/icons/hamburgerWhite.svg";
 export const Header = () => {
   const [navbar, setNavbar] = useState(false);
   const [animateHeader, setAnimateHeader] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
   const handleHeaderAnimation = () => {
     if (window.scrollY > 140) {
@@ -33,8 +34,29 @@ export const Header = () => {
 
   useEffect(() => {}, [navbar]);
 
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      // Extract the current path from the URL
+      const path = url.split("/")[1];
+      // Find the navigation item that matches the current path
+      const activeItem = navigation.find((item) => item.to === `/${path}`);
+      if (activeItem) {
+        setActiveLink(activeItem.name);
+      } else {
+        setActiveLink("");
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
+
   const navigation = [
     { name: "Home", to: `/` },
+    { name: "Services", to: `/services` },
     { name: "Work", to: `/work` },
     {
       name: "Blogs",
@@ -112,7 +134,7 @@ export const Header = () => {
                   <Link
                     href={navigate.to}
                     className={`px-2 py-2 font-clashgrotesk-600 font-semibold text-lg leading-6 hover:cursor-pointer ${
-                      router.pathname == navigate.to
+                      navigate.name === activeLink
                         ? "text-brand-primary-700 " ||
                           (animateHeader && "text-brand-secondary-300")
                         : (animateHeader &&
@@ -124,6 +146,7 @@ export const Header = () => {
                   </Link>
                 </li>
               ))}
+
               <Button
                 onClick={scrollToForm}
                 varient="primary"
