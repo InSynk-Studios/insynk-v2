@@ -19,12 +19,7 @@ export default function Designs() {
           className="mb-8 mt-16 h-52 sm:h-full"
           alt=""
         />
-        <div
-          className={twMerge(
-            paragraphStyles,
-            `sm:mx-16 lg:mx-32 space-y-0 lg:space-y-0`
-          )}
-        >
+        <div className={twMerge(paragraphStyles, `lg:mx-32`)}>
           <p>
             Hey, we value your curiosity to know our product design process, so
             let&apos;s get started :) We believe that a well-designed software
@@ -36,7 +31,10 @@ export default function Designs() {
             process.
           </p>
         </div>
-        <Timeline data={designsPageData} contentWrapperClassName="mb-20 sm:mb-40" />
+        <Timeline
+          data={designsPageData}
+          contentWrapperClassName="mb-20 sm:mb-40"
+        />
       </div>
     </div>
   );

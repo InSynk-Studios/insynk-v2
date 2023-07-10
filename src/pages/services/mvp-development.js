@@ -21,7 +21,7 @@ export default function MvpDevelopment() {
           className="mb-8 mt-16 h-52 sm:h-full"
           alt=""
         />
-        <div className={`${paragraphStyles} sm:mx-10 lg:mx-32`}>
+        <div className={`${paragraphStyles} lg:mx-20`}>
           <p>
             Hey, today, people want to try out products quickly, so, why not
             your products should be developed quickly, efficiently, and most
@@ -40,12 +40,10 @@ export default function MvpDevelopment() {
           </p>
         </div>
 
-        <div className="space-y-[32px] lg:space-y-[120px] mt-12 sm:mt-[115px]">
-          <div className="grid grid-rows-1 lg:grid-cols-3 gap-6 lg:gap-12">
+        <div className="space-y-[32px] lg:mx-20 lg:space-y-[120px] mt-12 sm:mt-[115px]">
+          <div className="flex flex-col sm:flex-row justify-between gap-6 lg:gap-0">
             <h2 className={titleStyles}>WHAT IS an mvp?</h2>
-            <div
-              className={`lg:col-span-2 lg:w-[97%] lg:place-self-end ${paragraphStyles}`}
-            >
+            <div className={`lg:w-[55%] ${paragraphStyles}`}>
               <p>
                 An MVP is a product that has just enough features to satisfy its
                 initial users and gather valuable feedback for future
@@ -63,11 +61,9 @@ export default function MvpDevelopment() {
               </p>
             </div>
           </div>
-          <div className="grid grid-rows-1 lg:grid-cols-3 gap-6 lg:gap-12">
+          <div className="flex flex-col sm:flex-row justify-between gap-6 lg:gap-0">
             <h2 className={titleStyles}>Why to build an MVP?</h2>
-            <div
-              className={`lg:col-span-2 lg:w-[97%] lg:place-self-end ${paragraphStyles}`}
-            >
+            <div className={`lg:w-[55%] ${paragraphStyles}`}>
               <p>
                 Building an MVP offers several benefits. Firstly, it helps to
                 reduce the risk of product failure. By testing the MVP with real
@@ -104,7 +100,7 @@ export default function MvpDevelopment() {
         </div>
         <Timeline
           data={mvpDevelopmentPageData}
-          contentWrapperClassName="mb-20 sm:mb-72"
+          contentWrapperClassName="mb-20 sm:mb-40 lg:mb-72"
         />
       </div>
     </div>

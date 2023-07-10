@@ -9,9 +9,9 @@ import EighthCircleSvg from "./assets/eighthCircle.svg";
 
 const wrapperStyles = "space-y-5 sm:space-y-5 lg:space-y-8";
 const titleStyles =
-  "text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400";
+  "text-xl sm:text-[40px] text-brand-secondary-100 leading-6 sm:leading-[45px] font-tanker-400 lg:pr-8";
 const paragraphStyles =
-  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px]";
+  "text-xs sm:text-lg font-dmsans-400 tracking-[-0.27px] space-y-4 lg:space-y-6 leading-5 sm:leading-[27px] lg:pr-20";
 
 export const designsPageData = [
   {
