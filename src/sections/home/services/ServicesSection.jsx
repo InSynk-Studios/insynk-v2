@@ -4,7 +4,7 @@ import Image from "next/image";
 import { serviceData } from "./servicesData";
 import Link from "next/link";
 
-export const ServicesSection = ({ isOnServicesPage = false }) => {
+export const ServicesSection = () => {
   return (
     <section className="flex flex-col justify-start items-center gap-12 text-center mt-32 w-full bg-brand-background-200">
       <h1 className="font-recoleta-500 mt-10 font-normal text-xl lg:text-4xl text-brand-primary-400">
@@ -30,7 +30,7 @@ export const ServicesSection = ({ isOnServicesPage = false }) => {
                 </div>
               </div>
               <div className="sm:absolute bottom-0 sm:bottom-10 lg:bottom-0 sm:left-[230px] md:left-[276px] xl:left-[294px] 2xl:left-[310px]">
-                <Link href={`/services${isOnServicesPage ? item.route : ""}`}>
+                <Link href={`/services${item.route}`}>
                   <Button
                     variant="none"
                     isSketch={true}
